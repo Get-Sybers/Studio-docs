@@ -6,11 +6,17 @@ All notable changes to this package are recorded in this file. The format follow
 
 ## [Unreleased]
 
+## [0.1.2] - 2026-11-24
+
 ### Added
 
 - The target `PageSizes`: the trim sizes of the book trade today, American, British, ISO and Japanese, each as the
   trade quotes it and in points, read from the `page-sizes.json` the target embeds.
 - `TextDocumentBody.pageSize`, the size of a page in points, a member of version 1.1 of the library's own type.
+
+### Changed
+
+- The workflow `Release` names its run artifact `Studio-docs-v<version>` and the GitHub release `Studio-docs v<version>`.
 
 ## [0.1.1] - 2026-11-24
 
@@ -98,6 +104,7 @@ All notable changes to this package are recorded in this file. The format follow
 - The example of the README and the test `createSaveReopen` are one: a section of two paragraphs, one of
   them styled, saved as an archive and opened again.
 
-[Unreleased]: https://github.com/Get-Sybers/Studio-docs/compare/0.1.1...HEAD
+[Unreleased]: https://github.com/Get-Sybers/Studio-docs/compare/0.1.2...HEAD
+[0.1.2]: https://github.com/Get-Sybers/Studio-docs/compare/0.1.1...0.1.2
 [0.1.1]: https://github.com/Get-Sybers/Studio-docs/compare/0.1.0...0.1.1
 [0.1.0]: https://github.com/Get-Sybers/Studio-docs/releases/tag/0.1.0
