@@ -45,14 +45,18 @@ All notable changes to this package are recorded in this file. The format follow
   Italic, bold and strikethrough travel as the inline presentation intent, underline and everything else as
   attributes of the library's own, and a paragraph-bound attribute carries each paragraph's properties and
   identifier. A run that holds a paragraph separator is refused.
+- The target `GoldenFiles`, which the tests share: one file of expected outputs for each test target.
+- The gate `make tidy conform`, the structural lint `scripts/structure-lint.sh`, and the workflow
+  `Swift CI`.
+- `README.md` in full: the dependency line and the imports, the example of a document created, saved and
+  opened again, what the library models and what it does not, the departures from Apple's reader and the
+  limits.
+- `docs/Architecture.md`: the targets, their concerns, their dependencies and the layers. The table of where
+  things live in `AGENTS.md` names every document of the repository.
 
 ### Changed
 
 - The forms of a union and the values of `Inheritable` are kept out of line. A paragraph is 936 bytes where
   it was 5,280, which a deep call on a secondary thread could not hold on its stack.
-
-### Added
-
-- The target `GoldenFiles`, which the tests share: one file of expected outputs for each test target.
-- The gate `make tidy conform`, the structural lint `scripts/structure-lint.sh`, and the workflow
-  `Swift CI`.
+- The example of the README and the test `createSaveReopen` are one: a section of two paragraphs, one of
+  them styled, saved as an archive and opened again.
