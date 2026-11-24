@@ -3,8 +3,8 @@ public import WireFormat
 
 /// Where a link leads.
 public struct Hyperlink: WireUnion {
-  /// The forms that the library models.
-  public enum Form: Sendable, Hashable {
+  /// The forms that the library models; each is kept out of line, so the value stays small.
+  public indirect enum Form: Sendable, Hashable {
     /// A file: a path or a file URL.
     case file(String)
     /// An action of the reader, by its name.

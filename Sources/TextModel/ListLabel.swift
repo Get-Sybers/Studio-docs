@@ -3,8 +3,8 @@ public import WireFormat
 
 /// The label of a list level: a bullet, a number, an image, or none.
 public struct ListLabel: WireUnion {
-  /// The forms that the library models.
-  public enum Form: Sendable, Hashable {
+  /// The forms that the library models; each is kept out of line, so the value stays small.
+  public indirect enum Form: Sendable, Hashable {
     /// An image.
     case image(ListImageLabel)
     /// No label.

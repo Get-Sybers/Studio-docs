@@ -3,8 +3,8 @@ public import WireFormat
 
 /// The slide that a link jumps to, by identifier or by position.
 public struct SlideTarget: WireUnion {
-  /// The forms that the library models.
-  public enum Form: Sendable, Hashable {
+  /// The forms that the library models; each is kept out of line, so the value stays small.
+  public indirect enum Form: Sendable, Hashable {
     /// The slide with this identifier.
     case byIdentifier(ObjectID)
     /// The first slide.

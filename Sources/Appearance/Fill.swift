@@ -3,8 +3,8 @@ public import WireFormat
 
 /// What fills an area: a colour, a gradient or an image.
 public struct Fill: WireUnion {
-  /// The forms that the library models.
-  public enum Form: Sendable, Hashable {
+  /// The forms that the library models; each is kept out of line, so the value stays small.
+  public indirect enum Form: Sendable, Hashable {
     /// One colour.
     case color(ColorValue)
     /// A gradient between two or more colours.
