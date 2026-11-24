@@ -19,7 +19,8 @@ their identifiers, versions, members, defaults and limits, from `Sources/<Target
 | `TextModel` | text bodies, paragraphs, runs, links, breaks, properties, stylesheets; a format table | `Appearance`, `JSONTree`, `PresetStyles`, `ResourceReferences`, `WireFormat` | yes |
 | `DocumentValidation` | typed findings and the checks that make them | `Appearance`, `DocumentIdentifiers`, `JSONTree`, `PresetStyles`, `ResourceReferences`, `TextModel`, `WireFormat` | yes |
 | `DocumentPackage` | `StudioDocument<Body>`, the manifest, the resources, the two layouts of a package, `UntypedBody` | `DocumentValidation`, `JSONTree`, `PresetStyles`, `ResourceReferences`, `TextModel`, `WireFormat`, `ZipArchives`, OrderedCollections | yes |
-| `TextDocument` | the library's own small body, under its own type identifiers; a format table | `DocumentPackage`, `TextModel`, `WireFormat` | yes |
+| `TextDocument` | the library's own small body, under its own type identifiers; a format table | `Appearance`, `DocumentPackage`, `TextModel`, `WireFormat` | yes |
+| `PageSizes` | the trim sizes of the book trade, read from `Resources/page-sizes.json` | `Appearance` | yes |
 | `CanvasCommon` | what canvas objects share: geometry, labels, reflections, durations, the owning of titles and captions; a format table | `Appearance`, `JSONTree`, `TextModel`, `WireFormat` | yes |
 | `TableModel` | tables: cells, rows, columns, formats, formulas, conditional styles, filters, sorts, visual properties; a format table | `Appearance`, `CanvasCommon`, `JSONTree`, `TextModel`, `WireFormat` | yes |
 | `ChartModel` | every kind of chart, with axes, series, data, legends and label formatting; a format table | `Appearance`, `CanvasCommon`, `JSONTree`, `TableModel`, `TextModel`, `WireFormat` | yes |

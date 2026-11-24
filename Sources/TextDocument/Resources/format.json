@@ -3,11 +3,25 @@
     {
       "type": "io.github.get-sybers.studio-docs.text-document",
       "name": "TextDocumentBody",
-      "version": "1.0",
+      "version": "1.1",
       "members": [
-        {"name": "title", "kind": "optional"},
-        {"name": "stylesheet", "kind": "optional"},
-        {"name": "sections", "kind": "required"}
+        {
+          "name": "title",
+          "kind": "optional"
+        },
+        {
+          "name": "stylesheet",
+          "kind": "optional"
+        },
+        {
+          "name": "sections",
+          "kind": "required"
+        },
+        {
+          "name": "page_size",
+          "kind": "optional",
+          "since": "1.1"
+        }
       ]
     },
     {
@@ -15,8 +29,14 @@
       "name": "TextSection",
       "version": "1.0",
       "members": [
-        {"name": "heading", "kind": "optional"},
-        {"name": "text", "kind": "required"}
+        {
+          "name": "heading",
+          "kind": "optional"
+        },
+        {
+          "name": "text",
+          "kind": "required"
+        }
       ]
     }
   ],

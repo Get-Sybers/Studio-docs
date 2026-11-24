@@ -201,7 +201,7 @@ version than 1.0 introduced shows that version in brackets.
 | `com.apple.apps.content-language.title-owning` | `TitleOwning` | CanvasCommon | union | 1.0 | `genericTitleOwning` |
 | `com.apple.apps.content-language.two-axis-chart` | `TwoAxisChart` | ChartModel | object | 1.0 | `title`, `caption`, `data`, `show_legend`, `legend`, `series`, `chart_colors`, `category_axis`, `value_axis`, `value_axis_secondary`, `geometry`, `aspect_ratio_locked`, `description` |
 | `io.github.get-sybers.studio-docs.text-document.section` | `TextSection` | TextDocument | object | 1.0 | `heading`, `text` |
-| `io.github.get-sybers.studio-docs.text-document` | `TextDocumentBody` | TextDocument | object | 1.0 | `title`, `stylesheet`, `sections` |
+| `io.github.get-sybers.studio-docs.text-document` | `TextDocumentBody` | TextDocument | object | 1.1 | `title`, `stylesheet`, `sections`, `page_size` (1.1) |
 
 ## Enumerations
 

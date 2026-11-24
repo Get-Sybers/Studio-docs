@@ -15,10 +15,14 @@ let ordered: Target.Dependency = .product(name: "OrderedCollections", package: "
 let bits: Target.Dependency = .product(name: "BitCollections", package: "swift-collections")
 let trees: Target.Dependency = .product(name: "HashTreeCollections", package: "swift-collections")
 
-// A library of one concern; `table` says that it embeds a format table, Resources/format.json.
-func library(_ name: String, needs dependencies: [Target.Dependency] = [], table: Bool = false) -> Target {
+// A library of one concern; `table` says that it embeds a format table, Resources/format.json, `data` other files there.
+func library(
+  _ name: String, needs dependencies: [Target.Dependency] = [], table: Bool = false, data: [String] = []
+) -> Target {
   .target(
-    name: name, dependencies: dependencies, resources: table ? [.embedInCode("Resources/format.json")] : [],
+    name: name, dependencies: dependencies,
+    resources: (table ? ["format.json"] : []).map { .embedInCode("Resources/\($0)") }
+      + data.map { .embedInCode("Resources/\($0)") },
     swiftSettings: native)
 }
 
@@ -37,9 +41,8 @@ let package = Package(
       name: "StudioDocs",
       targets: [
         "Appearance", "AttributedText", "CanvasCommon", "CanvasModel", "ChartModel", "DocumentIdentifiers",
-        "DocumentPackage",
-        "DocumentValidation", "JSONTree", "PresentationModel", "PresetStyles", "ResourceReferences", "TableModel",
-        "TextDocument", "TextModel", "WireFormat", "ZipArchives",
+        "DocumentPackage", "DocumentValidation", "JSONTree", "PageSizes", "PresentationModel", "PresetStyles",
+        "ResourceReferences", "TableModel", "TextDocument", "TextModel", "WireFormat", "ZipArchives",
       ])
   ],
   dependencies: [
@@ -69,7 +72,8 @@ let package = Package(
         "DocumentValidation", "JSONTree", "PresetStyles", "ResourceReferences", "TextModel", "WireFormat",
         "ZipArchives", ordered,
       ]),
-    library("TextDocument", needs: ["DocumentPackage", "TextModel", "WireFormat"], table: true),
+    library("TextDocument", needs: ["Appearance", "DocumentPackage", "TextModel", "WireFormat"], table: true),
+    library("PageSizes", needs: ["Appearance"], data: ["page-sizes.json"]),
     library("CanvasCommon", needs: ["Appearance", "JSONTree", "TextModel", "WireFormat"], table: true),
     library("TableModel", needs: ["Appearance", "CanvasCommon", "JSONTree", "TextModel", "WireFormat"], table: true),
     library(
@@ -112,8 +116,8 @@ let package = Package(
     tests(
       of: "TextDocument",
       with: [
-        "DocumentPackage", "DocumentValidation", "GoldenFiles", "JSONTree", "ModelFixtures", "PresetStyles",
-        "TextModel", "WireFormat",
+        "Appearance", "DocumentPackage", "DocumentValidation", "GoldenFiles", "JSONTree", "ModelFixtures", "PageSizes",
+        "PresetStyles", "TextModel", "WireFormat",
       ]),
     tests(of: "AttributedText", with: ["DocumentIdentifiers", "GoldenFiles", "JSONTree", "TextModel", "WireFormat"]),
     tests(
@@ -139,6 +143,7 @@ let package = Package(
         "Appearance", "CanvasCommon", "CanvasModel", "DocumentPackage", "DocumentValidation", "GoldenFiles", "JSONTree",
         "ModelFixtures", "TableModel", "TextModel", "WireFormat", "ZipArchives",
       ]),
+    tests(of: "PageSizes", with: ["Appearance", "GoldenFiles"]),
     tests(of: "GoldenFiles"),
     tests(of: "ModelFixtures", with: ["JSONTree", "WireFormat"]),
   ]
