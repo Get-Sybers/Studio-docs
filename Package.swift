@@ -14,9 +14,11 @@ let native: [SwiftSetting] = [
 let ordered: Target.Dependency = .product(name: "OrderedCollections", package: "swift-collections")
 let bits: Target.Dependency = .product(name: "BitCollections", package: "swift-collections")
 
-// A library of one concern.
-func library(_ name: String, needs dependencies: [Target.Dependency] = []) -> Target {
-  .target(name: name, dependencies: dependencies, swiftSettings: native)
+// A library of one concern; `table` says that it embeds a format table, Resources/format.json.
+func library(_ name: String, needs dependencies: [Target.Dependency] = [], table: Bool = false) -> Target {
+  .target(
+    name: name, dependencies: dependencies, resources: table ? [.embedInCode("Resources/format.json")] : [],
+    swiftSettings: native)
 }
 
 // The tests of a library; `data` says that they have a folder testdata of goldens and fixtures.
@@ -30,7 +32,9 @@ let package = Package(
   name: "Studio-docs",
   platforms: [.macOS(.v27)],
   products: [
-    .library(name: "StudioDocs", targets: ["JSONTree", "WireFormat", "ZipArchives"])
+    .library(
+      name: "StudioDocs",
+      targets: ["Appearance", "JSONTree", "ResourceReferences", "TextModel", "WireFormat", "ZipArchives"])
   ],
   dependencies: [
     .package(url: "https://github.com/apple/swift-collections", from: "1.7.0")
@@ -41,11 +45,13 @@ let package = Package(
     library("JSONTree", needs: [ordered]),
     library("WireFormat", needs: ["JSONTree", bits]),
     library("GoldenFiles"),
+    library("ModelFixtures", needs: ["JSONTree", "WireFormat"]),
 
     tests(of: "RawDeflate", data: false),
     tests(of: "ZipArchives", with: ["GoldenFiles", "RawDeflate"]),
     tests(of: "JSONTree", with: ["GoldenFiles"]),
     tests(of: "WireFormat", with: ["GoldenFiles", "JSONTree"]),
     tests(of: "GoldenFiles"),
+    tests(of: "ModelFixtures", with: ["JSONTree", "WireFormat"]),
   ]
 )

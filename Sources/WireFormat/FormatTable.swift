@@ -7,11 +7,19 @@ package struct FormatTable: Sendable {
   package let objects: [String: ObjectSchema]
   /// The union schemas, by the name of the Swift type that models each.
   package let unions: [String: UnionSchema]
+  /// The values of each enumeration, by the name of the Swift type that models it.
+  package let enumerations: [String: [String]]
   private let target: String
 
   private struct File: Decodable {
+    var enumerations: [Enumeration]?
     var objects: [Entry]
     var unions: [Entry]
+  }
+
+  private struct Enumeration: Decodable {
+    var name: String
+    var values: [String]
   }
 
   private struct Entry: Decodable {
@@ -42,6 +50,7 @@ package struct FormatTable: Sendable {
     case emptyRange(type: String, part: String)
     case objectWithoutMembers(String)
     case unionWithoutCases(String)
+    case enumerationWithoutValues(String)
   }
 
   /// Decodes a table and checks what its shape cannot express.
@@ -50,6 +59,16 @@ package struct FormatTable: Sendable {
     var objects: [String: ObjectSchema] = [:]
     var unions: [String: UnionSchema] = [:]
     var names: Set<String> = []
+    var enumerations: [String: [String]] = [:]
+    for listed in file.enumerations ?? [] {
+      guard names.insert(listed.name).inserted else { throw Defect.repeatedName(listed.name) }
+      guard !listed.values.isEmpty else { throw Defect.enumerationWithoutValues(listed.name) }
+      guard let repeated = listed.values.first(where: { value in listed.values.count { $0 == value } > 1 }) else {
+        enumerations[listed.name] = listed.values
+        continue
+      }
+      throw Defect.repeatedPart(type: listed.name, part: repeated)
+    }
     for entry in file.objects + file.unions {
       guard names.insert(entry.name).inserted, names.insert(entry.type).inserted else {
         throw Defect.repeatedName(entry.name)
@@ -84,6 +103,7 @@ package struct FormatTable: Sendable {
     }
     self.objects = objects
     self.unions = unions
+    self.enumerations = enumerations
     self.target = target
   }
 
@@ -102,6 +122,14 @@ package struct FormatTable: Sendable {
       preconditionFailure("the format table of \(target) lists no object named \(name)")
     }
     return schema
+  }
+
+  /// The values of the enumeration that a Swift type models.
+  package func values(of name: String) -> [String] {
+    guard let values = enumerations[name] else {
+      preconditionFailure("the format table of \(target) lists no enumeration named \(name)")
+    }
+    return values
   }
 
   /// The schema of the union type that a Swift type models.

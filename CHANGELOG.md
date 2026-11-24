@@ -16,6 +16,8 @@ All notable changes to this package are recorded in this file. The format follow
 - The target `WireFormat`: type identifiers, versions, the envelope of an object, tagged unions, the
   three states of an inheritable member, and readers and writers that keep every member a type does
   not model. A client adds members of its own to a type of the library with `ClientProperty`.
+- The target `ModelFixtures`, which the tests share: the fixtures of a test target, and the checks that a
+  type reads and writes every member that its format table lists.
 - The target `GoldenFiles`, which the tests share: one file of expected outputs for each test target.
 - The gate `make tidy conform`, the structural lint `scripts/structure-lint.sh`, and the workflow
   `Swift CI`.

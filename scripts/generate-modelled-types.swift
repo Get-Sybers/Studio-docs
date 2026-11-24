@@ -16,6 +16,12 @@ struct Table: Decodable {
     var cases: [Member]?
   }
 
+  struct Enumeration: Decodable {
+    var name: String
+    var values: [String]
+  }
+
+  var enumerations: [Enumeration]?
   var objects: [Entry]
   var unions: [Entry]
 }
@@ -35,6 +41,7 @@ guard arguments.count == 3 else {
 }
 let sources = URL(fileURLWithPath: arguments[1])
 var rows: [String] = []
+var enumerations: [String] = []
 do {
   let targets = try FileManager.default.contentsOfDirectory(atPath: sources.path).sorted()
   for target in targets {
@@ -43,19 +50,30 @@ do {
     let table = try JSONDecoder().decode(Table.self, from: Data(contentsOf: file))
     rows += table.objects.map { row($0, in: target, kind: "object") }
     rows += table.unions.map { row($0, in: target, kind: "union") }
+    enumerations += (table.enumerations ?? []).map { listed in
+      "| `\(listed.name)` | \(target) | \(listed.values.map { "`\($0)`" }.joined(separator: ", ")) |"
+    }
   }
   let lines =
     [
       "# Modelled types",
       "",
       "`make generate` writes this file from the format tables, `Sources/<Target>/Resources/format.json`.",
-      "It lists every type of the format that the library models, with the version of the type that",
-      "the library writes and the members or cases it reads. A member or a case that a later version",
-      "than 1.0 introduced shows that version in brackets.",
+      "It lists every type of the format that the library models, with the latest version of the type",
+      "that the library models and the members or cases it reads. A member or a case that a later",
+      "version than 1.0 introduced shows that version in brackets.",
       "",
       "| Type identifier | Swift type | Target | Kind | Version | Members or cases |",
       "| --- | --- | --- | --- | --- | --- |",
-    ] + rows.sorted() + [""]
+    ] + rows.sorted() + [
+      "",
+      "## Enumerations",
+      "",
+      "A value outside its list is kept as it was read and written back.",
+      "",
+      "| Swift type | Target | Values |",
+      "| --- | --- | --- |",
+    ] + enumerations.sorted() + [""]
   try Data(lines.joined(separator: "\n").utf8).write(to: URL(fileURLWithPath: arguments[2]))
 } catch {
   FileHandle.standardError.write(Data("generate-modelled-types: \(error)\n".utf8))
