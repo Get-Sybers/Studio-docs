@@ -3,8 +3,8 @@ public import WireFormat
 
 /// One element of a paragraph: a run of text, a link, or an object set in the line.
 public struct ParagraphContent: WireUnion {
-  /// The forms that the library models.
-  public enum Form: Sendable, Hashable {
+  /// The forms that the library models; each is kept out of line, so the value stays small.
+  public indirect enum Form: Sendable, Hashable {
     /// A link with its text.
     case hyperlink(HyperlinkField)
     /// An object set in the line; the library keeps it as JSON and does not model it.

@@ -3,8 +3,8 @@ public import WireFormat
 
 /// The bytes of an image or other media: carried in the JSON, or kept as a file of the package.
 public struct ResourceReference: WireUnion {
-  /// The forms that the library models.
-  public enum Form: Sendable, Hashable {
+  /// The forms that the library models; each is kept out of line, so the value stays small.
+  public indirect enum Form: Sendable, Hashable {
     /// The bytes are in the JSON, as Base64.
     case embedded(EmbeddedResource)
     /// The bytes are a file in the package's `Data` directory.

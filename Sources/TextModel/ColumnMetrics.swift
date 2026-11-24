@@ -3,8 +3,8 @@ public import WireFormat
 
 /// How a text area is divided into columns.
 public struct ColumnMetrics: WireUnion {
-  /// The forms that the library models.
-  public enum Form: Sendable, Hashable {
+  /// The forms that the library models; each is kept out of line, so the value stays small.
+  public indirect enum Form: Sendable, Hashable {
     /// Columns of one width.
     case equal(EqualColumns)
     /// One column.

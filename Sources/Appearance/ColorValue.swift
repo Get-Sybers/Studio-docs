@@ -3,8 +3,8 @@ public import WireFormat
 
 /// A colour, in one of the forms the format gives it.
 public struct ColorValue: WireUnion {
-  /// The forms that the library models.
-  public enum Form: Sendable, Hashable {
+  /// The forms that the library models; each is kept out of line, so the value stays small.
+  public indirect enum Form: Sendable, Hashable {
     /// Red, green, blue and alpha in a named colour space.
     case rgba(RGBAColor)
   }

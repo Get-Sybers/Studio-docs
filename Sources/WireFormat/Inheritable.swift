@@ -1,7 +1,7 @@
-/// A property that an object may leave to its preset, clear, or set.
+/// A property that an object may leave to its preset, clear with `null`, or set.
 ///
-/// The format tells an omitted member from a `null` one: the first inherits, the second stops the search.
-public enum Inheritable<Value> {
+/// A value is kept out of line, so that a type with many such members stays small.
+public indirect enum Inheritable<Value> {
   /// The member is omitted: the value comes from the preset chain, then from the declared default.
   case inherited
   /// The member is `null`: the property has no value, whatever a preset says.

@@ -1,0 +1,17 @@
+{
+  "attributed: an inline object and an element the library does not model" : "[Before] paragraph=-\n[<FFFC><FFFC>] paragraph=-\n[<FFFC>] paragraph=-\n[after] paragraph=-\n[<A>] paragraph=-",
+  "attributed: an italic run that begins and ends with punctuation" : "[She wrote ] paragraph=-\n[<2018>never!<2019>] italic paragraph=-\n[ and left.] paragraph=-\n[<A>] paragraph=-",
+  "attributed: an italic run that begins with a space" : "[He said] paragraph=-\n[ no] italic paragraph=-\n[ twice.] paragraph=-\n[<A>] paragraph=-",
+  "attributed: an italic run that ends with a space" : "[He said ] paragraph=-\n[no ] italic paragraph=-\n[twice.] paragraph=-\n[<A>] paragraph=-",
+  "attributed: an italic run that is only punctuation and space" : "[Wait] paragraph=-\n[ <2014> ] italic paragraph=-\n[what?] paragraph=-\n[<A>] paragraph=-",
+  "attributed: empty paragraphs, the last included" : "[One.] paragraph=-\n[<A>] paragraph=-\n[<A>] paragraph=p-2\n[Three.] paragraph=-\n[<A>] paragraph=-\n[<A>] paragraph=p-3",
+  "attributed: links" : "[See ] paragraph=-\n[the tables] italic link=https://example.org/tides paragraph=-\n[ or ] paragraph=-\n[go on] paragraph=-\n[.] paragraph=-\n[<A>] paragraph=-",
+  "attributed: no paragraphs" : "",
+  "attributed: other character properties and a preset" : "[styled] italic paragraph=-\n[<A>] paragraph=-",
+  "attributed: paragraph properties, breaks and identifiers" : "[First.] paragraph=p-1\n[<A>] paragraph=p-1\n[Second.] paragraph=p-2\n[<A>] paragraph=p-2",
+  "attributed: plain text" : "[Low water at six.] paragraph=-\n[<A>] paragraph=-",
+  "attributed: runs that touch" : "[bold] bold paragraph=-\n[italic] italic paragraph=-\n[plain] paragraph=-\n[both] italic bold paragraph=-\n[<A>] paragraph=-",
+  "attributed: switches that are off, cleared or left alone" : "[off] paragraph=-\n[cleared] paragraph=-\n[empty style] paragraph=-\n[<A>] paragraph=-",
+  "attributed: underline and strikethrough of each kind" : "[single] underline=single paragraph=-\n[double] underline=double paragraph=-\n[wavy] underline=wavy paragraph=-\n[struck] struck paragraph=-\n[twice] struck paragraph=-\n[<A>] paragraph=-",
+  "attributed: unusual characters" : "[non-breaking<A0>space, line<2028>separator, ] paragraph=-\n[e<301> and <E9>] italic paragraph=-\n[ <1F469><200D><1F4BB> <1F1EC><1F1E7> <FFFC> tab<9>here] paragraph=-\n[<A>] paragraph=-"
+}

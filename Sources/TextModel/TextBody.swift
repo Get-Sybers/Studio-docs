@@ -3,8 +3,8 @@ public import WireFormat
 
 /// A body of text: paragraphs, one plain string, or runs.
 public struct TextBody: WireUnion {
-  /// The forms that the library models.
-  public enum Form: Sendable, Hashable {
+  /// The forms that the library models; each is kept out of line, so the value stays small.
+  public indirect enum Form: Sendable, Hashable {
     /// Paragraphs, each with its own properties and contents.
     case paragraphs([Paragraph])
     /// Plain text in one style.

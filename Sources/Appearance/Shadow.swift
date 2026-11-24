@@ -3,8 +3,8 @@ public import WireFormat
 
 /// The shadow that an object or a run of text casts.
 public struct Shadow: WireUnion {
-  /// The forms that the library models.
-  public enum Form: Sendable, Hashable {
+  /// The forms that the library models; each is kept out of line, so the value stays small.
+  public indirect enum Form: Sendable, Hashable {
     /// A shadow that pools under the lower edge.
     case contact(ContactShadow)
     /// A shadow that curls away from the object.

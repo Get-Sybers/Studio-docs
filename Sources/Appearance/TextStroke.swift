@@ -3,8 +3,8 @@ public import WireFormat
 
 /// The outline of characters, or of a paragraph's borders: a stroke, or none.
 public struct TextStroke: WireUnion {
-  /// The forms that the library models.
-  public enum Form: Sendable, Hashable {
+  /// The forms that the library models; each is kept out of line, so the value stays small.
+  public indirect enum Form: Sendable, Hashable {
     /// No outline.
     case unstroked
     /// An outline.

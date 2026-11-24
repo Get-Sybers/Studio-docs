@@ -41,6 +41,18 @@ All notable changes to this package are recorded in this file. The format follow
   later major version of the package, and refuses to write a document that has validation errors.
   `UntypedBody` opens a Keynote presentation and writes it back as it was.
 - The target `TextDocument`: a small body of the library's own, a title, text styles and sections in order.
+- The target `AttributedText`: a bridge between paragraphs and Foundation's `AttributedString`, both ways.
+  Italic, bold and strikethrough travel as the inline presentation intent, underline and everything else as
+  attributes of the library's own, and a paragraph-bound attribute carries each paragraph's properties and
+  identifier. A run that holds a paragraph separator is refused.
+
+### Changed
+
+- The forms of a union and the values of `Inheritable` are kept out of line. A paragraph is 936 bytes where
+  it was 5,280, which a deep call on a secondary thread could not hold on its stack.
+
+### Added
+
 - The target `GoldenFiles`, which the tests share: one file of expected outputs for each test target.
 - The gate `make tidy conform`, the structural lint `scripts/structure-lint.sh`, and the workflow
   `Swift CI`.

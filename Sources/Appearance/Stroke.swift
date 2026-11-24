@@ -3,8 +3,8 @@ public import WireFormat
 
 /// What is drawn along an outline: a line, a picture frame, or nothing.
 public struct Stroke: WireUnion {
-  /// The forms that the library models.
-  public enum Form: Sendable, Hashable {
+  /// The forms that the library models; each is kept out of line, so the value stays small.
+  public indirect enum Form: Sendable, Hashable {
     /// Nothing.
     case empty
     /// A picture frame.
