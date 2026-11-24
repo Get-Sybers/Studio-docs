@@ -1,0 +1,505 @@
+{
+  "CharacterProperties": {
+    "background_color": {
+      "rgba": {
+        "red": 0.25
+      }
+    },
+    "baseline": "default",
+    "baseline_shift": 2,
+    "bold": true,
+    "capitalization": "all_caps",
+    "character_fill": {
+      "color": {
+        "rgba": {
+          "red": 0.25
+        }
+      }
+    },
+    "character_fill_should_fill_container": true,
+    "compatibility_font_name": "Old Fenwick",
+    "emphasis_mark": "•",
+    "font_features": [
+      {
+        "feature": 3,
+        "selector": 14
+      }
+    ],
+    "font_name": "Fenwick-Italic",
+    "font_size": 11.5,
+    "is_named_point_size": true,
+    "italic": true,
+    "language": "en-GB",
+    "ligatures": "all",
+    "shadow": {
+      "contactShadow": {
+        "opacity": 0.5
+      }
+    },
+    "strikethrough": "double",
+    "strikethrough_color": {
+      "rgba": {
+        "red": 0.25
+      }
+    },
+    "strikethrough_width": 1,
+    "stroke": "none",
+    "tracking": 0.02,
+    "underline": "double",
+    "underline_color": {
+      "rgba": {
+        "red": 0.25
+      }
+    },
+    "word_strikethrough": true,
+    "word_underline": true,
+    "writing_direction": "left_to_right"
+  },
+  "ColumnMetrics": [
+    {
+      "equal": {
+        "count": 2
+      }
+    },
+    "single",
+    {
+      "unequal": {
+        "column_widths": [
+          60,
+          40
+        ]
+      }
+    }
+  ],
+  "EqualColumns": {
+    "count": 2,
+    "gutter_width": 5
+  },
+  "FontFeature": {
+    "feature": 3,
+    "selector": 14
+  },
+  "Hyperlink": [
+    {
+      "file": "notes/tides.txt"
+    },
+    {
+      "program": "exit_slideshow"
+    },
+    {
+      "slide_jump": {
+        "by_identifier": "slide-harbour"
+      }
+    },
+    {
+      "url": "https://example.org/tides"
+    }
+  ],
+  "HyperlinkField": {
+    "target": {
+      "file": "notes/tides.txt"
+    },
+    "run": {
+      "string": "The gulls came back at noon."
+    }
+  },
+  "LineSpacing": {
+    "kind": "between",
+    "value": 1.2
+  },
+  "ListImageLabel": {
+    "scale": 1.25,
+    "offset": 2,
+    "resource": {
+      "base64_encoded": {
+        "string": "The gulls came back at noon.",
+        "filename": "harbour.png"
+      }
+    }
+  },
+  "ListLabel": [
+    {
+      "image": {
+        "resource": {
+          "base64_encoded": {
+            "string": "The gulls came back at noon.",
+            "filename": "harbour.png"
+          }
+        }
+      }
+    },
+    "none",
+    "null_image",
+    {
+      "number": {
+        "number_format": {
+          "kind": "alpha"
+        }
+      }
+    },
+    {
+      "string": {
+        "string": "The gulls came back at noon."
+      }
+    }
+  ],
+  "ListLevel": {
+    "label_indent": 18,
+    "text_indent": 1.5,
+    "label": {
+      "image": {
+        "resource": {
+          "base64_encoded": {
+            "string": "The gulls came back at noon.",
+            "filename": "harbour.png"
+          }
+        }
+      }
+    }
+  },
+  "ListNumberFormat": {
+    "kind": "alpha",
+    "upper": true,
+    "formal": true,
+    "format": "circled"
+  },
+  "ListNumberLabel": {
+    "number_format": {
+      "kind": "alpha"
+    },
+    "scale": 1.25,
+    "tiered": true
+  },
+  "ListProperties": {
+    "font_color": {
+      "rgba": {
+        "red": 0.25
+      }
+    },
+    "font_name": "Fenwick-Italic",
+    "writing_direction": "left_to_right",
+    "shadow": {
+      "contactShadow": {
+        "opacity": 0.5
+      }
+    },
+    "levels": [
+      {
+        "label_indent": 18,
+        "text_indent": 1.5,
+        "label": {
+          "image": {
+            "resource": {
+              "base64_encoded": {
+                "string": "The gulls came back at noon.",
+                "filename": "harbour.png"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "ListStringLabel": {
+    "string": "The gulls came back at noon.",
+    "scale": 1.25,
+    "offset": 2
+  },
+  "NamedCharacterStyle": {
+    "name": "Margin note",
+    "properties": {
+      "background_color": {
+        "rgba": {
+          "red": 0.25
+        }
+      }
+    }
+  },
+  "NamedListStyle": {
+    "name": "Margin note",
+    "properties": {
+      "font_color": {
+        "rgba": {
+          "red": 0.25
+        }
+      }
+    }
+  },
+  "NamedParagraphStyle": {
+    "name": "Margin note",
+    "properties": {
+      "alignment": "center"
+    }
+  },
+  "Paragraph": {
+    "style": {
+      "alignment": "center"
+    },
+    "list_style": {
+      "font_color": {
+        "rgba": {
+          "red": 0.25
+        }
+      }
+    },
+    "list_start": 3,
+    "list_level": 1,
+    "writing_direction": "left_to_right",
+    "contents": [
+      {
+        "run": {
+          "string": "The tide went out "
+        }
+      },
+      {
+        "run": {
+          "string": "slowly",
+          "style": {
+            "italic": true
+          }
+        }
+      },
+      {
+        "run": {
+          "string": ", and the boats leaned on their keels."
+        }
+      },
+      {
+        "hyperlink": {
+          "target": {
+            "url": "https://example.org/tides"
+          },
+          "run": {
+            "string": "Tide tables"
+          }
+        }
+      },
+      {
+        "inline_object": {
+          "image": {
+            "resource": {
+              "indirect": {
+                "filename": "anchor.png"
+              }
+            },
+            "description": "An anchor"
+          }
+        }
+      }
+    ],
+    "break_type": "column"
+  },
+  "ParagraphBorders": {
+    "stroke": "none",
+    "width": 320,
+    "offset": {
+      "dx": 1.5
+    },
+    "rounded": true,
+    "no_borders": true,
+    "all_borders": true,
+    "before": true,
+    "after": true,
+    "leading": true,
+    "trailing": true
+  },
+  "ParagraphContent": [
+    {
+      "hyperlink": {
+        "target": {
+          "file": "notes/tides.txt"
+        },
+        "run": {
+          "string": "The gulls came back at noon."
+        }
+      }
+    },
+    {
+      "inline_object": {
+        "image": {
+          "resource": {
+            "indirect": {
+              "filename": "anchor.png"
+            }
+          },
+          "description": "An anchor"
+        }
+      }
+    },
+    {
+      "run": {
+        "string": "The gulls came back at noon."
+      }
+    }
+  ],
+  "ParagraphProperties": {
+    "alignment": "center",
+    "decimal_tab": ".",
+    "default_tabs": 36,
+    "fill": {
+      "rgba": {
+        "red": 0.25
+      }
+    },
+    "first_line_indent": 18,
+    "following_style": "body",
+    "hyphenate": true,
+    "list_style": "bullets",
+    "keep_lines_together": true,
+    "keep_with_next": true,
+    "left_indent": 9,
+    "line_spacing": {
+      "value": 1.2
+    },
+    "outline_level": 0,
+    "start_on_new_page": true,
+    "borders": {
+      "stroke": "none"
+    },
+    "right_indent": 9,
+    "space_after": 6,
+    "space_before": 0,
+    "tabs": [
+      {
+        "position": 72
+      }
+    ],
+    "prevent_widow": true,
+    "show_in_bookmarks": true,
+    "show_in_tocnavigator": true,
+    "character_properties": {
+      "background_color": {
+        "rgba": {
+          "red": 0.25
+        }
+      }
+    }
+  },
+  "SlideTarget": [
+    {
+      "by_identifier": "slide-harbour"
+    },
+    "first",
+    "last",
+    "last_viewed",
+    "next",
+    "previous"
+  ],
+  "Stylesheet": {
+    "character_styles": [
+      {
+        "properties": {
+          "background_color": {
+            "rgba": {
+              "red": 0.25
+            }
+          }
+        }
+      }
+    ],
+    "paragraph_styles": [
+      {
+        "properties": {
+          "alignment": "center"
+        }
+      }
+    ],
+    "list_styles": [
+      {
+        "properties": {
+          "font_color": {
+            "rgba": {
+              "red": 0.25
+            }
+          }
+        }
+      }
+    ]
+  },
+  "TabStop": {
+    "position": 72,
+    "kind": "center",
+    "leader": "."
+  },
+  "TextBody": [
+    {
+      "paragraphs": [
+        {
+          "contents": [
+            {
+              "run": {
+                "string": "First paragraph."
+              }
+            }
+          ]
+        },
+        {
+          "style": {
+            "alignment": "center"
+          },
+          "contents": [
+            {
+              "run": {
+                "string": "Second paragraph."
+              }
+            }
+          ],
+          "break_type": "none"
+        }
+      ]
+    },
+    {
+      "string": "The gulls came back at noon."
+    },
+    {
+      "text_runs": [
+        {
+          "string": "Plain, then "
+        },
+        {
+          "string": "bold",
+          "style": {
+            "bold": true
+          }
+        }
+      ]
+    }
+  ],
+  "TextLayoutProperties": {
+    "columns": {
+      "equal": {
+        "count": 2
+      }
+    },
+    "continuous": true,
+    "margins": {
+      "top": 4
+    },
+    "padding": {
+      "top": 4
+    },
+    "shrink_to_fit": true,
+    "vertical_alignment": "bottom",
+    "vertical_text": true,
+    "writing_direction": "left_to_right"
+  },
+  "TextRun": {
+    "string": "A run with a non-breaking space, a line separator and é:   é 😀",
+    "style": {
+      "background_color": {
+        "rgba": {
+          "red": 0.25
+        }
+      }
+    }
+  },
+  "UnequalColumns": {
+    "column_widths": [
+      60,
+      40
+    ],
+    "gutter_widths": [
+      0
+    ]
+  }
+}

@@ -1,0 +1,361 @@
+{
+  "enumerations": [
+    {"name": "Baseline", "values": ["default", "subscript", "superscript"]},
+    {"name": "Capitalization", "values": ["all_caps", "none", "small_caps", "start", "title"]},
+    {"name": "Ligatures", "values": ["all", "required", "standard"]},
+    {"name": "StrikethroughStyle", "values": ["double", "none", "single"]},
+    {"name": "UnderlineStyle", "values": ["double", "none", "single", "wavy"]},
+    {"name": "WritingDirection", "values": ["left_to_right", "natural", "right_to_left"]},
+    {"name": "ParagraphAlignment", "values": ["center", "justified", "left", "natural", "right"]},
+    {"name": "LineSpacingKind", "values": ["between", "exact", "maximum", "minimum", "relative"]},
+    {"name": "TabAlignment", "values": ["center", "decimal", "left", "right"]},
+    {"name": "ParagraphBreak", "values": ["column", "none", "nontopic", "page", "para", "section"]},
+    {"name": "NumberingSystem", "values": ["alpha", "arabian", "arabian_abjad", "arabian_alpha", "hebrew", "hebrew_biblical", "hiragana", "hiragana_iroha", "japanese", "katakana", "katakana_iroha", "korean", "numeric", "roman", "simplified_chinese", "traditional_chinese"]},
+    {"name": "NumberDecoration", "values": ["circled", "decimal", "double_paren", "paren", "standard"]},
+    {"name": "VerticalTextAlignment", "values": ["bottom", "center", "top"]}
+  ],
+  "objects": [
+    {
+      "type": "com.apple.apps.content-language.paragraph",
+      "name": "Paragraph",
+      "version": "1.0",
+      "members": [
+        {"name": "style", "kind": "optional"},
+        {"name": "list_style", "kind": "optional"},
+        {"name": "list_start", "kind": "optional"},
+        {"name": "list_level", "kind": "optional"},
+        {"name": "writing_direction", "kind": "optional"},
+        {"name": "contents", "kind": "optional"},
+        {"name": "break_type", "kind": "optional"}
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.paragraph.hyperlink-field",
+      "name": "HyperlinkField",
+      "version": "1.0",
+      "members": [
+        {"name": "target", "kind": "required"},
+        {"name": "run", "kind": "required"}
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.text-run",
+      "name": "TextRun",
+      "version": "1.0",
+      "members": [
+        {"name": "string", "kind": "required"},
+        {"name": "style", "kind": "optional"}
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.character-properties",
+      "name": "CharacterProperties",
+      "version": "1.0",
+      "members": [
+        {"name": "background_color", "kind": "inheritable"},
+        {"name": "baseline", "kind": "inheritable"},
+        {"name": "baseline_shift", "kind": "inheritable"},
+        {"name": "bold", "kind": "inheritable"},
+        {"name": "capitalization", "kind": "inheritable"},
+        {"name": "character_fill", "kind": "inheritable"},
+        {"name": "character_fill_should_fill_container", "kind": "inheritable"},
+        {"name": "compatibility_font_name", "kind": "inheritable"},
+        {"name": "emphasis_mark", "kind": "inheritable"},
+        {"name": "font_features", "kind": "inheritable"},
+        {"name": "font_name", "kind": "inheritable"},
+        {"name": "font_size", "kind": "inheritable"},
+        {"name": "is_named_point_size", "kind": "inheritable"},
+        {"name": "italic", "kind": "inheritable"},
+        {"name": "language", "kind": "inheritable"},
+        {"name": "ligatures", "kind": "inheritable"},
+        {"name": "shadow", "kind": "inheritable"},
+        {"name": "strikethrough", "kind": "inheritable"},
+        {"name": "strikethrough_color", "kind": "inheritable"},
+        {"name": "strikethrough_width", "kind": "inheritable"},
+        {"name": "stroke", "kind": "inheritable"},
+        {"name": "tracking", "kind": "inheritable"},
+        {"name": "underline", "kind": "inheritable"},
+        {"name": "underline_color", "kind": "inheritable"},
+        {"name": "word_strikethrough", "kind": "inheritable"},
+        {"name": "word_underline", "kind": "inheritable"},
+        {"name": "writing_direction", "kind": "inheritable"}
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.character-properties.font-features-type",
+      "name": "FontFeature",
+      "version": "1.0",
+      "members": [
+        {"name": "feature", "kind": "required"},
+        {"name": "selector", "kind": "required"}
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.paragraph-properties",
+      "name": "ParagraphProperties",
+      "version": "1.0",
+      "members": [
+        {"name": "alignment", "kind": "inheritable"},
+        {"name": "decimal_tab", "kind": "inheritable"},
+        {"name": "default_tabs", "kind": "inheritable"},
+        {"name": "fill", "kind": "inheritable"},
+        {"name": "first_line_indent", "kind": "inheritable"},
+        {"name": "following_style", "kind": "inheritable"},
+        {"name": "hyphenate", "kind": "inheritable"},
+        {"name": "list_style", "kind": "inheritable"},
+        {"name": "keep_lines_together", "kind": "inheritable"},
+        {"name": "keep_with_next", "kind": "inheritable"},
+        {"name": "left_indent", "kind": "inheritable"},
+        {"name": "line_spacing", "kind": "inheritable"},
+        {"name": "outline_level", "kind": "inheritable"},
+        {"name": "start_on_new_page", "kind": "inheritable"},
+        {"name": "borders", "kind": "optional"},
+        {"name": "right_indent", "kind": "inheritable"},
+        {"name": "space_after", "kind": "inheritable"},
+        {"name": "space_before", "kind": "inheritable"},
+        {"name": "tabs", "kind": "inheritable"},
+        {"name": "prevent_widow", "kind": "inheritable"},
+        {"name": "show_in_bookmarks", "kind": "inheritable"},
+        {"name": "show_in_tocnavigator", "kind": "inheritable"},
+        {"name": "character_properties", "kind": "optional"}
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.line-spacing-type",
+      "name": "LineSpacing",
+      "version": "1.0",
+      "members": [
+        {"name": "kind", "kind": "optional"},
+        {"name": "value", "kind": "required"}
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.paragraph-properties.border-style-type",
+      "name": "ParagraphBorders",
+      "version": "1.0",
+      "members": [
+        {"name": "stroke", "kind": "inheritable"},
+        {"name": "width", "kind": "inheritable"},
+        {"name": "offset", "kind": "inheritable"},
+        {"name": "rounded", "kind": "inheritable"},
+        {"name": "no_borders", "kind": "optional"},
+        {"name": "all_borders", "kind": "optional"},
+        {"name": "before", "kind": "optional"},
+        {"name": "after", "kind": "optional"},
+        {"name": "leading", "kind": "optional"},
+        {"name": "trailing", "kind": "optional"}
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.tab-stop-type",
+      "name": "TabStop",
+      "version": "1.0",
+      "members": [
+        {"name": "position", "kind": "required"},
+        {"name": "kind", "kind": "optional"},
+        {"name": "leader", "kind": "optional"}
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.list-properties",
+      "name": "ListProperties",
+      "version": "1.0",
+      "members": [
+        {"name": "font_color", "kind": "inheritable"},
+        {"name": "font_name", "kind": "inheritable"},
+        {"name": "writing_direction", "kind": "inheritable"},
+        {"name": "shadow", "kind": "inheritable"},
+        {"name": "levels", "kind": "inheritable"}
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.list-level-type",
+      "name": "ListLevel",
+      "version": "1.0",
+      "members": [
+        {"name": "label_indent", "kind": "required", "minimum": 0},
+        {"name": "text_indent", "kind": "required", "minimum": 0},
+        {"name": "label", "kind": "required"}
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.list-label-type.list-number-label",
+      "name": "ListNumberLabel",
+      "version": "1.0",
+      "members": [
+        {"name": "number_format", "kind": "optional"},
+        {"name": "scale", "kind": "optional"},
+        {"name": "tiered", "kind": "optional"}
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.list-label-type.list-string-label",
+      "name": "ListStringLabel",
+      "version": "1.0",
+      "members": [
+        {"name": "string", "kind": "required"},
+        {"name": "scale", "kind": "optional"},
+        {"name": "offset", "kind": "optional"}
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.list-label-type.list-image-label",
+      "name": "ListImageLabel",
+      "version": "1.0",
+      "members": [
+        {"name": "scale", "kind": "optional"},
+        {"name": "offset", "kind": "optional"},
+        {"name": "resource", "kind": "required"}
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.number-format-type",
+      "name": "ListNumberFormat",
+      "version": "1.0",
+      "members": [
+        {"name": "kind", "kind": "optional"},
+        {"name": "upper", "kind": "optional"},
+        {"name": "formal", "kind": "optional"},
+        {"name": "format", "kind": "optional"}
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.layout-properties",
+      "name": "TextLayoutProperties",
+      "version": "1.0",
+      "members": [
+        {"name": "columns", "kind": "inheritable"},
+        {"name": "continuous", "kind": "inheritable"},
+        {"name": "margins", "kind": "inheritable"},
+        {"name": "padding", "kind": "inheritable"},
+        {"name": "shrink_to_fit", "kind": "inheritable"},
+        {"name": "vertical_alignment", "kind": "inheritable"},
+        {"name": "vertical_text", "kind": "inheritable"},
+        {"name": "writing_direction", "kind": "inheritable"}
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.column-metrics.equal-columns-description",
+      "name": "EqualColumns",
+      "version": "1.0",
+      "members": [
+        {"name": "count", "kind": "required", "minimum": 1, "maximum": 10},
+        {"name": "gutter_width", "kind": "optional", "minimum": 0, "maximum": 75}
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.column-metrics.unequal-columns-description",
+      "name": "UnequalColumns",
+      "version": "1.0",
+      "members": [
+        {"name": "column_widths", "kind": "required", "minimumCount": 1, "maximumCount": 10},
+        {"name": "gutter_widths", "kind": "optional", "minimumCount": 1, "maximumCount": 9}
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.stylesheet",
+      "name": "Stylesheet",
+      "version": "1.0",
+      "members": [
+        {"name": "character_styles", "kind": "optional"},
+        {"name": "paragraph_styles", "kind": "optional"},
+        {"name": "list_styles", "kind": "optional"}
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.stylesheet.character-style",
+      "name": "NamedCharacterStyle",
+      "version": "1.0",
+      "members": [
+        {"name": "name", "kind": "optional"},
+        {"name": "properties", "kind": "required"}
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.stylesheet.paragraph-style",
+      "name": "NamedParagraphStyle",
+      "version": "1.0",
+      "members": [
+        {"name": "name", "kind": "optional"},
+        {"name": "properties", "kind": "required"}
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.stylesheet.list-style",
+      "name": "NamedListStyle",
+      "version": "1.0",
+      "members": [
+        {"name": "name", "kind": "optional"},
+        {"name": "properties", "kind": "required"}
+      ]
+    }
+  ],
+  "unions": [
+    {
+      "type": "com.apple.apps.content-language.text",
+      "name": "TextBody",
+      "version": "1.0",
+      "cases": [
+        {"name": "paragraphs"},
+        {"name": "string"},
+        {"name": "text_runs"}
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.paragraph.constituent",
+      "name": "ParagraphContent",
+      "version": "1.0",
+      "cases": [
+        {"name": "hyperlink"},
+        {"name": "inline_object"},
+        {"name": "run"}
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.hyperlink",
+      "name": "Hyperlink",
+      "version": "1.0",
+      "cases": [
+        {"name": "file"},
+        {"name": "program"},
+        {"name": "slide_jump"},
+        {"name": "url"}
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.hyperlink.slide-target",
+      "name": "SlideTarget",
+      "version": "1.0",
+      "cases": [
+        {"name": "by_identifier"},
+        {"name": "first", "valueless": true},
+        {"name": "last", "valueless": true},
+        {"name": "last_viewed", "valueless": true},
+        {"name": "next", "valueless": true},
+        {"name": "previous", "valueless": true}
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.list-label-type",
+      "name": "ListLabel",
+      "version": "1.0",
+      "cases": [
+        {"name": "image"},
+        {"name": "none", "valueless": true},
+        {"name": "null_image", "valueless": true},
+        {"name": "number"},
+        {"name": "string"}
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.column-metrics",
+      "name": "ColumnMetrics",
+      "version": "1.0",
+      "cases": [
+        {"name": "equal"},
+        {"name": "single", "valueless": true},
+        {"name": "unequal"}
+      ]
+    }
+  ]
+}

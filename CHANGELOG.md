@@ -22,6 +22,9 @@ All notable changes to this package are recorded in this file. The format follow
   marks of a premium resource, with the format table that states their members.
 - The target `Appearance`: colours, fills, gradients, image fills, shadows, strokes and the small
   geometric values they use.
+- The target `TextModel`: text bodies, paragraphs, runs, links, breaks, character, paragraph, list and
+  layout properties, and the text styles of a stylesheet. A plain string and a list of runs split into
+  paragraphs at U+000A, U+000D and U+2029.
 - The target `GoldenFiles`, which the tests share: one file of expected outputs for each test target.
 - The gate `make tidy conform`, the structural lint `scripts/structure-lint.sh`, and the workflow
   `Swift CI`.
