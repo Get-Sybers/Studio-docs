@@ -6,6 +6,8 @@ All notable changes to this package are recorded in this file. The format follow
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-11-24
+
 ### Added
 
 - The targets `CanvasCommon`, `TableModel`, `ChartModel`, `CanvasModel` and `PresentationModel`: every type that
@@ -90,5 +92,6 @@ All notable changes to this package are recorded in this file. The format follow
 - The example of the README and the test `createSaveReopen` are one: a section of two paragraphs, one of
   them styled, saved as an archive and opened again.
 
-[Unreleased]: https://github.com/Get-Sybers/Studio-docs/compare/0.1.0...HEAD
+[Unreleased]: https://github.com/Get-Sybers/Studio-docs/compare/0.1.1...HEAD
+[0.1.1]: https://github.com/Get-Sybers/Studio-docs/compare/0.1.0...0.1.1
 [0.1.0]: https://github.com/Get-Sybers/Studio-docs/releases/tag/0.1.0
