@@ -69,5 +69,29 @@ and every night, with read-only permissions.
 | `build-test` | `xcode-27` | when the build is needed: `make tidy conform RESOLVE=--disable-automatic-resolution` |
 | `CI OK` | `ubuntu-24.04` | fails when a job above ended as anything but success or skipped; the one check to require |
 
-A change to the documents alone starts no macOS job. Dependabot raises the GitHub Actions pins weekly,
-seven days after a release.
+A change to the documents alone starts no macOS job. Dependabot raises the GitHub Actions pins and the Swift
+packages weekly, seven days after a release, each group in one pull request.
+
+## Release
+
+`.github/workflows/release.yml` is run by hand. A pull request cuts the version first: it moves the entries
+under `## [Unreleased]` to `## [x.y.z] - date` in `CHANGELOG.md`. Then the workflow runs on `main` with
+`publish` set. The version is never an input.
+
+| Job | Runs on | Does |
+| --- | --- | --- |
+| `gate` | `xcode-27` | reads the newest version `CHANGELOG.md` names, refuses one whose tag exists, runs `make tidy conform RESOLVE=--disable-automatic-resolution`, and keeps the section of that version as the release notes |
+| `publish` | `ubuntu-24.04` | with `publish` set, in the environment `release`: creates the tag and the GitHub release with those notes; it runs no code of the repository |
+
+Without `publish` the workflow runs the gate alone and resolves the version 0.0.0, which is no release. It also
+runs on a pull request that changes the workflow itself.
+
+## Rules on GitHub
+
+The ruleset `protect-main` applies to the default branch: nobody deletes or force-pushes it, every commit on it
+carries a verified signature, and a change reaches it through a pull request, merged by merge commit, squash
+or rebase, once the status check `CI OK` has passed. A commit made through GitHub's API or web editor is signed
+by GitHub and passes; a commit pushed from a machine without a signing key does not.
+
+The environment `release` has the owner as its required reviewer and `main` as its only branch; the job
+`publish` runs in it.

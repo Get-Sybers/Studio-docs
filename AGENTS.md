@@ -35,6 +35,8 @@ These rules bind every contributor, human or agent. `make tidy conform` checks m
   code of Apple's library is copied into it, and no file of Apple's is committed.
 - No personal name and no email address stands in a file or in a commit message.
 - `NOTICE` credits Apple's documentation and library as the reference for the format.
+- Every commit on `main` carries a verified signature. A commit made through GitHub's API or web editor is
+  signed by GitHub; one pushed from a machine without a signing key is refused.
 
 ## Where things live
 
@@ -47,7 +49,9 @@ These rules bind every contributor, human or agent. `make tidy conform` checks m
 | `docs/Architecture.md` | the targets, their concerns, their dependencies and the layers |
 | `docs/Conformance.md` | the gate, the structural lint, the version pins and CI |
 | `docs/Modelled-types.md` | the generated list of modelled types |
-| `.github/workflows/swift-ci.yml` | CI, which runs the gate |
+| `.github/workflows/` | `swift-ci.yml`, the CI that runs the gate, and `release.yml`, the release run by hand |
+| `.github/dependabot.yml` | the weekly raising of the Actions pins and the Swift packages |
+| `.github/pull_request_template.md` | the checklist of a pull request |
 | `Makefile` | the gate `conform`, `tidy` and `upgrade` |
 | `CHANGELOG.md` | every change, under `## [Unreleased]` until a release |
 | `README.md` | what the package is, how to use it, what it models and where it departs from Apple's reader |
