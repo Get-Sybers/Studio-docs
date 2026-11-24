@@ -25,6 +25,10 @@ All notable changes to this package are recorded in this file. The format follow
 - The target `TextModel`: text bodies, paragraphs, runs, links, breaks, character, paragraph, list and
   layout properties, and the text styles of a stylesheet. A plain string and a list of runs split into
   paragraphs at U+000A, U+000D and U+2029.
+- The target `PresetStyles`: the presets of `presets.json`, their inheritance, and a resolver that
+  returns the effective properties of an object: its own, its preset's, the parents', then the declared
+  default. A `null` stops the search. `TextModel` adds the layering of a run over its paragraph and the
+  text styles of a stylesheet.
 - The target `GoldenFiles`, which the tests share: one file of expected outputs for each test target.
 - The gate `make tidy conform`, the structural lint `scripts/structure-lint.sh`, and the workflow
   `Swift CI`.

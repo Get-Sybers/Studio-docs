@@ -34,7 +34,9 @@ let package = Package(
   products: [
     .library(
       name: "StudioDocs",
-      targets: ["Appearance", "JSONTree", "ResourceReferences", "TextModel", "WireFormat", "ZipArchives"])
+      targets: [
+        "Appearance", "JSONTree", "PresetStyles", "ResourceReferences", "TextModel", "WireFormat", "ZipArchives",
+      ])
   ],
   dependencies: [
     .package(url: "https://github.com/apple/swift-collections", from: "1.7.0")
@@ -44,9 +46,12 @@ let package = Package(
     library("ZipArchives", needs: ["RawDeflate", ordered]),
     library("JSONTree", needs: [ordered]),
     library("WireFormat", needs: ["JSONTree", bits]),
+    library("PresetStyles", needs: ["JSONTree", "WireFormat", ordered]),
     library("ResourceReferences", needs: ["JSONTree", "WireFormat"], table: true),
     library("Appearance", needs: ["JSONTree", "ResourceReferences", "WireFormat"], table: true),
-    library("TextModel", needs: ["Appearance", "JSONTree", "ResourceReferences", "WireFormat"], table: true),
+    library(
+      "TextModel", needs: ["Appearance", "JSONTree", "PresetStyles", "ResourceReferences", "WireFormat"],
+      table: true),
     library("GoldenFiles"),
     library("ModelFixtures", needs: ["JSONTree", "WireFormat"]),
 
@@ -54,6 +59,7 @@ let package = Package(
     tests(of: "ZipArchives", with: ["GoldenFiles", "RawDeflate"]),
     tests(of: "JSONTree", with: ["GoldenFiles"]),
     tests(of: "WireFormat", with: ["GoldenFiles", "JSONTree"]),
+    tests(of: "PresetStyles", with: ["Appearance", "GoldenFiles", "JSONTree", "TextModel", "WireFormat"]),
     tests(of: "ResourceReferences", with: ["GoldenFiles", "JSONTree", "ModelFixtures", "WireFormat"]),
     tests(of: "Appearance", with: ["GoldenFiles", "JSONTree", "ModelFixtures", "WireFormat"]),
     tests(of: "TextModel", with: ["Appearance", "GoldenFiles", "JSONTree", "ModelFixtures", "WireFormat"]),
