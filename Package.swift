@@ -45,6 +45,7 @@ let package = Package(
     library("JSONTree", needs: [ordered]),
     library("WireFormat", needs: ["JSONTree", bits]),
     library("ResourceReferences", needs: ["JSONTree", "WireFormat"], table: true),
+    library("Appearance", needs: ["JSONTree", "ResourceReferences", "WireFormat"], table: true),
     library("GoldenFiles"),
     library("ModelFixtures", needs: ["JSONTree", "WireFormat"]),
 
@@ -53,6 +54,7 @@ let package = Package(
     tests(of: "JSONTree", with: ["GoldenFiles"]),
     tests(of: "WireFormat", with: ["GoldenFiles", "JSONTree"]),
     tests(of: "ResourceReferences", with: ["GoldenFiles", "JSONTree", "ModelFixtures", "WireFormat"]),
+    tests(of: "Appearance", with: ["GoldenFiles", "JSONTree", "ModelFixtures", "WireFormat"]),
     tests(of: "GoldenFiles"),
     tests(of: "ModelFixtures", with: ["JSONTree", "WireFormat"]),
   ]

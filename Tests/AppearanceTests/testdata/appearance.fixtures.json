@@ -1,0 +1,257 @@
+{
+  "ColorValue": [
+    {
+      "rgba": {
+        "red": 0.25
+      }
+    }
+  ],
+  "ContactShadow": {
+    "opacity": 0.5,
+    "color": {
+      "rgba": {
+        "red": 0.25
+      }
+    },
+    "offset": 2,
+    "radius": 12,
+    "height": 0.25
+  },
+  "CurvedShadow": {
+    "angle": 45,
+    "opacity": 0.5,
+    "color": {
+      "rgba": {
+        "red": 0.25
+      }
+    },
+    "offset": 2,
+    "radius": 12,
+    "curve": 0.5
+  },
+  "DropShadow": {
+    "angle": 45,
+    "opacity": 0.5,
+    "color": {
+      "rgba": {
+        "red": 0.25
+      }
+    },
+    "offset": 2,
+    "radius": 12
+  },
+  "Fill": [
+    {
+      "color": {
+        "rgba": {
+          "red": 0.25
+        }
+      }
+    },
+    {
+      "gradient": {
+        "stops": [
+          {
+            "color": {
+              "rgba": {
+                "red": 0.25
+              }
+            },
+            "fraction": 0.5
+          }
+        ],
+        "flavor": {
+          "linear": {
+            "angle": 45
+          }
+        }
+      }
+    },
+    {
+      "image": {
+        "resource": {
+          "base64_encoded": {
+            "string": "The gulls came back at noon.",
+            "filename": "harbour.png"
+          }
+        },
+        "technique": "natural_size"
+      }
+    }
+  ],
+  "GradientFill": {
+    "is_advanced": true,
+    "stops": [
+      {
+        "color": {
+          "rgba": {
+            "red": 0.25
+          }
+        },
+        "fraction": 0.5
+      }
+    ],
+    "opacity": 0.5,
+    "flavor": {
+      "linear": {
+        "angle": 45
+      }
+    }
+  },
+  "GradientFlavor": [
+    {
+      "linear": {
+        "angle": 45
+      }
+    },
+    {
+      "radial": {
+        "start_point": {
+          "x": 12,
+          "y": 34.5
+        },
+        "end_point": {
+          "x": 12,
+          "y": 34.5
+        },
+        "base_natural_size": {
+          "width": 320,
+          "height": 0.25
+        }
+      }
+    }
+  ],
+  "GradientStop": {
+    "color": {
+      "rgba": {
+        "red": 0.25
+      }
+    },
+    "fraction": 0.5,
+    "inflection": 0.25
+  },
+  "ImageFill": {
+    "resource": {
+      "base64_encoded": {
+        "string": "The gulls came back at noon.",
+        "filename": "harbour.png"
+      }
+    },
+    "technique": "natural_size",
+    "scale_percent": 80,
+    "tint_color": {
+      "rgba": {
+        "red": 0.25
+      }
+    }
+  },
+  "Insets": {
+    "top": 4,
+    "bottom": 4,
+    "left": 8,
+    "right": 8
+  },
+  "LineStroke": {
+    "color": {
+      "rgba": {
+        "red": 0.25
+      }
+    },
+    "width": 320,
+    "pattern": "calligraphy"
+  },
+  "LinearFlavor": {
+    "angle": 45,
+    "start_point": {
+      "x": 12,
+      "y": 34.5
+    },
+    "end_point": {
+      "x": 12,
+      "y": 34.5
+    },
+    "base_natural_size": {
+      "width": 320,
+      "height": 0.25
+    }
+  },
+  "OffsetValue": {
+    "dx": 1.5,
+    "dy": -2
+  },
+  "PictureFrame": {
+    "name": "antique",
+    "scale_percent": 80
+  },
+  "PositionValue": {
+    "x": 12,
+    "y": 34.5
+  },
+  "RGBAColor": {
+    "red": 0.25,
+    "green": 0.5,
+    "blue": 0.75,
+    "alpha": 1,
+    "color_space": "p3",
+    "headroom": 2
+  },
+  "RadialFlavor": {
+    "start_point": {
+      "x": 12,
+      "y": 34.5
+    },
+    "end_point": {
+      "x": 12,
+      "y": 34.5
+    },
+    "base_natural_size": {
+      "width": 320,
+      "height": 0.25
+    }
+  },
+  "Shadow": [
+    {
+      "contactShadow": {
+        "opacity": 0.5
+      }
+    },
+    {
+      "curvedShadow": {
+        "angle": 45
+      }
+    },
+    {
+      "dropShadow": {
+        "angle": 45
+      }
+    },
+    "none"
+  ],
+  "SizeValue": {
+    "width": 320,
+    "height": 0.25
+  },
+  "Stroke": [
+    "empty",
+    {
+      "frame": {
+        "name": "antique"
+      }
+    },
+    {
+      "line": {
+        "color": {
+          "rgba": {
+            "red": 0.25
+          }
+        }
+      }
+    }
+  ],
+  "TextStroke": [
+    "none",
+    {
+      "stroke": "empty"
+    }
+  ]
+}

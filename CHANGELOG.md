@@ -20,6 +20,8 @@ All notable changes to this package are recorded in this file. The format follow
   type reads and writes every member that its format table lists.
 - The target `ResourceReferences`: the resource union, the indirect and the embedded resource, and the
   marks of a premium resource, with the format table that states their members.
+- The target `Appearance`: colours, fills, gradients, image fills, shadows, strokes and the small
+  geometric values they use.
 - The target `GoldenFiles`, which the tests share: one file of expected outputs for each test target.
 - The gate `make tidy conform`, the structural lint `scripts/structure-lint.sh`, and the workflow
   `Swift CI`.

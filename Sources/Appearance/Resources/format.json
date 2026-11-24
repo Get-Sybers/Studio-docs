@@ -1,0 +1,229 @@
+{
+  "enumerations": [
+    {"name": "RGBColorSpace", "values": ["p3", "srgb"]},
+    {"name": "ImageFillTechnique", "values": ["natural_size", "scale_to_fill", "scale_to_fit", "stretch", "tile"]},
+    {"name": "StrokePattern", "values": ["calligraphy", "chalk", "dry_brush", "feathered_brush", "long_dash", "medium_dash", "pen", "round_dash", "short_dash", "solid"]},
+    {"name": "PictureFrameName", "values": ["antique", "crayon_line", "formal_inset", "formal_shadow", "graph_paper", "headlines", "jet_set", "photo_portfolio1", "portfolio_inset", "pushpin", "renaissance1", "scrapbook2b", "storyboard", "vintage_inset"]}
+  ],
+  "objects": [
+    {
+      "type": "com.apple.apps.content-language.color.rgba",
+      "name": "RGBAColor",
+      "version": "1.1",
+      "members": [
+        {"name": "red", "kind": "optional", "default": 0, "minimum": 0, "maximum": 1},
+        {"name": "green", "kind": "optional", "default": 0, "minimum": 0, "maximum": 1},
+        {"name": "blue", "kind": "optional", "default": 0, "minimum": 0, "maximum": 1},
+        {"name": "alpha", "kind": "optional", "default": 1, "minimum": 0, "maximum": 1},
+        {"name": "color_space", "kind": "optional", "default": "srgb"},
+        {"name": "headroom", "kind": "optional", "since": "1.1", "default": 1, "minimum": 1, "maximum": 16}
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.fill.gradient",
+      "name": "GradientFill",
+      "version": "1.1",
+      "members": [
+        {"name": "is_advanced", "kind": "optional", "since": "1.1", "default": false},
+        {"name": "stops", "kind": "required"},
+        {"name": "opacity", "kind": "optional", "default": 1, "minimum": 0, "maximum": 1},
+        {"name": "flavor", "kind": "required"}
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.fill.gradient.stop",
+      "name": "GradientStop",
+      "version": "1.0",
+      "members": [
+        {"name": "color", "kind": "required"},
+        {"name": "fraction", "kind": "required", "minimum": 0, "maximum": 1},
+        {"name": "inflection", "kind": "optional", "default": 0.5, "minimum": 0, "maximum": 1}
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.fill.gradient.flavor.linear",
+      "name": "LinearFlavor",
+      "version": "1.1",
+      "members": [
+        {"name": "angle", "kind": "required", "minimum": 0, "maximum": 360},
+        {"name": "start_point", "kind": "optional", "since": "1.1"},
+        {"name": "end_point", "kind": "optional", "since": "1.1"},
+        {"name": "base_natural_size", "kind": "optional", "since": "1.1"}
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.fill.gradient.flavor.radial",
+      "name": "RadialFlavor",
+      "version": "1.0",
+      "members": [
+        {"name": "start_point", "kind": "required"},
+        {"name": "end_point", "kind": "required"},
+        {"name": "base_natural_size", "kind": "required"}
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.fill.image-fill",
+      "name": "ImageFill",
+      "version": "1.0",
+      "members": [
+        {"name": "resource", "kind": "required"},
+        {"name": "technique", "kind": "required"},
+        {"name": "scale_percent", "kind": "optional", "default": 100, "minimum": 10, "maximum": 200},
+        {"name": "tint_color", "kind": "optional"}
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.position",
+      "name": "PositionValue",
+      "version": "1.0",
+      "members": [
+        {"name": "x", "kind": "required"},
+        {"name": "y", "kind": "required"}
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.size",
+      "name": "SizeValue",
+      "version": "1.0",
+      "members": [
+        {"name": "width", "kind": "required"},
+        {"name": "height", "kind": "required"}
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.offset",
+      "name": "OffsetValue",
+      "version": "1.0",
+      "members": [
+        {"name": "dx", "kind": "optional", "default": 0},
+        {"name": "dy", "kind": "optional", "default": 0}
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.insets",
+      "name": "Insets",
+      "version": "1.0",
+      "members": [
+        {"name": "top", "kind": "optional", "default": 0, "minimum": 0, "maximum": 50000000},
+        {"name": "bottom", "kind": "optional", "default": 0, "minimum": 0, "maximum": 50000000},
+        {"name": "left", "kind": "optional", "default": 0, "minimum": 0, "maximum": 50000000},
+        {"name": "right", "kind": "optional", "default": 0, "minimum": 0, "maximum": 50000000}
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.contact-shadow",
+      "name": "ContactShadow",
+      "version": "1.0",
+      "members": [
+        {"name": "opacity", "kind": "optional", "default": 1, "minimum": 0, "maximum": 1},
+        {"name": "color", "kind": "optional"},
+        {"name": "offset", "kind": "optional", "default": 0, "minimum": -75, "maximum": 75},
+        {"name": "radius", "kind": "optional", "default": 28, "minimum": 10, "maximum": 100},
+        {"name": "height", "kind": "optional", "default": 0.17364818, "minimum": 0.08715574, "maximum": 0.57357644}
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.curved-shadow",
+      "name": "CurvedShadow",
+      "version": "1.0",
+      "members": [
+        {"name": "angle", "kind": "optional", "default": 270, "minimum": 0, "maximum": 360},
+        {"name": "opacity", "kind": "optional", "default": 1, "minimum": 0, "maximum": 1},
+        {"name": "color", "kind": "optional"},
+        {"name": "offset", "kind": "optional", "default": 1, "minimum": -50, "maximum": 50},
+        {"name": "radius", "kind": "optional", "default": 0, "minimum": 0, "maximum": 100},
+        {"name": "curve", "kind": "optional", "default": 1, "minimum": -1, "maximum": 1}
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.drop-shadow",
+      "name": "DropShadow",
+      "version": "1.0",
+      "members": [
+        {"name": "angle", "kind": "optional", "default": 270, "minimum": 0, "maximum": 360},
+        {"name": "opacity", "kind": "optional", "default": 1, "minimum": 0, "maximum": 1},
+        {"name": "color", "kind": "optional"},
+        {"name": "offset", "kind": "optional", "default": 2, "minimum": 0, "maximum": 50},
+        {"name": "radius", "kind": "optional", "default": 5, "minimum": 0, "maximum": 100}
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.stroke.line",
+      "name": "LineStroke",
+      "version": "1.0",
+      "members": [
+        {"name": "color", "kind": "optional"},
+        {"name": "width", "kind": "optional", "default": 1, "minimum": 0.25, "maximum": 100},
+        {"name": "pattern", "kind": "optional", "default": "solid"}
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.stroke.frame",
+      "name": "PictureFrame",
+      "version": "1.0",
+      "members": [
+        {"name": "name", "kind": "required"},
+        {"name": "scale_percent", "kind": "optional", "default": 100, "minimum": 10, "maximum": 100}
+      ]
+    }
+  ],
+  "unions": [
+    {
+      "type": "com.apple.apps.content-language.color",
+      "name": "ColorValue",
+      "version": "1.0",
+      "cases": [
+        {"name": "rgba"}
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.fill",
+      "name": "Fill",
+      "version": "1.0",
+      "cases": [
+        {"name": "color"},
+        {"name": "gradient"},
+        {"name": "image"}
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.fill.gradient.flavor",
+      "name": "GradientFlavor",
+      "version": "1.0",
+      "cases": [
+        {"name": "linear"},
+        {"name": "radial"}
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.shadow",
+      "name": "Shadow",
+      "version": "1.1",
+      "cases": [
+        {"name": "contactShadow"},
+        {"name": "curvedShadow"},
+        {"name": "dropShadow"},
+        {"name": "none", "since": "1.1", "valueless": true}
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.stroke",
+      "name": "Stroke",
+      "version": "1.0",
+      "cases": [
+        {"name": "empty", "valueless": true},
+        {"name": "frame"},
+        {"name": "line"}
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.text-stroke",
+      "name": "TextStroke",
+      "version": "1.0",
+      "cases": [
+        {"name": "none", "valueless": true},
+        {"name": "stroke"}
+      ]
+    }
+  ]
+}
