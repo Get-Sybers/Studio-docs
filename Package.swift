@@ -44,6 +44,7 @@ let package = Package(
     library("ZipArchives", needs: ["RawDeflate", ordered]),
     library("JSONTree", needs: [ordered]),
     library("WireFormat", needs: ["JSONTree", bits]),
+    library("ResourceReferences", needs: ["JSONTree", "WireFormat"], table: true),
     library("GoldenFiles"),
     library("ModelFixtures", needs: ["JSONTree", "WireFormat"]),
 
@@ -51,6 +52,7 @@ let package = Package(
     tests(of: "ZipArchives", with: ["GoldenFiles", "RawDeflate"]),
     tests(of: "JSONTree", with: ["GoldenFiles"]),
     tests(of: "WireFormat", with: ["GoldenFiles", "JSONTree"]),
+    tests(of: "ResourceReferences", with: ["GoldenFiles", "JSONTree", "ModelFixtures", "WireFormat"]),
     tests(of: "GoldenFiles"),
     tests(of: "ModelFixtures", with: ["JSONTree", "WireFormat"]),
   ]

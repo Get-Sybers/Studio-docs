@@ -1,0 +1,40 @@
+{
+  "EmbeddedResource": {
+    "string": "iVBORwD/",
+    "filename": "dot.png",
+    "premium_resource_info": {
+      "asset_uuid": "5B7C1D0E-8A4F-4C21-9E3B-6D2F0A1C4E77",
+      "is_derived_asset": true,
+      "may_need_watermark": true
+    },
+    "version": "2.0"
+  },
+  "IndirectResource": {
+    "identifier": "3f2a9c.png",
+    "filename": "harbour.png",
+    "premium_resource_info": {
+      "asset_uuid": "5B7C1D0E-8A4F-4C21-9E3B-6D2F0A1C4E77",
+      "is_derived_asset": true,
+      "may_need_watermark": true
+    },
+    "version": "2.0"
+  },
+  "PremiumResourceInfo": {
+    "asset_uuid": "5B7C1D0E-8A4F-4C21-9E3B-6D2F0A1C4E77",
+    "is_derived_asset": true,
+    "may_need_watermark": true
+  },
+  "ResourceReference": [
+    {
+      "base64_encoded": {
+        "string": "iVBORwD/",
+        "filename": "dot.png"
+      }
+    },
+    {
+      "indirect": {
+        "filename": "harbour.png"
+      }
+    }
+  ]
+}

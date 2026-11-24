@@ -1,0 +1,47 @@
+{
+  "enumerations": [
+  ],
+  "objects": [
+    {
+      "type": "com.apple.apps.content-language.resource.indirect-resource",
+      "name": "IndirectResource",
+      "version": "2.0",
+      "members": [
+        {"name": "identifier", "kind": "optional"},
+        {"name": "filename", "kind": "required"},
+        {"name": "premium_resource_info", "kind": "optional", "since": "2.0"}
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.resource.base64-encoded-resource",
+      "name": "EmbeddedResource",
+      "version": "2.0",
+      "members": [
+        {"name": "string", "kind": "required"},
+        {"name": "filename", "kind": "required"},
+        {"name": "premium_resource_info", "kind": "optional", "since": "2.0"}
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.resource.premium-resource-info",
+      "name": "PremiumResourceInfo",
+      "version": "1.0",
+      "members": [
+        {"name": "asset_uuid", "kind": "required"},
+        {"name": "is_derived_asset", "kind": "required"},
+        {"name": "may_need_watermark", "kind": "required"}
+      ]
+    }
+  ],
+  "unions": [
+    {
+      "type": "com.apple.apps.content-language.resource",
+      "name": "ResourceReference",
+      "version": "1.0",
+      "cases": [
+        {"name": "base64_encoded"},
+        {"name": "indirect"}
+      ]
+    }
+  ]
+}

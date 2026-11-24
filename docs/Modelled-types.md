@@ -7,6 +7,10 @@ version than 1.0 introduced shows that version in brackets.
 
 | Type identifier | Swift type | Target | Kind | Version | Members or cases |
 | --- | --- | --- | --- | --- | --- |
+| `com.apple.apps.content-language.resource.base64-encoded-resource` | `EmbeddedResource` | ResourceReferences | object | 2.0 | `string`, `filename`, `premium_resource_info` (2.0) |
+| `com.apple.apps.content-language.resource.indirect-resource` | `IndirectResource` | ResourceReferences | object | 2.0 | `identifier`, `filename`, `premium_resource_info` (2.0) |
+| `com.apple.apps.content-language.resource.premium-resource-info` | `PremiumResourceInfo` | ResourceReferences | object | 1.0 | `asset_uuid`, `is_derived_asset`, `may_need_watermark` |
+| `com.apple.apps.content-language.resource` | `ResourceReference` | ResourceReferences | union | 1.0 | `base64_encoded`, `indirect` |
 
 ## Enumerations
 

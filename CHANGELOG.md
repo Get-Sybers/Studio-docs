@@ -18,6 +18,8 @@ All notable changes to this package are recorded in this file. The format follow
   not model. A client adds members of its own to a type of the library with `ClientProperty`.
 - The target `ModelFixtures`, which the tests share: the fixtures of a test target, and the checks that a
   type reads and writes every member that its format table lists.
+- The target `ResourceReferences`: the resource union, the indirect and the embedded resource, and the
+  marks of a premium resource, with the format table that states their members.
 - The target `GoldenFiles`, which the tests share: one file of expected outputs for each test target.
 - The gate `make tidy conform`, the structural lint `scripts/structure-lint.sh`, and the workflow
   `Swift CI`.
