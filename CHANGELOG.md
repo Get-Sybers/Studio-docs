@@ -32,6 +32,9 @@ All notable changes to this package are recorded in this file. The format follow
 - The target `DocumentIdentifiers`: an index of every object identifier of a tree with the places that
   carry it, and a mint that makes identifiers no object carries. Reading and writing keep an identifier
   as it is; only a call to the mint makes one.
+- The target `DocumentValidation`: typed findings, each an error or a warning with its part and its place.
+  It checks the presets, the names in `Data`, every object that names a modelled type against its schema
+  and its own rules, the identifiers, and what links and presets refer to.
 - The target `GoldenFiles`, which the tests share: one file of expected outputs for each test target.
 - The gate `make tidy conform`, the structural lint `scripts/structure-lint.sh`, and the workflow
   `Swift CI`.

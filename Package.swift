@@ -56,6 +56,12 @@ let package = Package(
     library(
       "TextModel", needs: ["Appearance", "JSONTree", "PresetStyles", "ResourceReferences", "WireFormat"],
       table: true),
+    library(
+      "DocumentValidation",
+      needs: [
+        "Appearance", "DocumentIdentifiers", "JSONTree", "PresetStyles", "ResourceReferences", "TextModel",
+        "WireFormat",
+      ]),
     library("GoldenFiles"),
     library("ModelFixtures", needs: ["JSONTree", "WireFormat"]),
 
@@ -64,6 +70,9 @@ let package = Package(
     tests(of: "JSONTree", with: ["GoldenFiles"]),
     tests(of: "WireFormat", with: ["GoldenFiles", "JSONTree"]),
     tests(of: "DocumentIdentifiers", with: ["GoldenFiles", "JSONTree", "TextModel", "WireFormat"]),
+    tests(
+      of: "DocumentValidation",
+      with: ["Appearance", "GoldenFiles", "JSONTree", "PresetStyles", "ResourceReferences", "TextModel", "WireFormat"]),
     tests(of: "PresetStyles", with: ["Appearance", "GoldenFiles", "JSONTree", "TextModel", "WireFormat"]),
     tests(of: "ResourceReferences", with: ["GoldenFiles", "JSONTree", "ModelFixtures", "WireFormat"]),
     tests(of: "Appearance", with: ["GoldenFiles", "JSONTree", "ModelFixtures", "WireFormat"]),
