@@ -44,5 +44,12 @@ These rules bind every contributor, human or agent. `make tidy conform` checks m
 | `Sources/<Target>/Resources/format.json` | the format table of a target that models types of the format |
 | `Tests/<Target>Tests/` | the tests of a target, with their goldens and fixtures in `testdata/` |
 | `scripts/` | the structural lint and the generator of `docs/Modelled-types.md` |
-| `docs/` | the gate and the generated list of modelled types |
+| `docs/Architecture.md` | the targets, their concerns, their dependencies and the layers |
+| `docs/Conformance.md` | the gate, the structural lint, the version pins and CI |
+| `docs/Modelled-types.md` | the generated list of modelled types |
+| `.github/workflows/swift-ci.yml` | CI, which runs the gate |
 | `Makefile` | the gate `conform`, `tidy` and `upgrade` |
+| `CHANGELOG.md` | every change, under `## [Unreleased]` until a release |
+| `README.md` | what the package is, how to use it, what it models and where it departs from Apple's reader |
+| `NOTICE` | the credits: Apple's documentation and library as the reference, and Swift Collections |
+| `.xcode-version`, `.swift-format` | the pin of the toolchain and the configuration of the formatter |

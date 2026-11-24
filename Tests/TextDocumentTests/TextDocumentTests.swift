@@ -38,18 +38,18 @@ import WireFormat
     let url = FileManager.default.temporaryDirectory.appendingPathComponent("\(UUID().uuidString).studio")
     defer { try? FileManager.default.removeItem(at: url) }
 
+    let styled = Paragraph(contents: [
+      .text("Low water at "), .text("six", style: CharacterProperties(italic: true)), .text("."),
+    ])
     var body = TextDocumentBody(title: .string("Harbour notes"))
     body.sections.append(
-      TextSection(heading: "Monday", paragraphs: ["Low water at six.", "The boats leaned on their keels."]))
-    body.sections[0].text = .paragraphs([
-      Paragraph(contents: [.text("Low water at "), .text("six", style: CharacterProperties(italic: true)), .text(".")])
-    ])
-    let document = StudioDocument(body: body)
-    try document.write(to: url)
+      TextSection(
+        heading: .string("Monday"), text: .paragraphs([styled, Paragraph("The boats leaned on their keels.")])))
+    try StudioDocument(body: body).write(to: url)
 
     let reopened = try StudioDocument<TextDocumentBody>(contentsOf: url)
     #expect(reopened.body == body)
-    #expect(reopened.body.plainText == "Harbour notes\nMonday\nLow water at six.")
+    #expect(reopened.body.plainText == "Harbour notes\nMonday\nLow water at six.\nThe boats leaned on their keels.")
     #expect(reopened.validate().findings == [])
     let got = String(decoding: try reopened.body.mainTree.text(.readable), as: UTF8.self)
     #expect(got == (try goldens.want("the example of the README", got: got)))
