@@ -35,6 +35,11 @@ All notable changes to this package are recorded in this file. The format follow
 - The target `DocumentValidation`: typed findings, each an error or a warning with its part and its place.
   It checks the presets, the names in `Data`, every object that names a modelled type against its schema
   and its own rules, the identifiers, and what links and presets refer to.
+- The target `DocumentPackage`: `StudioDocument`, generic over the body a client defines, with its presets,
+  manifest and resources. It opens and saves a package as one ZIP archive or as a directory, where a save
+  writes only the files whose bytes differ. It keeps every entry and member it does not know, refuses a
+  later major version of the package, and refuses to write a document that has validation errors.
+  `UntypedBody` opens a Keynote presentation and writes it back as it was.
 - The target `GoldenFiles`, which the tests share: one file of expected outputs for each test target.
 - The gate `make tidy conform`, the structural lint `scripts/structure-lint.sh`, and the workflow
   `Swift CI`.

@@ -36,9 +36,8 @@ let package = Package(
     .library(
       name: "StudioDocs",
       targets: [
-        "Appearance", "DocumentIdentifiers", "JSONTree", "PresetStyles", "ResourceReferences", "TextModel",
-        "WireFormat",
-        "ZipArchives",
+        "Appearance", "DocumentIdentifiers", "DocumentPackage", "DocumentValidation", "JSONTree", "PresetStyles",
+        "ResourceReferences", "TextModel", "WireFormat", "ZipArchives",
       ])
   ],
   dependencies: [
@@ -62,6 +61,12 @@ let package = Package(
         "Appearance", "DocumentIdentifiers", "JSONTree", "PresetStyles", "ResourceReferences", "TextModel",
         "WireFormat",
       ]),
+    library(
+      "DocumentPackage",
+      needs: [
+        "DocumentValidation", "JSONTree", "PresetStyles", "ResourceReferences", "TextModel", "WireFormat",
+        "ZipArchives", ordered,
+      ]),
     library("GoldenFiles"),
     library("ModelFixtures", needs: ["JSONTree", "WireFormat"]),
 
@@ -73,6 +78,12 @@ let package = Package(
     tests(
       of: "DocumentValidation",
       with: ["Appearance", "GoldenFiles", "JSONTree", "PresetStyles", "ResourceReferences", "TextModel", "WireFormat"]),
+    tests(
+      of: "DocumentPackage",
+      with: [
+        "DocumentValidation", "GoldenFiles", "JSONTree", "ModelFixtures", "PresetStyles", "ResourceReferences",
+        "TextModel", "WireFormat", "ZipArchives",
+      ]),
     tests(of: "PresetStyles", with: ["Appearance", "GoldenFiles", "JSONTree", "TextModel", "WireFormat"]),
     tests(of: "ResourceReferences", with: ["GoldenFiles", "JSONTree", "ModelFixtures", "WireFormat"]),
     tests(of: "Appearance", with: ["GoldenFiles", "JSONTree", "ModelFixtures", "WireFormat"]),
