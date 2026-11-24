@@ -176,7 +176,7 @@ import ZipArchives
     var writer = ZipWriter()
     try writer.add(Data(main.utf8), named: "main.json")
     try writer.add(Data([0xFF, 0xD8, 0xFF]), named: "Data/photo.jpg")
-    let document = try StudioDocument<UntypedBody>(archive: try writer.finish())
+    let document = try StudioDocument<UntypedBody>(archive: writer.finish())
     #expect(document.body.typeIdentifier == "com.apple.apps.content-language.presentation")
     #expect(document.manifest.packageVersion == nil)
     #expect(document.validate().findings == [])

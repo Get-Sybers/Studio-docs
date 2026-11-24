@@ -43,8 +43,6 @@ public enum ZipError: Error, Sendable, Hashable {
     case compressionMethod(name: String, method: Int)
     /// The archive spans more than one disk.
     case multipleDisks
-    /// The archive to be written needs Zip64 records: 65,535 entries or 4 GiB are exceeded.
-    case zip64Writing
   }
 
   /// A ground for refusal.

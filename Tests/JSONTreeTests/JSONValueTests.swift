@@ -32,6 +32,26 @@ struct TextCase: Sendable, CustomTestStringConvertible {
   ]
 }
 
+struct RepeatedCase: Sendable, CustomTestStringConvertible {
+  var name: String
+  var text: String
+  var found: (name: String, path: String)?
+  var testDescription: String { name }
+
+  static let all: [RepeatedCase] = [
+    RepeatedCase(name: "at the root", text: #"{"a": 1, "a": 2}"#, found: ("a", "<root>")),
+    RepeatedCase(name: "inside a member", text: #"{"x": {"b": 1, "c": [], "b": 2}}"#, found: ("b", "x")),
+    RepeatedCase(name: "inside an array", text: #"[{"c": 1}, {"d": 1, "d": 2}]"#, found: ("d", "[1]")),
+    RepeatedCase(name: "spelt with an escape", text: #"{"a": 1, "\u0061": 2}"#, found: ("a", "<root>")),
+    RepeatedCase(name: "spelt with a surrogate pair", text: #"{"\ud83d\ude00": 1, "😀": 2}"#, found: ("😀", "<root>")),
+    RepeatedCase(name: "names that differ in case", text: #"{"a": 1, "A": 2}"#, found: nil),
+    RepeatedCase(name: "values that spell a name", text: #"{"a": "b", "b": "a", "c": ["a", {"a": 1}]}"#, found: nil),
+    RepeatedCase(name: "names that hold structure", text: #"{"a:{": 1, "}": 2, "a:{": 3}"#, found: ("a:{", "<root>")),
+    RepeatedCase(
+      name: "a repeat after a nested object", text: #"{"a": {"a": 1}, "b": 2, "a": 3}"#, found: ("a", "<root>")),
+  ]
+}
+
 @Suite struct JSONValueTests {
   let goldens: GoldenFile
 
@@ -75,6 +95,19 @@ struct TextCase: Sendable, CustomTestStringConvertible {
   ])
   func distinct(_ left: String, _ right: String) throws {
     #expect(try JSONValue(parsing: Data(left.utf8)) != JSONValue(parsing: Data(right.utf8)))
+  }
+
+  @Test(arguments: RepeatedCase.all)
+  func refusesARepeatedMemberName(_ item: RepeatedCase) {
+    do throws(JSONTreeError) {
+      _ = try JSONValue(parsing: Data(item.text.utf8))
+      #expect(item.found == nil)
+    } catch .repeatedMember(let name, let path) {
+      #expect(name == item.found?.name)
+      #expect(path.description == item.found?.path)
+    } catch {
+      Issue.record("unexpected \(error)")
+    }
   }
 
   @Test func aNumberThatIsNotFiniteEqualsItself() {

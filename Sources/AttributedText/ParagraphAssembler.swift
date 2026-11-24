@@ -6,6 +6,7 @@ import WireFormat
 struct ParagraphAssembler {
   private(set) var paragraphs: [Paragraph] = []
   private var contents: [ParagraphContent] = []
+  private var places: [Int?] = []
   private var frame: Paragraph?
   private var isOpen = false
 
@@ -31,6 +32,7 @@ struct ParagraphAssembler {
     paragraph.contents = contents.isEmpty ? nil : contents
     paragraphs.append(paragraph)
     contents = []
+    places = []
     frame = nil
     isOpen = false
   }
@@ -42,11 +44,12 @@ struct ParagraphAssembler {
       let styled = (style ?? CharacterProperties()).applying(intent: intent, underline: underline)
       return style == nil && styled == CharacterProperties() ? nil : styled
     }
+    let place = run[RunIndexAttribute.self]
     guard var content = run[ContentAttribute.self] else {
       // Text that came from elsewhere: a plain run, or a link if Foundation's attribute says so.
       let plain = TextRun(text, style: restyle(nil))
       let link = run.link.map { HyperlinkField(target: .url($0.absoluteString), run: plain) }
-      append(link.map(ParagraphContent.hyperlink) ?? .run(plain))
+      append(link.map(ParagraphContent.hyperlink) ?? .run(plain), at: place)
       return
     }
     switch content.form {
@@ -54,27 +57,33 @@ struct ParagraphAssembler {
       template.string = text
       template.style = restyle(template.style)
       content.form = .run(template)
-      append(content)
+      append(content, at: place)
     case .hyperlink(var template):
       template.run.string = text
       template.run.style = restyle(template.run.style)
       content.form = .hyperlink(template)
-      append(content)
+      append(content, at: place)
     case .inlineObject, nil:
       // Each U+FFFC is the element once more; anything typed beside it is plain text.
       for part in text.split(separator: AttributedString.objectReplacement, omittingEmptySubsequences: false)
         .enumerated()
       {
-        if part.offset > 0 { contents.append(content) }
-        if !part.element.isEmpty { append(.run(TextRun(String(part.element), style: restyle(nil)))) }
+        if part.offset > 0 {
+          contents.append(content)
+          places.append(place)
+        }
+        if !part.element.isEmpty { append(.run(TextRun(String(part.element), style: restyle(nil))), at: nil) }
       }
     }
   }
 
-  // An attribute that the library does not carry may cut a run in two; the two halves are one run again here.
-  private mutating func append(_ content: ParagraphContent) {
-    guard let last = contents.last, let joined = Self.join(last, content) else {
+  // An attribute that the library does not carry may cut a run in two; the halves, of one place, are one run again.
+  private mutating func append(_ content: ParagraphContent, at place: Int?) {
+    guard let last = contents.last, let earlier = places.last, earlier == nil || place == nil || earlier == place,
+      let joined = Self.join(last, content)
+    else {
       contents.append(content)
+      places.append(place)
       return
     }
     contents[contents.count - 1] = joined

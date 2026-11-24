@@ -59,6 +59,7 @@ extension AttributedString {
         throw .paragraphSeparator(paragraph: index, content: position, scalar: scalar)
       }
       piece[ContentAttribute.self] = template
+      piece[RunIndexAttribute.self] = position
       append(piece)
     }
   }
