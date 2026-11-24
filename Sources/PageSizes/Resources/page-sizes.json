@@ -1,0 +1,27 @@
+{
+  "sizes": [
+    {"name": "Mass Market Paperback", "system": "US", "width": 4.25, "height": 6.875, "unit": "inch"},
+    {"name": "Trade Paperback 5 by 8", "system": "US", "width": 5, "height": 8, "unit": "inch"},
+    {"name": "Trade Paperback 5.25 by 8", "system": "US", "width": 5.25, "height": 8, "unit": "inch"},
+    {"name": "Digest", "system": "US", "width": 5.5, "height": 8.5, "unit": "inch"},
+    {"name": "US Trade", "system": "US", "width": 6, "height": 9, "unit": "inch"},
+    {"name": "Textbook 7 by 10", "system": "US", "width": 7, "height": 10, "unit": "inch"},
+    {"name": "US Letter", "system": "US", "width": 8.5, "height": 11, "unit": "inch"},
+    {"name": "Square 8.5", "system": "US", "width": 8.5, "height": 8.5, "unit": "inch"},
+    {"name": "A Format", "system": "UK", "width": 111, "height": 178, "unit": "mm"},
+    {"name": "B Format", "system": "UK", "width": 129, "height": 198, "unit": "mm"},
+    {"name": "C Format", "system": "UK", "width": 135, "height": 216, "unit": "mm"},
+    {"name": "Demy", "system": "UK", "width": 138, "height": 216, "unit": "mm"},
+    {"name": "Royal", "system": "UK", "width": 156, "height": 234, "unit": "mm"},
+    {"name": "Crown Quarto", "system": "UK", "width": 189, "height": 246, "unit": "mm"},
+    {"name": "A4", "system": "ISO", "width": 210, "height": 297, "unit": "mm"},
+    {"name": "A5", "system": "ISO", "width": 148, "height": 210, "unit": "mm"},
+    {"name": "A6", "system": "ISO", "width": 105, "height": 148, "unit": "mm"},
+    {"name": "B5", "system": "ISO", "width": 176, "height": 250, "unit": "mm"},
+    {"name": "B6", "system": "ISO", "width": 125, "height": 176, "unit": "mm"},
+    {"name": "Bunko", "system": "Japan", "width": 105, "height": 148, "unit": "mm"},
+    {"name": "Shinsho", "system": "Japan", "width": 103, "height": 182, "unit": "mm"},
+    {"name": "Tankobon", "system": "Japan", "width": 128, "height": 182, "unit": "mm"},
+    {"name": "Shiroku-ban", "system": "Japan", "width": 127, "height": 188, "unit": "mm"}
+  ]
+}

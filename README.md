@@ -25,6 +25,7 @@ import DocumentPackage  // StudioDocument, DocumentBody, UntypedBody, WriteOptio
 import PresentationModel  // Presentation, Slide, SlideObject, KeynoteTheme
 import CanvasModel  // CanvasObject, Shape, Textbox, Image, Movie, Group
 import TextDocument  // TextDocumentBody, TextSection
+import PageSizes  // PageSizeCatalogue, PageSize
 import TextModel  // TextBody, Paragraph, TextRun, CharacterProperties, Stylesheet
 import WireFormat  // ObjectEnvelope, Inheritable, ClientProperty, FormatVersion
 ```
@@ -66,6 +67,8 @@ Beyond the example:
 - `StudioDocument<Presentation>(contentsOf: url)` opens a Keynote presentation with its slides and objects
   typed; `StudioDocument<UntypedBody>(contentsOf: url)` opens any package, keeps `main.json` as a tree, and
   writes it back as it was.
+- `body.pageSize = PageSizeCatalogue.named("US Trade")?.size` gives a text document the trim size of a book.
+  `PageSizes` holds the sizes the trade uses today, American, British, ISO and Japanese, each in points.
 - A body of your own conforms to `WireObject` and `DocumentBody`; a member of your own on a type of the
   library is a `ClientProperty`, and every reader and writer of the library keeps it.
 
@@ -83,7 +86,8 @@ presentation and its slides down to the runs of text.
 | `ChartModel` | every kind of chart, with axes, series, data, legends and label formatting |
 | `TableModel` | tables: cells, rows, columns, cell formats, formulas, conditional styles, filters, sorts, pivots and visual properties |
 | `CanvasCommon` | what canvas objects share: geometry, labels, reflections, durations, and the owning of titles and captions |
-| `TextDocument` | the library's own small body: a title, text styles and sections in order |
+| `TextDocument` | the library's own small body: a title, text styles, sections in order and the size of a page |
+| `PageSizes` | the trim sizes of the book trade, as it quotes them and in points |
 | `TextModel` | text bodies, paragraphs, runs, links, breaks; character, paragraph, list and layout properties; stylesheets |
 | `AttributedText` | paragraphs to Foundation's `AttributedString` and back |
 | `Appearance` | colours, fills, gradients, image fills, shadows, strokes and the geometric values they use |

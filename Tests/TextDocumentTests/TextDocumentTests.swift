@@ -1,9 +1,11 @@
+import Appearance
 import DocumentPackage
 import DocumentValidation
 import Foundation
 import GoldenFiles
 import JSONTree
 import ModelFixtures
+import PageSizes
 import PresetStyles
 import Testing
 import TextDocument
@@ -53,6 +55,16 @@ import WireFormat
     #expect(reopened.validate().findings == [])
     let got = String(decoding: try reopened.body.mainTree.text(.readable), as: UTF8.self)
     #expect(got == (try goldens.want("the example of the README", got: got)))
+  }
+
+  @Test func aPageSizeTravelsWithTheDocument() throws {
+    var body = TextDocumentBody(sections: [TextSection(heading: "One", paragraphs: ["First."])])
+    body.pageSize = PageSizeCatalogue.named("US Trade")?.size
+    let tree = StudioDocument(body: body).body.mainTree
+    #expect(tree["page_size"]?["width"] == 432)
+    #expect(tree["version"] == nil)
+    let reopened = try StudioDocument<TextDocumentBody>(archive: try StudioDocument(body: body).archive())
+    #expect(reopened.body.pageSize == SizeValue(width: 432, height: 648))
   }
 
   @Test func validationKnowsTheTypesOfTheBody() throws {
