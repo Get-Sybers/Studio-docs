@@ -8,10 +8,20 @@ All notable changes to this package are recorded in this file. The format follow
 
 ### Added
 
+- The ZIP writer writes Zip64 records where a size, an offset or a count needs them; the reader read them already.
+- `JSONValue(parsing:)` refuses an object that holds one member name twice, naming the member and the place of
+  the object, where Foundation's decoder kept the first value in silence.
+- A package whose entries all sit inside one folder, as zipping a folder makes, opens.
+- The attribute `RunIndexAttribute`, through which adjacent runs of one style survive the bridge to
+  `AttributedString` as two runs.
 - The workflow `Release`: run by hand on `main`, it publishes the newest version that `CHANGELOG.md` names as a
   tag and a GitHub release, after the gate, in the environment `release` that the owner approves.
 - The pull request template, Dependabot for the Swift packages, and in `docs/Conformance.md` the rules of the
   repository on GitHub: the ruleset `protect-main` and the environment `release`.
+
+### Changed
+
+- `ZipWriter.finish()` no longer throws, and `ZipError.Feature.zip64Writing` is gone.
 
 ## [0.1.0] - 2026-11-24
 

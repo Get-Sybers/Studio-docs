@@ -3,6 +3,7 @@
   "broken: a fault deep in the text" : "unreadableBody(WireFormat.WireError.unexpectedKind(expected: JSONTree.JSONKind.string, found: JSONTree.JSONKind.number, at: entries[0].text.paragraphs[0].contents[0].run.string))",
   "broken: a preset has no properties" : "malformedPresets(PresetStyles.PresetError.entryWithoutProperties(identifier: \"a\"))",
   "broken: main.json inside a folder" : "missingMain",
+  "broken: main.json inside a folder beside other entries" : "missingMain",
   "broken: main.json is another type" : "unreadableBody(WireFormat.WireError.typeMismatch(expected: org.example.notebook, found: \"org.example.other\", at: <root>))",
   "broken: main.json is not JSON" : "malformedJSON(main.json)",
   "broken: main.json lacks a required member" : "unreadableBody(WireFormat.WireError.missingMember(\"entries\", at: <root>))",

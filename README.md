@@ -83,7 +83,7 @@ refers to.
 | `DocumentValidation` | typed findings, each an error or a warning, with its part and its path |
 | `WireFormat` | type identifiers, versions, the envelope of an object, unions, `Inheritable`, `ClientProperty`, readers and writers |
 | `JSONTree` | a JSON value tree through Foundation's coders, whole numbers exact |
-| `ZipArchives` | a ZIP reader and writer over the system's zlib, with limits against hostile archives |
+| `ZipArchives` | a ZIP reader and writer over the system's zlib, Zip64 included, with limits against hostile archives |
 
 [docs/Modelled-types.md](docs/Modelled-types.md) lists every type of the format that the library models,
 generated from the format tables in `Sources/<Target>/Resources/format.json`.
@@ -106,19 +106,18 @@ library does not model is kept as read and written back.
 - A run inside a paragraph that holds U+000A, U+000D or U+2029 is a validation warning, not an error,
   since a reader of flat text ends the paragraph there. The bridge to `AttributedString` refuses it.
 - The identifier of an indirect resource is the name of a file in `Data`, not an object identifier.
+- A member name repeated in one JSON object is refused on open, with the place of the object. Apple's reader
+  keeps the first value.
+- An archive whose entries all sit inside one folder, as zipping a folder makes, opens as the package; it is
+  written back with its files at the root.
 
 ## Limits
 
 - The library is checked against the documentation pages and the models of Apple's reference library,
   and against no file that Keynote wrote.
-- A member name repeated in one JSON object is not detected; the tree keeps the first value.
-- The ZIP writer writes no Zip64 archive: fewer than 65,535 entries and under 4 GiB. The reader reads
-  Zip64.
-- Every entry of a package is read into memory on open.
-- An archive whose entries all sit inside one top-level folder is refused: it has no `main.json` at its
-  root.
-- In the bridge to `AttributedString`, a run with no text does not survive the round trip, and adjacent
-  runs of one style come back as one run. Every paragraph ends with a line feed;
+- Every entry of a package is read and checked on open.
+- In the bridge to `AttributedString`, a run with no text does not survive the round trip: no character
+  carries it. Every paragraph ends with a line feed;
   `AttributedTextOptions(terminatesLastParagraph: false)` drops the last one, and then an empty last
   paragraph has no character to carry its properties and identifier.
 

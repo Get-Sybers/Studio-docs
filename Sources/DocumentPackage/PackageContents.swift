@@ -56,11 +56,27 @@ struct PackageContents {
     } catch {
       throw .archive(error)
     }
+    descendIntoSoleFolder()
   }
 
   init(directory: URL, limits: ZipLimits) throws(DocumentError) {
     var total = 0
     try read(directory, prefix: "", limits: limits, total: &total)
+    descendIntoSoleFolder()
+  }
+
+  /// An archive made by zipping a folder holds the package one level down; its entries are then read as the package's.
+  private mutating func descendIntoSoleFolder() {
+    guard entries[Self.main] == nil else { return }
+    var folder: Substring?
+    for name in entries.keys {
+      guard let slash = name.firstIndex(of: "/") else { return }
+      let prefix = name[...slash]
+      if folder == nil { folder = prefix } else if folder != prefix { return }
+    }
+    guard let folder, entries[folder + Self.main] != nil else { return }
+    entries = OrderedDictionary(
+      uniqueKeysWithValues: entries.map { (String($0.key.dropFirst(folder.count)), $0.value) })
   }
 
   private mutating func read(
@@ -111,7 +127,7 @@ struct PackageContents {
       for (name, bytes) in entries {
         try writer.add(bytes, named: name)
       }
-      return try writer.finish()
+      return writer.finish()
     } catch {
       throw .archive(error)
     }

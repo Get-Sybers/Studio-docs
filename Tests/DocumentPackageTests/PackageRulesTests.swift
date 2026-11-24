@@ -44,7 +44,9 @@ struct BrokenCase: Sendable, CustomTestStringConvertible {
   static let all: [BrokenCase] = [
     BrokenCase(name: "no main.json", entries: [("presets.json", "[]")]),
     BrokenCase(name: "main.json under another case", entries: [("Main.json", main)]),
-    BrokenCase(name: "main.json inside a folder", entries: [("notes/main.json", main)]),
+    BrokenCase(
+      name: "main.json inside a folder beside other entries",
+      entries: [("notes/main.json", main), ("presets.json", "[]")]),
     BrokenCase(name: "main.json is not JSON", entries: [("main.json", "{entries: []}")]),
     BrokenCase(
       name: "main.json is another type",
@@ -79,7 +81,7 @@ struct BrokenCase: Sendable, CustomTestStringConvertible {
     for (name, text) in entries {
       try writer.add(Data(text.utf8), named: name)
     }
-    return try writer.finish()
+    return writer.finish()
   }
 
   static func describe(_ error: DocumentError) -> String {
@@ -127,6 +129,18 @@ struct BrokenCase: Sendable, CustomTestStringConvertible {
     }
     #expect(got == (try goldens.want("broken: \(item.name)", got: got)))
     #expect(got != "accepted")
+  }
+
+  @Test func aPackageInsideOneFolderOpens() throws {
+    let archive = try Self.archive([
+      ("notes/main.json", BrokenCase.main), ("notes/Data/anchor.png", "png"), ("notes/extra.txt", "x"),
+    ])
+    let document = try StudioDocument<Notebook>(archive: archive)
+    #expect(document.resources.names == ["anchor.png"])
+    #expect(document.unmodelledEntries.map(\.name) == ["extra.txt"])
+    let written = try ZipReader(try document.archive())
+    #expect(
+      written.entries.map(\.name) == ["main.json", "manifest.json", "presets.json", "Data/anchor.png", "extra.txt"])
   }
 
   @Test func refusesAHostileArchive() throws {

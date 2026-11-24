@@ -29,6 +29,13 @@ struct BridgeCase: Sendable, CustomTestStringConvertible {
     BridgeCase(name: "an italic run that is only punctuation and space") {
       [Paragraph(contents: [.text("Wait"), .text(" \u{2014} ", style: italic), .text("what?")])]
     },
+    BridgeCase(name: "adjacent runs of one style") {
+      [
+        Paragraph(contents: [
+          .text("one "), .text("two", style: italic), .text(" three", style: italic), .text(" four"),
+        ])
+      ]
+    },
     BridgeCase(name: "runs that touch") {
       [
         Paragraph(contents: [
@@ -166,9 +173,9 @@ struct BridgeCase: Sendable, CustomTestStringConvertible {
     #expect([Paragraph](whole) == [Paragraph("One."), Paragraph("Two.")])
   }
 
-  @Test func adjacentRunsOfOneStyleComeBackAsOne() throws {
+  @Test func adjacentRunsOfOneStyleStayApartAndAnEmptyRunIsLost() throws {
     let text = try AttributedString(paragraphs: [Paragraph(contents: [.text("one "), .text("two"), .text("")])])
-    #expect([Paragraph](text) == [Paragraph("one two")])
+    #expect([Paragraph](text) == [Paragraph(contents: [.text("one "), .text("two")])])
   }
 
   @Test(arguments: ["\n", "\r", "\u{2029}", "\r\n"])

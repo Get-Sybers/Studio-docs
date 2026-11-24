@@ -7,6 +7,8 @@ extension AttributeScopes {
     public let paragraph: ParagraphAttribute
     /// The run or link that a character belongs to, without its text.
     public let content: ContentAttribute
+    /// The place of that run or link among the contents of its paragraph.
+    public let runIndex: RunIndexAttribute
     /// The underline of a character.
     public let underline: UnderlineAttribute
     /// Foundation's attributes, of which the library uses the inline presentation intent and the link.

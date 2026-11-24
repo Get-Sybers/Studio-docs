@@ -1,5 +1,6 @@
 {
-  "attributed: an inline object and an element the library does not model" : "[Before] paragraph=-\n[<FFFC><FFFC>] paragraph=-\n[<FFFC>] paragraph=-\n[after] paragraph=-\n[<A>] paragraph=-",
+  "attributed: adjacent runs of one style" : "[one ] paragraph=-\n[two] italic paragraph=-\n[ three] italic paragraph=-\n[ four] paragraph=-\n[<A>] paragraph=-",
+  "attributed: an inline object and an element the library does not model" : "[Before] paragraph=-\n[<FFFC>] paragraph=-\n[<FFFC>] paragraph=-\n[<FFFC>] paragraph=-\n[after] paragraph=-\n[<A>] paragraph=-",
   "attributed: an italic run that begins and ends with punctuation" : "[She wrote ] paragraph=-\n[<2018>never!<2019>] italic paragraph=-\n[ and left.] paragraph=-\n[<A>] paragraph=-",
   "attributed: an italic run that begins with a space" : "[He said] paragraph=-\n[ no] italic paragraph=-\n[ twice.] paragraph=-\n[<A>] paragraph=-",
   "attributed: an italic run that ends with a space" : "[He said ] paragraph=-\n[no ] italic paragraph=-\n[twice.] paragraph=-\n[<A>] paragraph=-",

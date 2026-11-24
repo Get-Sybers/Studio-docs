@@ -1,8 +1,11 @@
 public import Foundation
 
 extension JSONValue {
-  /// Reads JSON text through Foundation's decoder.
+  /// Reads JSON text through Foundation's decoder; an object that holds a member name twice is refused.
   public init(parsing text: Data) throws(JSONTreeError) {
+    if let repeated = MemberNameScan.firstRepeatedName(in: text) {
+      throw .repeatedMember(name: repeated.name, at: repeated.path)
+    }
     do {
       self = try JSONDecoder().decode(JSONValue.self, from: text)
     } catch {
