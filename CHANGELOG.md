@@ -8,6 +8,11 @@ All notable changes to this package are recorded in this file. The format follow
 
 ### Added
 
+- The targets `CanvasCommon`, `TableModel`, `ChartModel`, `CanvasModel` and `PresentationModel`: every type that
+  Apple documents, 171 of them, from the presentation and its slides to the cells of a table and the series of a
+  chart, each with its format table, fixtures and goldens. `Presentation` is a document body, so a Keynote
+  presentation opens typed through `StudioDocument<Presentation>`.
+- `Indirect`, a box that keeps a value out of line where a type of the format holds one of its own type.
 - The ZIP writer writes Zip64 records where a size, an offset or a count needs them; the reader read them already.
 - `JSONValue(parsing:)` refuses an object that holds one member name twice, naming the member and the place of
   the object, where Foundation's decoder kept the first value in silence.

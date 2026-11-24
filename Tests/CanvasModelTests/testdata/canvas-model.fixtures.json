@@ -1,0 +1,419 @@
+{
+  "Audio": {
+    "geometry": {
+      "position": {
+        "x": 1.5,
+        "y": 1.5
+      },
+      "size": {
+        "width": 1.5,
+        "height": 1.5
+      }
+    },
+    "aspect_ratio_locked": true,
+    "description": "description sample",
+    "resource": {
+      "base64_encoded": {
+        "string": "string sample",
+        "filename": "anchor.png"
+      }
+    },
+    "playback_options": {},
+    "native_audio_recording": true
+  },
+  "BezierPath": {
+    "path": "path sample",
+    "space": {
+      "position": {
+        "x": 1.5,
+        "y": 1.5
+      },
+      "size": {
+        "width": 1.5,
+        "height": 1.5
+      }
+    }
+  },
+  "ConnectionAnchor": {
+    "object_id": "object id sample",
+    "magnet": "center"
+  },
+  "ConnectionEnd": {
+    "end_point": {
+      "x": 1.5,
+      "y": 1.5
+    },
+    "line_end": "filled_arrow",
+    "outset": 1.5,
+    "anchor": {
+      "object_id": "object id sample"
+    }
+  },
+  "ConnectionLine": {
+    "geometry": {
+      "position": {
+        "x": 1.5,
+        "y": 1.5
+      },
+      "size": {
+        "width": 1.5,
+        "height": 1.5
+      }
+    },
+    "aspect_ratio_locked": true,
+    "description": "description sample",
+    "line_type": "straight",
+    "tail": {},
+    "head": {},
+    "stroke": "empty",
+    "opacity": 1.5,
+    "shadow": "none",
+    "reflection": {}
+  },
+  "GenericCanvasObject": {
+    "geometry": {
+      "position": {
+        "x": 1.5,
+        "y": 1.5
+      },
+      "size": {
+        "width": 1.5,
+        "height": 1.5
+      }
+    },
+    "aspect_ratio_locked": true,
+    "description": "description sample"
+  },
+  "Group": {
+    "geometry": {
+      "position": {
+        "x": 1.5,
+        "y": 1.5
+      },
+      "size": {
+        "width": 1.5,
+        "height": 1.5
+      }
+    },
+    "aspect_ratio_locked": true,
+    "description": "description sample",
+    "title": {},
+    "title_is_positioned_on_top": true,
+    "caption": {},
+    "children": [
+      {
+        "audio": {
+          "resource": {
+            "base64_encoded": {
+              "string": "string sample",
+              "filename": "anchor.png"
+            }
+          },
+          "playback_options": {}
+        }
+      }
+    ]
+  },
+  "Image": {
+    "geometry": {
+      "position": {
+        "x": 1.5,
+        "y": 1.5
+      },
+      "size": {
+        "width": 1.5,
+        "height": 1.5
+      }
+    },
+    "aspect_ratio_locked": true,
+    "description": "description sample",
+    "title": {},
+    "title_is_positioned_on_top": true,
+    "caption": {},
+    "resource": {
+      "base64_encoded": {
+        "string": "string sample",
+        "filename": "anchor.png"
+      }
+    },
+    "mask": {},
+    "instant_alpha_path": {
+      "path": "path sample"
+    },
+    "stroke": "empty",
+    "opacity": 1.5,
+    "shadow": "none",
+    "reflection": {},
+    "is_placeholder": true,
+    "was_media_replaced": true
+  },
+  "ImageMask": {
+    "geometry": {
+      "position": {
+        "x": 1.5,
+        "y": 1.5
+      },
+      "size": {
+        "width": 1.5,
+        "height": 1.5
+      }
+    },
+    "path": {
+      "bezier": {
+        "path": "path sample"
+      }
+    }
+  },
+  "InstantAlphaPath": {
+    "path": "path sample",
+    "size": {
+      "width": 1.5,
+      "height": 1.5
+    }
+  },
+  "Movie": {
+    "geometry": {
+      "position": {
+        "x": 1.5,
+        "y": 1.5
+      },
+      "size": {
+        "width": 1.5,
+        "height": 1.5
+      }
+    },
+    "aspect_ratio_locked": true,
+    "description": "description sample",
+    "title": {},
+    "title_is_positioned_on_top": true,
+    "caption": {},
+    "resource": {
+      "base64_encoded": {
+        "string": "string sample",
+        "filename": "anchor.png"
+      }
+    },
+    "poster_image": {
+      "base64_encoded": {
+        "string": "string sample",
+        "filename": "anchor.png"
+      }
+    },
+    "poster_time": {
+      "seconds": 1.5
+    },
+    "playback_options": {},
+    "stroke": "empty",
+    "opacity": 1.5,
+    "shadow": "none",
+    "reflection": {}
+  },
+  "PlaybackOptions": {
+    "volume": 0.5,
+    "start_time": {
+      "seconds": 1.5
+    },
+    "end_time": {
+      "seconds": 1.5
+    },
+    "loop_option": "back_and_forth",
+    "plays_across_slides": true
+  },
+  "Rect": {
+    "position": {
+      "x": 1.5,
+      "y": 1.5
+    },
+    "size": {
+      "width": 1.5,
+      "height": 1.5
+    }
+  },
+  "Shape": {
+    "geometry": {
+      "position": {
+        "x": 1.5,
+        "y": 1.5
+      },
+      "size": {
+        "width": 1.5,
+        "height": 1.5
+      }
+    },
+    "aspect_ratio_locked": true,
+    "description": "description sample",
+    "title": {},
+    "title_is_positioned_on_top": true,
+    "caption": {},
+    "path": {
+      "bezier": {
+        "path": "path sample"
+      }
+    },
+    "tail": "filled_arrow",
+    "head": "filled_arrow",
+    "fill": {
+      "color": {
+        "rgba": {}
+      }
+    },
+    "stroke": "empty",
+    "opacity": 1.5,
+    "shadow": "none",
+    "reflection": {},
+    "layout_properties": {},
+    "paragraph_properties": {},
+    "text": {
+      "string": "string sample"
+    }
+  },
+  "Textbox": {
+    "geometry": {
+      "position": {
+        "x": 1.5,
+        "y": 1.5
+      },
+      "size": {
+        "width": 1.5,
+        "height": 1.5
+      }
+    },
+    "aspect_ratio_locked": true,
+    "description": "description sample",
+    "title": {},
+    "title_is_positioned_on_top": true,
+    "caption": {},
+    "fill": {
+      "color": {
+        "rgba": {}
+      }
+    },
+    "stroke": "empty",
+    "opacity": 1.5,
+    "shadow": "none",
+    "reflection": {},
+    "layout_properties": {},
+    "paragraph_properties": {},
+    "text": {
+      "string": "string sample"
+    }
+  },
+  "AnchorMagnet": [
+    "center",
+    "east",
+    {
+      "edge": {
+        "x": 1.5,
+        "y": 1.5
+      }
+    },
+    {
+      "floating": {
+        "x": 1.5,
+        "y": 1.5
+      }
+    },
+    "north",
+    "south",
+    "west"
+  ],
+  "CanvasObject": [
+    {
+      "audio": {
+        "resource": {
+          "base64_encoded": {
+            "string": "string sample",
+            "filename": "anchor.png"
+          }
+        },
+        "playback_options": {}
+      }
+    },
+    {
+      "chart": {
+        "area": {}
+      }
+    },
+    {
+      "connectionLine": {
+        "tail": {},
+        "head": {}
+      }
+    },
+    {
+      "genericCanvasObject": {}
+    },
+    {
+      "group": {
+        "children": [
+          {
+            "audio": {
+              "resource": {
+                "base64_encoded": {
+                  "string": "string sample",
+                  "filename": "anchor.png"
+                }
+              },
+              "playback_options": {}
+            }
+          }
+        ]
+      }
+    },
+    {
+      "image": {
+        "resource": {
+          "base64_encoded": {
+            "string": "string sample",
+            "filename": "anchor.png"
+          }
+        }
+      }
+    },
+    {
+      "movie": {
+        "resource": {
+          "base64_encoded": {
+            "string": "string sample",
+            "filename": "anchor.png"
+          }
+        },
+        "playback_options": {}
+      }
+    },
+    {
+      "shape": {}
+    },
+    {
+      "table": {
+        "number_of_columns": 2,
+        "number_of_rows": 2
+      }
+    },
+    {
+      "textbox": {}
+    }
+  ],
+  "ConnectionLineKind": [
+    {
+      "corner": {
+        "x": 1.5,
+        "y": 1.5
+      }
+    },
+    {
+      "curved": {
+        "x": 1.5,
+        "y": 1.5
+      }
+    },
+    "straight"
+  ],
+  "Path": [
+    {
+      "bezier": {
+        "path": "path sample"
+      }
+    }
+  ]
+}

@@ -1,0 +1,2515 @@
+{
+  "enumerations": [
+    {
+      "name": "AxisScale",
+      "values": [
+        "linear",
+        "log",
+        "percent"
+      ]
+    },
+    {
+      "name": "ChartDataSource",
+      "values": [
+        "chart_data_grid",
+        "table_formula_references",
+        "uninitialized"
+      ]
+    },
+    {
+      "name": "ConnectionLineType",
+      "values": [
+        "curved",
+        "none",
+        "straight"
+      ]
+    },
+    {
+      "name": "FillReuseRule",
+      "values": [
+        "series_fill_use_series_stroke",
+        "symbol_fill_uses_series_fill",
+        "symbol_fill_uses_series_stroke"
+      ]
+    },
+    {
+      "name": "MixedSeriesType",
+      "values": [
+        "area",
+        "column",
+        "line"
+      ]
+    },
+    {
+      "name": "PlotDirection",
+      "values": [
+        "columns_as_series",
+        "rows_as_series"
+      ]
+    },
+    {
+      "name": "SeriesSymbolType",
+      "values": [
+        "circle",
+        "diamond",
+        "none",
+        "plus",
+        "square",
+        "triangle",
+        "x",
+        "yield"
+      ]
+    },
+    {
+      "name": "SeriesValueLabelPosition",
+      "values": [
+        "auto",
+        "bottom",
+        "bottom_left",
+        "bottom_right",
+        "center",
+        "inside",
+        "inside_bottom",
+        "inside_left",
+        "inside_right",
+        "inside_top",
+        "left",
+        "outside",
+        "outside_top",
+        "right",
+        "top",
+        "top_left",
+        "top_right"
+      ]
+    },
+    {
+      "name": "ValueLabelsSelection",
+      "values": [
+        "none",
+        "size",
+        "x",
+        "x_and_y",
+        "y"
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "type": "com.apple.apps.content-language.area3-dchart",
+      "name": "Area3DChart",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "title",
+          "kind": "optional"
+        },
+        {
+          "name": "caption",
+          "kind": "optional"
+        },
+        {
+          "name": "data",
+          "kind": "optional"
+        },
+        {
+          "name": "show_legend",
+          "kind": "optional",
+          "default": true
+        },
+        {
+          "name": "legend",
+          "kind": "optional"
+        },
+        {
+          "name": "series",
+          "kind": "optional"
+        },
+        {
+          "name": "chart_colors",
+          "kind": "optional"
+        },
+        {
+          "name": "category_axis",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis_secondary",
+          "kind": "optional"
+        },
+        {
+          "name": "geometry",
+          "kind": "optional"
+        },
+        {
+          "name": "aspect_ratio_locked",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "description",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.area-chart",
+      "name": "AreaChart",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "title",
+          "kind": "optional"
+        },
+        {
+          "name": "caption",
+          "kind": "optional"
+        },
+        {
+          "name": "data",
+          "kind": "optional"
+        },
+        {
+          "name": "show_legend",
+          "kind": "optional",
+          "default": true
+        },
+        {
+          "name": "legend",
+          "kind": "optional"
+        },
+        {
+          "name": "series",
+          "kind": "optional"
+        },
+        {
+          "name": "chart_colors",
+          "kind": "optional"
+        },
+        {
+          "name": "category_axis",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis_secondary",
+          "kind": "optional"
+        },
+        {
+          "name": "geometry",
+          "kind": "optional"
+        },
+        {
+          "name": "aspect_ratio_locked",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "description",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.bar3-dchart",
+      "name": "Bar3DChart",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "title",
+          "kind": "optional"
+        },
+        {
+          "name": "caption",
+          "kind": "optional"
+        },
+        {
+          "name": "data",
+          "kind": "optional"
+        },
+        {
+          "name": "show_legend",
+          "kind": "optional",
+          "default": true
+        },
+        {
+          "name": "legend",
+          "kind": "optional"
+        },
+        {
+          "name": "series",
+          "kind": "optional"
+        },
+        {
+          "name": "chart_colors",
+          "kind": "optional"
+        },
+        {
+          "name": "category_axis",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis_secondary",
+          "kind": "optional"
+        },
+        {
+          "name": "geometry",
+          "kind": "optional"
+        },
+        {
+          "name": "aspect_ratio_locked",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "description",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.bar-chart",
+      "name": "BarChart",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "title",
+          "kind": "optional"
+        },
+        {
+          "name": "caption",
+          "kind": "optional"
+        },
+        {
+          "name": "data",
+          "kind": "optional"
+        },
+        {
+          "name": "show_legend",
+          "kind": "optional",
+          "default": true
+        },
+        {
+          "name": "legend",
+          "kind": "optional"
+        },
+        {
+          "name": "series",
+          "kind": "optional"
+        },
+        {
+          "name": "chart_colors",
+          "kind": "optional"
+        },
+        {
+          "name": "category_axis",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis_secondary",
+          "kind": "optional"
+        },
+        {
+          "name": "geometry",
+          "kind": "optional"
+        },
+        {
+          "name": "aspect_ratio_locked",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "description",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.bar-interactive-chart",
+      "name": "BarInteractiveChart",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "title",
+          "kind": "optional"
+        },
+        {
+          "name": "caption",
+          "kind": "optional"
+        },
+        {
+          "name": "data",
+          "kind": "optional"
+        },
+        {
+          "name": "show_legend",
+          "kind": "optional",
+          "default": true
+        },
+        {
+          "name": "legend",
+          "kind": "optional"
+        },
+        {
+          "name": "series",
+          "kind": "optional"
+        },
+        {
+          "name": "chart_colors",
+          "kind": "optional"
+        },
+        {
+          "name": "category_axis",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis_secondary",
+          "kind": "optional"
+        },
+        {
+          "name": "geometry",
+          "kind": "optional"
+        },
+        {
+          "name": "aspect_ratio_locked",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "description",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.bubble-chart",
+      "name": "BubbleChart",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "title",
+          "kind": "optional"
+        },
+        {
+          "name": "caption",
+          "kind": "optional"
+        },
+        {
+          "name": "data",
+          "kind": "optional"
+        },
+        {
+          "name": "show_legend",
+          "kind": "optional",
+          "default": true
+        },
+        {
+          "name": "legend",
+          "kind": "optional"
+        },
+        {
+          "name": "series",
+          "kind": "optional"
+        },
+        {
+          "name": "chart_colors",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis_x",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis_y",
+          "kind": "optional"
+        },
+        {
+          "name": "geometry",
+          "kind": "optional"
+        },
+        {
+          "name": "aspect_ratio_locked",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "description",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.bubble-interactive-chart",
+      "name": "BubbleInteractiveChart",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "title",
+          "kind": "optional"
+        },
+        {
+          "name": "caption",
+          "kind": "optional"
+        },
+        {
+          "name": "data",
+          "kind": "optional"
+        },
+        {
+          "name": "show_legend",
+          "kind": "optional",
+          "default": true
+        },
+        {
+          "name": "legend",
+          "kind": "optional"
+        },
+        {
+          "name": "series",
+          "kind": "optional"
+        },
+        {
+          "name": "chart_colors",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis_x",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis_y",
+          "kind": "optional"
+        },
+        {
+          "name": "geometry",
+          "kind": "optional"
+        },
+        {
+          "name": "aspect_ratio_locked",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "description",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.chart-category-axis",
+      "name": "ChartCategoryAxis",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "title",
+          "kind": "optional"
+        },
+        {
+          "name": "title_text_style",
+          "kind": "optional"
+        },
+        {
+          "name": "label_text_style",
+          "kind": "optional"
+        },
+        {
+          "name": "show_labels",
+          "kind": "optional",
+          "default": true
+        },
+        {
+          "name": "show_title",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "show_major_tickmarks",
+          "kind": "optional",
+          "default": true
+        },
+        {
+          "name": "show_minor_tickmarks",
+          "kind": "optional",
+          "default": true
+        },
+        {
+          "name": "labels_orientation",
+          "kind": "optional"
+        },
+        {
+          "name": "label_format_type",
+          "kind": "optional"
+        },
+        {
+          "name": "label_date_format",
+          "kind": "optional"
+        },
+        {
+          "name": "label_duration_format",
+          "kind": "optional"
+        },
+        {
+          "name": "label_number_format",
+          "kind": "optional"
+        },
+        {
+          "name": "label_currency_format",
+          "kind": "optional"
+        },
+        {
+          "name": "label_spacing",
+          "kind": "optional"
+        },
+        {
+          "name": "show_axis",
+          "kind": "optional",
+          "default": true
+        },
+        {
+          "name": "show_major_gridlines",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "show_clustered_series_labels",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "show_last_label",
+          "kind": "optional",
+          "default": false
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.chart-common.chart-color",
+      "name": "ChartColor",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "fill",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.chart-data",
+      "name": "ChartData",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "plot_direction",
+          "kind": "optional"
+        },
+        {
+          "name": "shared_xvalues",
+          "kind": "optional",
+          "default": true
+        },
+        {
+          "name": "chart_data_source",
+          "kind": "required"
+        },
+        {
+          "name": "column_labels",
+          "kind": "optional"
+        },
+        {
+          "name": "row_labels",
+          "kind": "optional"
+        },
+        {
+          "name": "rows",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.chart-data.chart-data-row",
+      "name": "ChartDataRow",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "values",
+          "kind": "required"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.chart-legend",
+      "name": "ChartLegend",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "geometry",
+          "kind": "optional"
+        },
+        {
+          "name": "label_text_style",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.chart-series",
+      "name": "ChartSeries",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "label_format_type",
+          "kind": "optional"
+        },
+        {
+          "name": "label_date_format",
+          "kind": "optional"
+        },
+        {
+          "name": "label_duration_format",
+          "kind": "optional"
+        },
+        {
+          "name": "label_number_format",
+          "kind": "optional"
+        },
+        {
+          "name": "label_currency_format",
+          "kind": "optional"
+        },
+        {
+          "name": "series_index",
+          "kind": "optional"
+        },
+        {
+          "name": "show_value_labels",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "value_label_position",
+          "kind": "optional"
+        },
+        {
+          "name": "value_label_text_style",
+          "kind": "optional"
+        },
+        {
+          "name": "value_label_outside_text_style",
+          "kind": "optional"
+        },
+        {
+          "name": "fill",
+          "kind": "inheritable"
+        },
+        {
+          "name": "stroke",
+          "kind": "optional"
+        },
+        {
+          "name": "symbol_type",
+          "kind": "optional"
+        },
+        {
+          "name": "symbol_stroke",
+          "kind": "optional"
+        },
+        {
+          "name": "symbol_fill",
+          "kind": "inheritable"
+        },
+        {
+          "name": "symbol_size",
+          "kind": "optional"
+        },
+        {
+          "name": "fill_reuse_rules",
+          "kind": "optional"
+        },
+        {
+          "name": "fill_use_series_stroke_alpha_multiplier",
+          "kind": "optional"
+        },
+        {
+          "name": "connection_line_type",
+          "kind": "optional"
+        },
+        {
+          "name": "value_labels_selection",
+          "kind": "optional"
+        },
+        {
+          "name": "show_negative_data",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "mixed_series_type",
+          "kind": "optional"
+        },
+        {
+          "name": "y_axis_selection",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.chart-value-axis",
+      "name": "ChartValueAxis",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "title",
+          "kind": "optional"
+        },
+        {
+          "name": "title_text_style",
+          "kind": "optional"
+        },
+        {
+          "name": "label_text_style",
+          "kind": "optional"
+        },
+        {
+          "name": "show_labels",
+          "kind": "optional",
+          "default": true
+        },
+        {
+          "name": "show_title",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "show_major_tickmarks",
+          "kind": "optional",
+          "default": true
+        },
+        {
+          "name": "show_minor_tickmarks",
+          "kind": "optional",
+          "default": true
+        },
+        {
+          "name": "labels_orientation",
+          "kind": "optional"
+        },
+        {
+          "name": "label_format_type",
+          "kind": "optional"
+        },
+        {
+          "name": "label_date_format",
+          "kind": "optional"
+        },
+        {
+          "name": "label_duration_format",
+          "kind": "optional"
+        },
+        {
+          "name": "label_number_format",
+          "kind": "optional"
+        },
+        {
+          "name": "label_currency_format",
+          "kind": "optional"
+        },
+        {
+          "name": "scale",
+          "kind": "optional"
+        },
+        {
+          "name": "max",
+          "kind": "optional"
+        },
+        {
+          "name": "min",
+          "kind": "optional"
+        },
+        {
+          "name": "show_axis",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "show_major_gridlines",
+          "kind": "optional",
+          "default": true
+        },
+        {
+          "name": "show_minimum_label",
+          "kind": "optional",
+          "default": true
+        },
+        {
+          "name": "number_of_major_gridlines",
+          "kind": "optional"
+        },
+        {
+          "name": "number_of_decades",
+          "kind": "optional"
+        },
+        {
+          "name": "number_of_minor_gridlines",
+          "kind": "optional"
+        },
+        {
+          "name": "show_minor_gridlines",
+          "kind": "optional",
+          "default": false
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.column3-dchart",
+      "name": "Column3DChart",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "title",
+          "kind": "optional"
+        },
+        {
+          "name": "caption",
+          "kind": "optional"
+        },
+        {
+          "name": "data",
+          "kind": "optional"
+        },
+        {
+          "name": "show_legend",
+          "kind": "optional",
+          "default": true
+        },
+        {
+          "name": "legend",
+          "kind": "optional"
+        },
+        {
+          "name": "series",
+          "kind": "optional"
+        },
+        {
+          "name": "chart_colors",
+          "kind": "optional"
+        },
+        {
+          "name": "category_axis",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis_secondary",
+          "kind": "optional"
+        },
+        {
+          "name": "geometry",
+          "kind": "optional"
+        },
+        {
+          "name": "aspect_ratio_locked",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "description",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.column-chart",
+      "name": "ColumnChart",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "title",
+          "kind": "optional"
+        },
+        {
+          "name": "caption",
+          "kind": "optional"
+        },
+        {
+          "name": "data",
+          "kind": "optional"
+        },
+        {
+          "name": "show_legend",
+          "kind": "optional",
+          "default": true
+        },
+        {
+          "name": "legend",
+          "kind": "optional"
+        },
+        {
+          "name": "series",
+          "kind": "optional"
+        },
+        {
+          "name": "chart_colors",
+          "kind": "optional"
+        },
+        {
+          "name": "category_axis",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis_secondary",
+          "kind": "optional"
+        },
+        {
+          "name": "geometry",
+          "kind": "optional"
+        },
+        {
+          "name": "aspect_ratio_locked",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "description",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.column-interactive-chart",
+      "name": "ColumnInteractiveChart",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "title",
+          "kind": "optional"
+        },
+        {
+          "name": "caption",
+          "kind": "optional"
+        },
+        {
+          "name": "data",
+          "kind": "optional"
+        },
+        {
+          "name": "show_legend",
+          "kind": "optional",
+          "default": true
+        },
+        {
+          "name": "legend",
+          "kind": "optional"
+        },
+        {
+          "name": "series",
+          "kind": "optional"
+        },
+        {
+          "name": "chart_colors",
+          "kind": "optional"
+        },
+        {
+          "name": "category_axis",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis_secondary",
+          "kind": "optional"
+        },
+        {
+          "name": "geometry",
+          "kind": "optional"
+        },
+        {
+          "name": "aspect_ratio_locked",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "description",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.donut-chart",
+      "name": "DonutChart",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "title",
+          "kind": "optional"
+        },
+        {
+          "name": "caption",
+          "kind": "optional"
+        },
+        {
+          "name": "data",
+          "kind": "optional"
+        },
+        {
+          "name": "show_legend",
+          "kind": "optional",
+          "default": true
+        },
+        {
+          "name": "legend",
+          "kind": "optional"
+        },
+        {
+          "name": "series",
+          "kind": "optional"
+        },
+        {
+          "name": "chart_colors",
+          "kind": "optional"
+        },
+        {
+          "name": "geometry",
+          "kind": "optional"
+        },
+        {
+          "name": "aspect_ratio_locked",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "description",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.category-comparison-chart-generic",
+      "name": "GenericCategoryComparisonChart",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "category_axis",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis_secondary",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.chart-axis-common-generic",
+      "name": "GenericChartAxisCommon",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "title",
+          "kind": "optional"
+        },
+        {
+          "name": "title_text_style",
+          "kind": "optional"
+        },
+        {
+          "name": "label_text_style",
+          "kind": "optional"
+        },
+        {
+          "name": "show_labels",
+          "kind": "optional",
+          "default": true
+        },
+        {
+          "name": "show_title",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "show_major_tickmarks",
+          "kind": "optional",
+          "default": true
+        },
+        {
+          "name": "show_minor_tickmarks",
+          "kind": "optional",
+          "default": true
+        },
+        {
+          "name": "labels_orientation",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.chart-common-generic",
+      "name": "GenericChartCommon",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "title",
+          "kind": "optional"
+        },
+        {
+          "name": "caption",
+          "kind": "optional"
+        },
+        {
+          "name": "data",
+          "kind": "optional"
+        },
+        {
+          "name": "show_legend",
+          "kind": "optional",
+          "default": true
+        },
+        {
+          "name": "legend",
+          "kind": "optional"
+        },
+        {
+          "name": "series",
+          "kind": "optional"
+        },
+        {
+          "name": "chart_colors",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.chart-label-formatting-generic",
+      "name": "GenericChartLabelFormatting",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "label_format_type",
+          "kind": "optional"
+        },
+        {
+          "name": "label_date_format",
+          "kind": "optional"
+        },
+        {
+          "name": "label_duration_format",
+          "kind": "optional"
+        },
+        {
+          "name": "label_number_format",
+          "kind": "optional"
+        },
+        {
+          "name": "label_currency_format",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.correlation-chart-generic",
+      "name": "GenericCorrelationChart",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "value_axis_x",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis_y",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.line3-dchart",
+      "name": "Line3DChart",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "title",
+          "kind": "optional"
+        },
+        {
+          "name": "caption",
+          "kind": "optional"
+        },
+        {
+          "name": "data",
+          "kind": "optional"
+        },
+        {
+          "name": "show_legend",
+          "kind": "optional",
+          "default": true
+        },
+        {
+          "name": "legend",
+          "kind": "optional"
+        },
+        {
+          "name": "series",
+          "kind": "optional"
+        },
+        {
+          "name": "chart_colors",
+          "kind": "optional"
+        },
+        {
+          "name": "category_axis",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis_secondary",
+          "kind": "optional"
+        },
+        {
+          "name": "geometry",
+          "kind": "optional"
+        },
+        {
+          "name": "aspect_ratio_locked",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "description",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.line-chart",
+      "name": "LineChart",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "title",
+          "kind": "optional"
+        },
+        {
+          "name": "caption",
+          "kind": "optional"
+        },
+        {
+          "name": "data",
+          "kind": "optional"
+        },
+        {
+          "name": "show_legend",
+          "kind": "optional",
+          "default": true
+        },
+        {
+          "name": "legend",
+          "kind": "optional"
+        },
+        {
+          "name": "series",
+          "kind": "optional"
+        },
+        {
+          "name": "chart_colors",
+          "kind": "optional"
+        },
+        {
+          "name": "category_axis",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis_secondary",
+          "kind": "optional"
+        },
+        {
+          "name": "geometry",
+          "kind": "optional"
+        },
+        {
+          "name": "aspect_ratio_locked",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "description",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.mixed-chart",
+      "name": "MixedChart",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "title",
+          "kind": "optional"
+        },
+        {
+          "name": "caption",
+          "kind": "optional"
+        },
+        {
+          "name": "data",
+          "kind": "optional"
+        },
+        {
+          "name": "show_legend",
+          "kind": "optional",
+          "default": true
+        },
+        {
+          "name": "legend",
+          "kind": "optional"
+        },
+        {
+          "name": "series",
+          "kind": "optional"
+        },
+        {
+          "name": "chart_colors",
+          "kind": "optional"
+        },
+        {
+          "name": "category_axis",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis_secondary",
+          "kind": "optional"
+        },
+        {
+          "name": "geometry",
+          "kind": "optional"
+        },
+        {
+          "name": "aspect_ratio_locked",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "description",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.pie3-dchart",
+      "name": "Pie3DChart",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "title",
+          "kind": "optional"
+        },
+        {
+          "name": "caption",
+          "kind": "optional"
+        },
+        {
+          "name": "data",
+          "kind": "optional"
+        },
+        {
+          "name": "show_legend",
+          "kind": "optional",
+          "default": true
+        },
+        {
+          "name": "legend",
+          "kind": "optional"
+        },
+        {
+          "name": "series",
+          "kind": "optional"
+        },
+        {
+          "name": "chart_colors",
+          "kind": "optional"
+        },
+        {
+          "name": "geometry",
+          "kind": "optional"
+        },
+        {
+          "name": "aspect_ratio_locked",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "description",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.pie-chart",
+      "name": "PieChart",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "title",
+          "kind": "optional"
+        },
+        {
+          "name": "caption",
+          "kind": "optional"
+        },
+        {
+          "name": "data",
+          "kind": "optional"
+        },
+        {
+          "name": "show_legend",
+          "kind": "optional",
+          "default": true
+        },
+        {
+          "name": "legend",
+          "kind": "optional"
+        },
+        {
+          "name": "series",
+          "kind": "optional"
+        },
+        {
+          "name": "chart_colors",
+          "kind": "optional"
+        },
+        {
+          "name": "geometry",
+          "kind": "optional"
+        },
+        {
+          "name": "aspect_ratio_locked",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "description",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.radar-chart",
+      "name": "RadarChart",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "title",
+          "kind": "optional"
+        },
+        {
+          "name": "caption",
+          "kind": "optional"
+        },
+        {
+          "name": "data",
+          "kind": "optional"
+        },
+        {
+          "name": "show_legend",
+          "kind": "optional",
+          "default": true
+        },
+        {
+          "name": "legend",
+          "kind": "optional"
+        },
+        {
+          "name": "series",
+          "kind": "optional"
+        },
+        {
+          "name": "chart_colors",
+          "kind": "optional"
+        },
+        {
+          "name": "category_axis",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis_secondary",
+          "kind": "optional"
+        },
+        {
+          "name": "geometry",
+          "kind": "optional"
+        },
+        {
+          "name": "aspect_ratio_locked",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "description",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.scatter-chart",
+      "name": "ScatterChart",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "title",
+          "kind": "optional"
+        },
+        {
+          "name": "caption",
+          "kind": "optional"
+        },
+        {
+          "name": "data",
+          "kind": "optional"
+        },
+        {
+          "name": "show_legend",
+          "kind": "optional",
+          "default": true
+        },
+        {
+          "name": "legend",
+          "kind": "optional"
+        },
+        {
+          "name": "series",
+          "kind": "optional"
+        },
+        {
+          "name": "chart_colors",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis_x",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis_y",
+          "kind": "optional"
+        },
+        {
+          "name": "geometry",
+          "kind": "optional"
+        },
+        {
+          "name": "aspect_ratio_locked",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "description",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.scatter-interactive-chart",
+      "name": "ScatterInteractiveChart",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "title",
+          "kind": "optional"
+        },
+        {
+          "name": "caption",
+          "kind": "optional"
+        },
+        {
+          "name": "data",
+          "kind": "optional"
+        },
+        {
+          "name": "show_legend",
+          "kind": "optional",
+          "default": true
+        },
+        {
+          "name": "legend",
+          "kind": "optional"
+        },
+        {
+          "name": "series",
+          "kind": "optional"
+        },
+        {
+          "name": "chart_colors",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis_x",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis_y",
+          "kind": "optional"
+        },
+        {
+          "name": "geometry",
+          "kind": "optional"
+        },
+        {
+          "name": "aspect_ratio_locked",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "description",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.stacked-area3-dchart",
+      "name": "StackedArea3DChart",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "title",
+          "kind": "optional"
+        },
+        {
+          "name": "caption",
+          "kind": "optional"
+        },
+        {
+          "name": "data",
+          "kind": "optional"
+        },
+        {
+          "name": "show_legend",
+          "kind": "optional",
+          "default": true
+        },
+        {
+          "name": "legend",
+          "kind": "optional"
+        },
+        {
+          "name": "series",
+          "kind": "optional"
+        },
+        {
+          "name": "chart_colors",
+          "kind": "optional"
+        },
+        {
+          "name": "category_axis",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis_secondary",
+          "kind": "optional"
+        },
+        {
+          "name": "geometry",
+          "kind": "optional"
+        },
+        {
+          "name": "aspect_ratio_locked",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "description",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.stacked-area-chart",
+      "name": "StackedAreaChart",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "title",
+          "kind": "optional"
+        },
+        {
+          "name": "caption",
+          "kind": "optional"
+        },
+        {
+          "name": "data",
+          "kind": "optional"
+        },
+        {
+          "name": "show_legend",
+          "kind": "optional",
+          "default": true
+        },
+        {
+          "name": "legend",
+          "kind": "optional"
+        },
+        {
+          "name": "series",
+          "kind": "optional"
+        },
+        {
+          "name": "chart_colors",
+          "kind": "optional"
+        },
+        {
+          "name": "category_axis",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis_secondary",
+          "kind": "optional"
+        },
+        {
+          "name": "geometry",
+          "kind": "optional"
+        },
+        {
+          "name": "aspect_ratio_locked",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "description",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.stacked-bar3-dchart",
+      "name": "StackedBar3DChart",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "title",
+          "kind": "optional"
+        },
+        {
+          "name": "caption",
+          "kind": "optional"
+        },
+        {
+          "name": "data",
+          "kind": "optional"
+        },
+        {
+          "name": "show_legend",
+          "kind": "optional",
+          "default": true
+        },
+        {
+          "name": "legend",
+          "kind": "optional"
+        },
+        {
+          "name": "series",
+          "kind": "optional"
+        },
+        {
+          "name": "chart_colors",
+          "kind": "optional"
+        },
+        {
+          "name": "category_axis",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis_secondary",
+          "kind": "optional"
+        },
+        {
+          "name": "geometry",
+          "kind": "optional"
+        },
+        {
+          "name": "aspect_ratio_locked",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "description",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.stacked-bar-chart",
+      "name": "StackedBarChart",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "title",
+          "kind": "optional"
+        },
+        {
+          "name": "caption",
+          "kind": "optional"
+        },
+        {
+          "name": "data",
+          "kind": "optional"
+        },
+        {
+          "name": "show_legend",
+          "kind": "optional",
+          "default": true
+        },
+        {
+          "name": "legend",
+          "kind": "optional"
+        },
+        {
+          "name": "series",
+          "kind": "optional"
+        },
+        {
+          "name": "chart_colors",
+          "kind": "optional"
+        },
+        {
+          "name": "category_axis",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis_secondary",
+          "kind": "optional"
+        },
+        {
+          "name": "geometry",
+          "kind": "optional"
+        },
+        {
+          "name": "aspect_ratio_locked",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "description",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.stacked-column3-dchart",
+      "name": "StackedColumn3DChart",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "title",
+          "kind": "optional"
+        },
+        {
+          "name": "caption",
+          "kind": "optional"
+        },
+        {
+          "name": "data",
+          "kind": "optional"
+        },
+        {
+          "name": "show_legend",
+          "kind": "optional",
+          "default": true
+        },
+        {
+          "name": "legend",
+          "kind": "optional"
+        },
+        {
+          "name": "series",
+          "kind": "optional"
+        },
+        {
+          "name": "chart_colors",
+          "kind": "optional"
+        },
+        {
+          "name": "category_axis",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis_secondary",
+          "kind": "optional"
+        },
+        {
+          "name": "geometry",
+          "kind": "optional"
+        },
+        {
+          "name": "aspect_ratio_locked",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "description",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.stacked-column-chart",
+      "name": "StackedColumnChart",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "title",
+          "kind": "optional"
+        },
+        {
+          "name": "caption",
+          "kind": "optional"
+        },
+        {
+          "name": "data",
+          "kind": "optional"
+        },
+        {
+          "name": "show_legend",
+          "kind": "optional",
+          "default": true
+        },
+        {
+          "name": "legend",
+          "kind": "optional"
+        },
+        {
+          "name": "series",
+          "kind": "optional"
+        },
+        {
+          "name": "chart_colors",
+          "kind": "optional"
+        },
+        {
+          "name": "category_axis",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis_secondary",
+          "kind": "optional"
+        },
+        {
+          "name": "geometry",
+          "kind": "optional"
+        },
+        {
+          "name": "aspect_ratio_locked",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "description",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.two-axis-chart",
+      "name": "TwoAxisChart",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "title",
+          "kind": "optional"
+        },
+        {
+          "name": "caption",
+          "kind": "optional"
+        },
+        {
+          "name": "data",
+          "kind": "optional"
+        },
+        {
+          "name": "show_legend",
+          "kind": "optional",
+          "default": true
+        },
+        {
+          "name": "legend",
+          "kind": "optional"
+        },
+        {
+          "name": "series",
+          "kind": "optional"
+        },
+        {
+          "name": "chart_colors",
+          "kind": "optional"
+        },
+        {
+          "name": "category_axis",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis",
+          "kind": "optional"
+        },
+        {
+          "name": "value_axis_secondary",
+          "kind": "optional"
+        },
+        {
+          "name": "geometry",
+          "kind": "optional"
+        },
+        {
+          "name": "aspect_ratio_locked",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "description",
+          "kind": "optional"
+        }
+      ]
+    }
+  ],
+  "unions": [
+    {
+      "type": "com.apple.apps.content-language.chart-axis-common.axis-label-orientation",
+      "name": "AxisLabelOrientation",
+      "version": "1.0",
+      "cases": [
+        {
+          "name": "custom"
+        },
+        {
+          "name": "horizontal",
+          "valueless": true
+        },
+        {
+          "name": "left_diagonal",
+          "valueless": true
+        },
+        {
+          "name": "left_vertical",
+          "valueless": true
+        },
+        {
+          "name": "parallel",
+          "valueless": true
+        },
+        {
+          "name": "perpendicular",
+          "valueless": true
+        },
+        {
+          "name": "right_diagonal",
+          "valueless": true
+        },
+        {
+          "name": "right_vertical",
+          "valueless": true
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.category-comparison-chart",
+      "name": "CategoryComparisonChart",
+      "version": "1.0",
+      "cases": [
+        {
+          "name": "area3Dchart"
+        },
+        {
+          "name": "areaChart"
+        },
+        {
+          "name": "bar3Dchart"
+        },
+        {
+          "name": "barChart"
+        },
+        {
+          "name": "barInteractiveChart"
+        },
+        {
+          "name": "column3Dchart"
+        },
+        {
+          "name": "columnChart"
+        },
+        {
+          "name": "columnInteractiveChart"
+        },
+        {
+          "name": "genericCategoryComparisonChart"
+        },
+        {
+          "name": "line3Dchart"
+        },
+        {
+          "name": "lineChart"
+        },
+        {
+          "name": "mixedChart"
+        },
+        {
+          "name": "radarChart"
+        },
+        {
+          "name": "stackedArea3Dchart"
+        },
+        {
+          "name": "stackedAreaChart"
+        },
+        {
+          "name": "stackedBar3Dchart"
+        },
+        {
+          "name": "stackedBarChart"
+        },
+        {
+          "name": "stackedColumn3Dchart"
+        },
+        {
+          "name": "stackedColumnChart"
+        },
+        {
+          "name": "twoAxisChart"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.chart",
+      "name": "Chart",
+      "version": "1.0",
+      "cases": [
+        {
+          "name": "area"
+        },
+        {
+          "name": "area_3d"
+        },
+        {
+          "name": "bar"
+        },
+        {
+          "name": "bar_3d"
+        },
+        {
+          "name": "bar_interactive"
+        },
+        {
+          "name": "bubble"
+        },
+        {
+          "name": "bubble_interactive"
+        },
+        {
+          "name": "column"
+        },
+        {
+          "name": "column_3d"
+        },
+        {
+          "name": "column_interactive"
+        },
+        {
+          "name": "donut"
+        },
+        {
+          "name": "line"
+        },
+        {
+          "name": "line_3d"
+        },
+        {
+          "name": "mixed"
+        },
+        {
+          "name": "pie"
+        },
+        {
+          "name": "pie_3d"
+        },
+        {
+          "name": "radar"
+        },
+        {
+          "name": "scatter"
+        },
+        {
+          "name": "scatter_interactive"
+        },
+        {
+          "name": "stacked_area"
+        },
+        {
+          "name": "stacked_area_3d"
+        },
+        {
+          "name": "stacked_bar"
+        },
+        {
+          "name": "stacked_bar_3d"
+        },
+        {
+          "name": "stacked_column"
+        },
+        {
+          "name": "stacked_column_3d"
+        },
+        {
+          "name": "two_axis"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.chart-axis-common",
+      "name": "ChartAxisCommon",
+      "version": "1.0",
+      "cases": [
+        {
+          "name": "chartCategoryAxis"
+        },
+        {
+          "name": "chartValueAxis"
+        },
+        {
+          "name": "genericChartAxisCommon"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.chart-common",
+      "name": "ChartCommon",
+      "version": "1.0",
+      "cases": [
+        {
+          "name": "area3Dchart"
+        },
+        {
+          "name": "areaChart"
+        },
+        {
+          "name": "bar3Dchart"
+        },
+        {
+          "name": "barChart"
+        },
+        {
+          "name": "barInteractiveChart"
+        },
+        {
+          "name": "bubbleChart"
+        },
+        {
+          "name": "bubbleInteractiveChart"
+        },
+        {
+          "name": "column3Dchart"
+        },
+        {
+          "name": "columnChart"
+        },
+        {
+          "name": "columnInteractiveChart"
+        },
+        {
+          "name": "donutChart"
+        },
+        {
+          "name": "genericChartCommon"
+        },
+        {
+          "name": "line3Dchart"
+        },
+        {
+          "name": "lineChart"
+        },
+        {
+          "name": "mixedChart"
+        },
+        {
+          "name": "pie3Dchart"
+        },
+        {
+          "name": "pieChart"
+        },
+        {
+          "name": "radarChart"
+        },
+        {
+          "name": "scatterChart"
+        },
+        {
+          "name": "scatterInteractiveChart"
+        },
+        {
+          "name": "stackedArea3Dchart"
+        },
+        {
+          "name": "stackedAreaChart"
+        },
+        {
+          "name": "stackedBar3Dchart"
+        },
+        {
+          "name": "stackedBarChart"
+        },
+        {
+          "name": "stackedColumn3Dchart"
+        },
+        {
+          "name": "stackedColumnChart"
+        },
+        {
+          "name": "twoAxisChart"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.chart-data.chart-data-value",
+      "name": "ChartDataValue",
+      "version": "1.0",
+      "cases": [
+        {
+          "name": "date"
+        },
+        {
+          "name": "duration"
+        },
+        {
+          "name": "empty",
+          "valueless": true
+        },
+        {
+          "name": "number"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.chart-label-formatting",
+      "name": "ChartLabelFormatting",
+      "version": "1.0",
+      "cases": [
+        {
+          "name": "chartCategoryAxis"
+        },
+        {
+          "name": "chartSeries"
+        },
+        {
+          "name": "chartValueAxis"
+        },
+        {
+          "name": "genericChartLabelFormatting"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.correlation-chart",
+      "name": "CorrelationChart",
+      "version": "1.0",
+      "cases": [
+        {
+          "name": "bubbleChart"
+        },
+        {
+          "name": "bubbleInteractiveChart"
+        },
+        {
+          "name": "genericCorrelationChart"
+        },
+        {
+          "name": "scatterChart"
+        },
+        {
+          "name": "scatterInteractiveChart"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.chart-category-axis.label-spacing",
+      "name": "LabelSpacing",
+      "version": "1.0",
+      "cases": [
+        {
+          "name": "auto_fit",
+          "valueless": true
+        },
+        {
+          "name": "custom"
+        },
+        {
+          "name": "none",
+          "valueless": true
+        },
+        {
+          "name": "show_all",
+          "valueless": true
+        }
+      ]
+    }
+  ]
+}

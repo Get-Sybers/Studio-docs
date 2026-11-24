@@ -1,0 +1,181 @@
+{
+  "enumerations": [
+    {
+      "name": "LineEnd",
+      "values": [
+        "filled_arrow",
+        "filled_circle",
+        "filled_diamond",
+        "filled_square",
+        "inverted_arrow",
+        "line",
+        "none",
+        "open_arrow",
+        "open_circle",
+        "open_square",
+        "simple_arrow"
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "type": "com.apple.apps.content-language.caption-owning-generic",
+      "name": "GenericCaptionOwning",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "caption",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.placeable-title-owning-generic",
+      "name": "GenericPlaceableTitleOwning",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "title",
+          "kind": "optional"
+        },
+        {
+          "name": "title_is_positioned_on_top",
+          "kind": "optional",
+          "default": true
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.title-owning-generic",
+      "name": "GenericTitleOwning",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "title",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.geometry",
+      "name": "Geometry",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "position",
+          "kind": "required"
+        },
+        {
+          "name": "size",
+          "kind": "required"
+        },
+        {
+          "name": "angle",
+          "kind": "optional",
+          "default": 0
+        },
+        {
+          "name": "flip_horizontally",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "width_valid",
+          "kind": "optional",
+          "default": true
+        },
+        {
+          "name": "height_valid",
+          "kind": "optional",
+          "default": true
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.label",
+      "name": "Label",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "layout_properties",
+          "kind": "optional"
+        },
+        {
+          "name": "paragraph_properties",
+          "kind": "optional"
+        },
+        {
+          "name": "text",
+          "kind": "optional"
+        },
+        {
+          "name": "is_visible",
+          "kind": "optional",
+          "default": true
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.reflection",
+      "name": "Reflection",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "opacity",
+          "kind": "optional",
+          "default": 1,
+          "minimum": 0,
+          "maximum": 1
+        },
+        {
+          "name": "fade_acceleration",
+          "kind": "optional",
+          "default": 1,
+          "minimum": 1
+        }
+      ]
+    }
+  ],
+  "unions": [
+    {
+      "type": "com.apple.apps.content-language.caption-owning",
+      "name": "CaptionOwning",
+      "version": "1.0",
+      "cases": [
+        {
+          "name": "genericCaptionOwning"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.duration",
+      "name": "DurationValue",
+      "version": "1.0",
+      "cases": [
+        {
+          "name": "seconds"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.placeable-title-owning",
+      "name": "PlaceableTitleOwning",
+      "version": "1.0",
+      "cases": [
+        {
+          "name": "genericPlaceableTitleOwning"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.title-owning",
+      "name": "TitleOwning",
+      "version": "1.0",
+      "cases": [
+        {
+          "name": "genericTitleOwning"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,280 @@
+{
+  "BodyStrokeStyle": {
+    "name": "name sample",
+    "properties": {}
+  },
+  "CellStyle": {
+    "name": "name sample",
+    "properties": {}
+  },
+  "HeaderFooterStrokeStyle": {
+    "name": "name sample",
+    "properties": {}
+  },
+  "KeynoteTheme": {
+    "name": "name sample",
+    "locale": "locale sample",
+    "slide_layouts": [
+      {
+        "name": "name sample"
+      }
+    ]
+  },
+  "MediaProperties": {
+    "stroke": "empty",
+    "opacity": 1.5,
+    "reflection": {},
+    "shadow": "none"
+  },
+  "MediaStyle": {
+    "name": "name sample",
+    "properties": {}
+  },
+  "OverallStyle": {
+    "name": "name sample",
+    "properties": {}
+  },
+  "PlaceholderDefinition": {
+    "kind": "body",
+    "is_visible": true
+  },
+  "Presentation": {
+    "theme": {},
+    "slide_size": {
+      "width": 1.5,
+      "height": 1.5
+    },
+    "slides": [
+      {}
+    ],
+    "stylesheet": {}
+  },
+  "ShapeProperties": {
+    "stroke": "empty",
+    "opacity": 1.5,
+    "reflection": {},
+    "shadow": "none",
+    "fill": {
+      "color": {
+        "rgba": {}
+      }
+    },
+    "head": "filled_arrow",
+    "tail": "filled_arrow",
+    "layout_properties": {},
+    "paragraph_properties": {}
+  },
+  "ShapeStyle": {
+    "name": "name sample",
+    "properties": {}
+  },
+  "Slide": {
+    "layout": "layout sample",
+    "contents": [
+      {
+        "object": {
+          "audio": {
+            "resource": {
+              "base64_encoded": {
+                "string": "string sample",
+                "filename": "anchor.png"
+              }
+            },
+            "playback_options": {}
+          }
+        }
+      }
+    ],
+    "background": {
+      "standard": {
+        "color": {
+          "rgba": {}
+        }
+      }
+    },
+    "depth": 2,
+    "note": {
+      "string": "string sample"
+    }
+  },
+  "SlideLayout": {
+    "name": "name sample",
+    "contents": [
+      {
+        "object": {
+          "audio": {
+            "resource": {
+              "base64_encoded": {
+                "string": "string sample",
+                "filename": "anchor.png"
+              }
+            },
+            "playback_options": {}
+          }
+        }
+      }
+    ],
+    "background": {
+      "standard": {
+        "color": {
+          "rgba": {}
+        }
+      }
+    },
+    "slide_objects_layer_with_layout": true
+  },
+  "SlideObject": {
+    "instructional_text": "instructional text sample",
+    "is_locked": true,
+    "object": {
+      "audio": {
+        "resource": {
+          "base64_encoded": {
+            "string": "string sample",
+            "filename": "anchor.png"
+          }
+        },
+        "playback_options": {}
+      }
+    },
+    "placeholder_info": {
+      "tagged": "tagged sample"
+    },
+    "source_kind": "layout"
+  },
+  "TableStyleCollection": {
+    "table_name_shape_style": {
+      "properties": {}
+    },
+    "table_name_style": {
+      "properties": {}
+    },
+    "overall_style": {
+      "properties": {}
+    },
+    "body_cell_style": {
+      "properties": {}
+    },
+    "body_text_style": {
+      "properties": {}
+    },
+    "body_stroke_style": {
+      "properties": {}
+    },
+    "header_row_cell_style": {
+      "properties": {}
+    },
+    "header_row_text_style": {
+      "properties": {}
+    },
+    "header_row_stroke_style": {
+      "properties": {}
+    },
+    "header_column_cell_style": {
+      "properties": {}
+    },
+    "header_column_text_style": {
+      "properties": {}
+    },
+    "header_column_stroke_style": {
+      "properties": {}
+    },
+    "footer_row_cell_style": {
+      "properties": {}
+    },
+    "footer_row_text_style": {
+      "properties": {}
+    },
+    "footer_row_stroke_style": {
+      "properties": {}
+    },
+    "category_level1_cell_style": {
+      "properties": {}
+    },
+    "category_level1_text_style": {
+      "properties": {}
+    },
+    "category_level2_cell_style": {
+      "properties": {}
+    },
+    "category_level2_text_style": {
+      "properties": {}
+    },
+    "category_level3_cell_style": {
+      "properties": {}
+    },
+    "category_level3_text_style": {
+      "properties": {}
+    },
+    "category_level4_cell_style": {
+      "properties": {}
+    },
+    "category_level4_text_style": {
+      "properties": {}
+    },
+    "category_level5_cell_style": {
+      "properties": {}
+    },
+    "category_level5_text_style": {
+      "properties": {}
+    },
+    "label_level1_cell_style": {
+      "properties": {}
+    },
+    "label_level1_text_style": {
+      "properties": {}
+    },
+    "label_level2_cell_style": {
+      "properties": {}
+    },
+    "label_level2_text_style": {
+      "properties": {}
+    },
+    "label_level3_cell_style": {
+      "properties": {}
+    },
+    "label_level3_text_style": {
+      "properties": {}
+    },
+    "label_level4_cell_style": {
+      "properties": {}
+    },
+    "label_level4_text_style": {
+      "properties": {}
+    },
+    "label_level5_cell_style": {
+      "properties": {}
+    },
+    "label_level5_text_style": {
+      "properties": {}
+    },
+    "pivot_body_summary_row_cell_style": {
+      "properties": {}
+    },
+    "pivot_body_summary_column_cell_style": {
+      "properties": {}
+    },
+    "pivot_header_column_summary_cell_style": {
+      "properties": {}
+    }
+  },
+  "PlaceholderInfo": [
+    {
+      "defined": {
+        "kind": "body"
+      }
+    },
+    {
+      "tagged": "tagged sample"
+    }
+  ],
+  "SlideBackground": [
+    {
+      "standard": {
+        "color": {
+          "rgba": {}
+        }
+      }
+    }
+  ]
+}
