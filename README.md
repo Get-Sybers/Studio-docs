@@ -111,7 +111,7 @@ library does not model is kept as read and written back.
 
 - The library is checked against the documentation pages and the models of Apple's reference library,
   and against no file that Keynote wrote.
-- A member name repeated in one JSON object is not detected; the tree keeps one of the values.
+- A member name repeated in one JSON object is not detected; the tree keeps the first value.
 - The ZIP writer writes no Zip64 archive: fewer than 65,535 entries and under 4 GiB. The reader reads
   Zip64.
 - Every entry of a package is read into memory on open.
