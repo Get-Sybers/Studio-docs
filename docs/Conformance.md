@@ -90,8 +90,8 @@ runs on a pull request that changes the workflow itself.
 
 The ruleset `protect-main` applies to the default branch: nobody deletes or force-pushes it, every commit on it
 carries a verified signature, and a change reaches it through a pull request, merged by merge commit, squash
-or rebase. The ruleset requires no status check; `CI OK` is the one to require. A commit made through GitHub's
-API or web editor is signed by GitHub and passes; a commit pushed from a machine without a signing key does not.
+or rebase, once the status check `CI OK` has passed. A commit made through GitHub's API or web editor is signed
+by GitHub and passes; a commit pushed from a machine without a signing key does not.
 
 The environment `release` has the owner as its required reviewer and `main` as its only branch; the job
 `publish` runs in it.
