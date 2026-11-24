@@ -1,0 +1,22 @@
+Studio-docs
+Copyright 2026 the Studio-docs contributors
+
+This product is an independent Swift implementation of the document package layout and the text
+model that Apple Inc. documents for Creator Studio documents. It is not affiliated with, sponsored
+by or endorsed by Apple Inc.
+
+The reference for the format is the work of Apple Inc.:
+
+  - the documentation "Keynote Interchange Format",
+    https://developer.apple.com/documentation/keynoteinterchangeformat
+  - the library creator-studio-doc-format, Copyright 2026 Apple Inc., licensed under the Apache
+    License, Version 2.0, https://github.com/apple/creator-studio-doc-format
+
+This product holds no source code and no documentation text of either. The type identifiers, member
+names, versions, defaults and limits in its format tables are facts of the format, read from those
+two sources.
+
+This product depends on Swift Collections, https://github.com/apple/swift-collections, licensed
+under the Apache License, Version 2.0, with a Runtime Library Exception.
+
+Keynote and Creator Studio are trademarks of Apple Inc.
