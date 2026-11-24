@@ -6,6 +6,8 @@ All notable changes to this package are recorded in this file. The format follow
 
 ## [Unreleased]
 
+## [0.1.0] - 2026-11-24
+
 ### Added
 
 - The targets `RawDeflate` and `ZipArchives`: a reader and a writer of ZIP archives over the system's
@@ -60,3 +62,6 @@ All notable changes to this package are recorded in this file. The format follow
   it was 5,280, which a deep call on a secondary thread could not hold on its stack.
 - The example of the README and the test `createSaveReopen` are one: a section of two paragraphs, one of
   them styled, saved as an archive and opened again.
+
+[Unreleased]: https://github.com/Get-Sybers/Studio-docs/compare/0.1.0...HEAD
+[0.1.0]: https://github.com/Get-Sybers/Studio-docs/releases/tag/0.1.0
