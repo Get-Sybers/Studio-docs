@@ -38,9 +38,13 @@ git ls-files -- README.md AGENTS.md 'docs/*.md' | while IFS= read -r file; do
 done | grep . && report "a document states a plan or a status; documents state present fact"
 
 git ls-files -- '*.swift' '*.sh' '*.yml' '*.yaml' Makefile | grep -v '/testdata/' | while IFS= read -r file; do
-  awk -v file="$file" '
+  case "$file" in
+    *.swift) mark='^[[:space:]]*//' ;;
+    *) mark='^[[:space:]]*#' ;;
+  esac
+  awk -v file="$file" -v mark="$mark" '
     NR == 1 && /^#!/ { next }
-    /^[[:space:]]*(\/\/|#)/ { run++; if (run == 4) printf "%s:%d: comment block longer than three lines\n", file, NR; next }
+    $0 ~ mark { run++; if (run == 4) printf "%s:%d: comment block longer than three lines\n", file, NR; next }
     { run = 0 }' "$file"
 done | grep . && report "a comment block is longer than three lines"
 

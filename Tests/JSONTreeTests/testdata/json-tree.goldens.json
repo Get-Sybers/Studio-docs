@@ -1,0 +1,9 @@
+{
+  "text: a scalar at the top" : "\"alone\"\n\"alone\"",
+  "text: members are ordered by name" : "{\"Alpha\":2,\"_\":6,\"alpha\":3,\"b10\":4,\"b2\":5,\"zeta\":1}\n{\n  \"Alpha\" : 2,\n  \"_\" : 6,\n  \"alpha\" : 3,\n  \"b10\" : 4,\n  \"b2\" : 5,\n  \"zeta\" : 1\n}",
+  "text: nested" : "{\"a\":{\"b\":[{\"c\":[]},{}]},\"d\":null}\n{\n  \"a\" : {\n    \"b\" : [\n      {\n        \"c\" : [\n\n        ]\n      },\n      {\n\n      }\n    ]\n  },\n  \"d\" : null\n}",
+  "text: numbers at the edges" : "[9007199254740993,18446744073709551615,1.8446744073709552e+19,5e-324,0.1]\n[\n  9007199254740993,\n  18446744073709551615,\n  1.8446744073709552e+19,\n  5e-324,\n  0.1\n]",
+  "text: scalars" : "[null,true,false,0,-7,1.5,\"text\",\"\"]\n[\n  null,\n  true,\n  false,\n  0,\n  -7,\n  1.5,\n  \"text\",\n  \"\"\n]",
+  "text: unusual characters" : "[\"non-breaking space\",\"line separator\",\"😀\",\"é\",\"tab\\there\",\"quote\\\"\",\"a/b\",\"\\u0001\"]\n[\n  \"non-breaking space\",\n  \"line separator\",\n  \"😀\",\n  \"é\",\n  \"tab\\there\",\n  \"quote\\\"\",\n  \"a/b\",\n  \"\\u0001\"\n]",
+  "text: whole numbers lose their fraction" : "[1,100,0,2.5]\n[\n  1,\n  100,\n  0,\n  2.5\n]"
+}

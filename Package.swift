@@ -29,7 +29,7 @@ let package = Package(
   name: "Studio-docs",
   platforms: [.macOS(.v27)],
   products: [
-    .library(name: "StudioDocs", targets: ["ZipArchives"])
+    .library(name: "StudioDocs", targets: ["JSONTree", "ZipArchives"])
   ],
   dependencies: [
     .package(url: "https://github.com/apple/swift-collections", from: "1.7.0")
@@ -37,10 +37,12 @@ let package = Package(
   targets: [
     library("RawDeflate"),
     library("ZipArchives", needs: ["RawDeflate", ordered]),
+    library("JSONTree", needs: [ordered]),
     library("GoldenFiles"),
 
     tests(of: "RawDeflate", data: false),
     tests(of: "ZipArchives", with: ["GoldenFiles", "RawDeflate"]),
+    tests(of: "JSONTree", with: ["GoldenFiles"]),
     tests(of: "GoldenFiles"),
   ]
 )

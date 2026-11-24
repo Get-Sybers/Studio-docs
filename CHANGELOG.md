@@ -11,6 +11,8 @@ All notable changes to this package are recorded in this file. The format follow
 - The targets `RawDeflate` and `ZipArchives`: a reader and a writer of ZIP archives over the system's
   zlib. The reader refuses names that leave the archive, repeated names, entries that share bytes, and
   sizes and ratios beyond its limits.
+- The target `JSONTree`: a JSON value tree that reads and writes through Foundation's coders, keeps
+  whole numbers exact, and treats the order of an object's members as without meaning.
 - The target `GoldenFiles`, which the tests share: one file of expected outputs for each test target.
 - The gate `make tidy conform`, the structural lint `scripts/structure-lint.sh`, and the workflow
   `Swift CI`.
