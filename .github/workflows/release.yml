@@ -1,0 +1,140 @@
+name: Release
+
+# Runs the gate from any branch. With `publish`, on main, it publishes the
+# newest version that CHANGELOG.md names as a tag and a release: the version is
+# never an input, and a version whose tag exists is refused.
+
+on:
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: "Publish the newest version in CHANGELOG.md as a tag and a release (from main only)"
+        required: false
+        type: boolean
+        default: false
+  pull_request:
+    paths:
+      - .github/workflows/release.yml
+
+permissions: {}
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    name: gate
+    runs-on: xcode-27
+    timeout-minutes: 45
+    permissions:
+      contents: read
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 1
+          persist-credentials: false
+
+      # The version is cut in the pull request that moves the Unreleased entries
+      # under it, and shipped here once: a publish stops when its tag exists.
+      # A run that is not a publish resolves 0.0.0, which is no release.
+      - name: Resolve the version
+        id: version
+        env:
+          PUBLISH: ${{ inputs.publish }}
+          REF: ${{ github.ref }}
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          named="$(awk '$1 == "##" && $2 ~ /^\[[0-9]+\.[0-9]+\.[0-9]+\]$/ { print substr($2, 2, length($2) - 2); exit }' CHANGELOG.md)"
+          [[ -n "${named}" ]] || { echo "::error::CHANGELOG.md names no version"; exit 1; }
+          tags="$(gh api "repos/${GH_REPO}/git/matching-refs/tags/${named}" --jq "map(select(.ref == \"refs/tags/${named}\")) | length")"
+          echo "CHANGELOG.md names ${named}; tags of that name: ${tags}"
+          version="0.0.0"
+          if [[ "${PUBLISH}" == "true" ]]; then
+            [[ "${REF}" == "refs/heads/main" ]] || { echo "::error::a release is published from main, not ${REF}"; exit 1; }
+            [[ "${tags}" == "0" ]] || { echo "::error::${named} is released: cut the next version in CHANGELOG.md in a pull request"; exit 1; }
+            version="${named}"
+          fi
+          echo "version=${version}" >> "${GITHUB_OUTPUT}"
+          echo "NAMED=${named}" >> "${GITHUB_ENV}"
+
+      - name: Select Xcode
+        run: |
+          echo "DEVELOPER_DIR=/Applications/Xcode_$(cat .xcode-version).app/Contents/Developer" >> "$GITHUB_ENV"
+
+      - name: Cache Swift packages
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: ~/Library/Caches/org.swift.swiftpm
+          key: spm-${{ runner.os }}-${{ hashFiles('**/Package.resolved') }}
+
+      # The job's token lifts the fetch of the package dependency above the limits of an anonymous clone.
+      - name: Gate
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          auth="$(printf 'x-access-token:%s' "${GH_TOKEN}" | base64)"
+          echo "::add-mask::${auth}"
+          export GIT_CONFIG_COUNT=1
+          export GIT_CONFIG_KEY_0="http.https://github.com/.extraheader"
+          export GIT_CONFIG_VALUE_0="AUTHORIZATION: basic ${auth}"
+          make tidy conform RESOLVE=--disable-automatic-resolution
+
+      # The notes are the section of the version in CHANGELOG.md, without the link lines at the end of the file.
+      - name: Write the release notes
+        run: |
+          mkdir dist
+          awk -v v="${NAMED}" '$1 == "##" { on = ($2 == "[" v "]"); next } /^\[[^]]+\]: / { next } on' CHANGELOG.md > dist/notes.md
+          grep -q '[^[:space:]]' dist/notes.md || { echo "::error::the section of ${NAMED} in CHANGELOG.md is empty"; exit 1; }
+          cat dist/notes.md
+
+      - name: Keep the notes
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: notes-${{ steps.version.outputs.version }}
+          path: dist/
+          if-no-files-found: error
+          retention-days: 14
+
+  # The one job with a token that writes. It runs no code of the repository:
+  # it takes the notes from the job above and makes the tag and the release.
+  publish:
+    name: publish
+    if: ${{ inputs.publish }}
+    needs: build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    environment: release
+    permissions:
+      contents: write
+    env:
+      VERSION: ${{ needs.build.outputs.version }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - name: Fetch the notes
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: notes-${{ needs.build.outputs.version }}
+          path: dist
+
+      - name: Refuse a version that is released
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tags="$(gh api "repos/${GH_REPO}/git/matching-refs/tags/${VERSION}" --jq "map(select(.ref == \"refs/tags/${VERSION}\")) | length")"
+          [[ "${tags}" == "0" ]] || { echo "::error::${VERSION} is released: cut the next version in CHANGELOG.md in a pull request"; exit 1; }
+
+      - name: Publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "${VERSION}" --target "${GITHUB_SHA}" --title "Studio-docs ${VERSION}" --notes-file dist/notes.md
+          echo "Published \`${VERSION}\` from \`${GITHUB_SHA}\`: \`.package(url: \"${GITHUB_SERVER_URL}/${GH_REPO}\", from: \"${VERSION}\")\`" >> "${GITHUB_STEP_SUMMARY}"

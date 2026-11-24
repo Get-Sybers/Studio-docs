@@ -6,6 +6,13 @@ All notable changes to this package are recorded in this file. The format follow
 
 ## [Unreleased]
 
+### Added
+
+- The workflow `Release`: run by hand on `main`, it publishes the newest version that `CHANGELOG.md` names as a
+  tag and a GitHub release, after the gate, in the environment `release` that the owner approves.
+- The pull request template, Dependabot for the Swift packages, and in `docs/Conformance.md` the rules of the
+  repository on GitHub: the ruleset `protect-main` and the environment `release`.
+
 ## [0.1.0] - 2026-11-24
 
 ### Added
