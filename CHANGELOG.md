@@ -40,6 +40,7 @@ All notable changes to this package are recorded in this file. The format follow
   writes only the files whose bytes differ. It keeps every entry and member it does not know, refuses a
   later major version of the package, and refuses to write a document that has validation errors.
   `UntypedBody` opens a Keynote presentation and writes it back as it was.
+- The target `TextDocument`: a small body of the library's own, a title, text styles and sections in order.
 - The target `GoldenFiles`, which the tests share: one file of expected outputs for each test target.
 - The gate `make tidy conform`, the structural lint `scripts/structure-lint.sh`, and the workflow
   `Swift CI`.

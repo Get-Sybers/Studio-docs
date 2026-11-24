@@ -37,7 +37,7 @@ let package = Package(
       name: "StudioDocs",
       targets: [
         "Appearance", "DocumentIdentifiers", "DocumentPackage", "DocumentValidation", "JSONTree", "PresetStyles",
-        "ResourceReferences", "TextModel", "WireFormat", "ZipArchives",
+        "ResourceReferences", "TextDocument", "TextModel", "WireFormat", "ZipArchives",
       ])
   ],
   dependencies: [
@@ -67,6 +67,7 @@ let package = Package(
         "DocumentValidation", "JSONTree", "PresetStyles", "ResourceReferences", "TextModel", "WireFormat",
         "ZipArchives", ordered,
       ]),
+    library("TextDocument", needs: ["DocumentPackage", "TextModel", "WireFormat"], table: true),
     library("GoldenFiles"),
     library("ModelFixtures", needs: ["JSONTree", "WireFormat"]),
 
@@ -88,6 +89,12 @@ let package = Package(
     tests(of: "ResourceReferences", with: ["GoldenFiles", "JSONTree", "ModelFixtures", "WireFormat"]),
     tests(of: "Appearance", with: ["GoldenFiles", "JSONTree", "ModelFixtures", "WireFormat"]),
     tests(of: "TextModel", with: ["Appearance", "GoldenFiles", "JSONTree", "ModelFixtures", "WireFormat"]),
+    tests(
+      of: "TextDocument",
+      with: [
+        "DocumentPackage", "DocumentValidation", "GoldenFiles", "JSONTree", "ModelFixtures", "PresetStyles",
+        "TextModel", "WireFormat",
+      ]),
     tests(of: "GoldenFiles"),
     tests(of: "ModelFixtures", with: ["JSONTree", "WireFormat"]),
   ]

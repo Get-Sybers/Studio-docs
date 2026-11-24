@@ -60,6 +60,8 @@ version than 1.0 introduced shows that version in brackets.
 | `com.apple.apps.content-language.text-run` | `TextRun` | TextModel | object | 1.0 | `string`, `style` |
 | `com.apple.apps.content-language.text-stroke` | `TextStroke` | Appearance | union | 1.0 | `none`, `stroke` |
 | `com.apple.apps.content-language.text` | `TextBody` | TextModel | union | 1.0 | `paragraphs`, `string`, `text_runs` |
+| `io.github.get-sybers.studio-docs.text-document.section` | `TextSection` | TextDocument | object | 1.0 | `heading`, `text` |
+| `io.github.get-sybers.studio-docs.text-document` | `TextDocumentBody` | TextDocument | object | 1.0 | `title`, `stylesheet`, `sections` |
 
 ## Enumerations
 

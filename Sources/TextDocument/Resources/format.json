@@ -1,0 +1,24 @@
+{
+  "objects": [
+    {
+      "type": "io.github.get-sybers.studio-docs.text-document",
+      "name": "TextDocumentBody",
+      "version": "1.0",
+      "members": [
+        {"name": "title", "kind": "optional"},
+        {"name": "stylesheet", "kind": "optional"},
+        {"name": "sections", "kind": "required"}
+      ]
+    },
+    {
+      "type": "io.github.get-sybers.studio-docs.text-document.section",
+      "name": "TextSection",
+      "version": "1.0",
+      "members": [
+        {"name": "heading", "kind": "optional"},
+        {"name": "text", "kind": "required"}
+      ]
+    }
+  ],
+  "unions": []
+}

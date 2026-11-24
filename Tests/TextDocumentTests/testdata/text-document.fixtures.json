@@ -1,0 +1,18 @@
+{
+  "TextDocumentBody": {
+    "title": {"string": "Harbour notes"},
+    "stylesheet": {
+      "paragraph_styles": [
+        {"name": "Body", "preset_identifier": "body", "properties": {"alignment": "justified"}}
+      ]
+    },
+    "sections": [
+      {"heading": {"string": "Monday"}, "text": {"paragraphs": [{"contents": [{"run": {"string": "Low water at six."}}]}]}},
+      {"text": {"string": "A section with no heading."}}
+    ]
+  },
+  "TextSection": {
+    "heading": {"paragraphs": [{"contents": [{"run": {"string": "Tuesday", "style": {"bold": true}}}]}]},
+    "text": {"paragraphs": [{"style": {"preset_identifier": "body"}, "contents": [{"run": {"string": "The swell rose before dawn."}}]}]}
+  }
+}
