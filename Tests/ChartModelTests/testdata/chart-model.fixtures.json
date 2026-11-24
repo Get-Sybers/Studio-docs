@@ -1,0 +1,1244 @@
+{
+  "Area3DChart": {
+    "title": {},
+    "caption": {},
+    "data": {
+      "chart_data_source": "chart_data_grid"
+    },
+    "show_legend": true,
+    "legend": {},
+    "series": [
+      {}
+    ],
+    "chart_colors": [
+      {}
+    ],
+    "category_axis": {},
+    "value_axis": {},
+    "value_axis_secondary": {},
+    "geometry": {
+      "position": {
+        "x": 1.5,
+        "y": 1.5
+      },
+      "size": {
+        "width": 1.5,
+        "height": 1.5
+      }
+    },
+    "aspect_ratio_locked": true,
+    "description": "description sample"
+  },
+  "AreaChart": {
+    "title": {},
+    "caption": {},
+    "data": {
+      "chart_data_source": "chart_data_grid"
+    },
+    "show_legend": true,
+    "legend": {},
+    "series": [
+      {}
+    ],
+    "chart_colors": [
+      {}
+    ],
+    "category_axis": {},
+    "value_axis": {},
+    "value_axis_secondary": {},
+    "geometry": {
+      "position": {
+        "x": 1.5,
+        "y": 1.5
+      },
+      "size": {
+        "width": 1.5,
+        "height": 1.5
+      }
+    },
+    "aspect_ratio_locked": true,
+    "description": "description sample"
+  },
+  "Bar3DChart": {
+    "title": {},
+    "caption": {},
+    "data": {
+      "chart_data_source": "chart_data_grid"
+    },
+    "show_legend": true,
+    "legend": {},
+    "series": [
+      {}
+    ],
+    "chart_colors": [
+      {}
+    ],
+    "category_axis": {},
+    "value_axis": {},
+    "value_axis_secondary": {},
+    "geometry": {
+      "position": {
+        "x": 1.5,
+        "y": 1.5
+      },
+      "size": {
+        "width": 1.5,
+        "height": 1.5
+      }
+    },
+    "aspect_ratio_locked": true,
+    "description": "description sample"
+  },
+  "BarChart": {
+    "title": {},
+    "caption": {},
+    "data": {
+      "chart_data_source": "chart_data_grid"
+    },
+    "show_legend": true,
+    "legend": {},
+    "series": [
+      {}
+    ],
+    "chart_colors": [
+      {}
+    ],
+    "category_axis": {},
+    "value_axis": {},
+    "value_axis_secondary": {},
+    "geometry": {
+      "position": {
+        "x": 1.5,
+        "y": 1.5
+      },
+      "size": {
+        "width": 1.5,
+        "height": 1.5
+      }
+    },
+    "aspect_ratio_locked": true,
+    "description": "description sample"
+  },
+  "BarInteractiveChart": {
+    "title": {},
+    "caption": {},
+    "data": {
+      "chart_data_source": "chart_data_grid"
+    },
+    "show_legend": true,
+    "legend": {},
+    "series": [
+      {}
+    ],
+    "chart_colors": [
+      {}
+    ],
+    "category_axis": {},
+    "value_axis": {},
+    "value_axis_secondary": {},
+    "geometry": {
+      "position": {
+        "x": 1.5,
+        "y": 1.5
+      },
+      "size": {
+        "width": 1.5,
+        "height": 1.5
+      }
+    },
+    "aspect_ratio_locked": true,
+    "description": "description sample"
+  },
+  "BubbleChart": {
+    "title": {},
+    "caption": {},
+    "data": {
+      "chart_data_source": "chart_data_grid"
+    },
+    "show_legend": true,
+    "legend": {},
+    "series": [
+      {}
+    ],
+    "chart_colors": [
+      {}
+    ],
+    "value_axis_x": {},
+    "value_axis_y": {},
+    "geometry": {
+      "position": {
+        "x": 1.5,
+        "y": 1.5
+      },
+      "size": {
+        "width": 1.5,
+        "height": 1.5
+      }
+    },
+    "aspect_ratio_locked": true,
+    "description": "description sample"
+  },
+  "BubbleInteractiveChart": {
+    "title": {},
+    "caption": {},
+    "data": {
+      "chart_data_source": "chart_data_grid"
+    },
+    "show_legend": true,
+    "legend": {},
+    "series": [
+      {}
+    ],
+    "chart_colors": [
+      {}
+    ],
+    "value_axis_x": {},
+    "value_axis_y": {},
+    "geometry": {
+      "position": {
+        "x": 1.5,
+        "y": 1.5
+      },
+      "size": {
+        "width": 1.5,
+        "height": 1.5
+      }
+    },
+    "aspect_ratio_locked": true,
+    "description": "description sample"
+  },
+  "ChartCategoryAxis": {
+    "title": "title sample",
+    "title_text_style": {},
+    "label_text_style": {},
+    "show_labels": true,
+    "show_title": true,
+    "show_major_tickmarks": true,
+    "show_minor_tickmarks": true,
+    "labels_orientation": "horizontal",
+    "label_format_type": "automatic",
+    "label_date_format": {
+      "format_string": "format string sample"
+    },
+    "label_duration_format": {},
+    "label_number_format": {},
+    "label_currency_format": {},
+    "label_spacing": "auto_fit",
+    "show_axis": true,
+    "show_major_gridlines": true,
+    "show_clustered_series_labels": true,
+    "show_last_label": true
+  },
+  "ChartColor": {
+    "fill": {
+      "color": {
+        "rgba": {}
+      }
+    }
+  },
+  "ChartData": {
+    "plot_direction": "columns_as_series",
+    "shared_xvalues": true,
+    "chart_data_source": "chart_data_grid",
+    "column_labels": [
+      "column labels sample"
+    ],
+    "row_labels": [
+      "row labels sample"
+    ],
+    "rows": [
+      {
+        "values": [
+          "empty"
+        ]
+      }
+    ]
+  },
+  "ChartDataRow": {
+    "values": [
+      "empty"
+    ]
+  },
+  "ChartLegend": {
+    "geometry": {
+      "position": {
+        "x": 1.5,
+        "y": 1.5
+      },
+      "size": {
+        "width": 1.5,
+        "height": 1.5
+      }
+    },
+    "label_text_style": {}
+  },
+  "ChartSeries": {
+    "label_format_type": "automatic",
+    "label_date_format": {
+      "format_string": "format string sample"
+    },
+    "label_duration_format": {},
+    "label_number_format": {},
+    "label_currency_format": {},
+    "series_index": 2,
+    "show_value_labels": true,
+    "value_label_position": "auto",
+    "value_label_text_style": {},
+    "value_label_outside_text_style": {},
+    "fill": {
+      "color": {
+        "rgba": {}
+      }
+    },
+    "stroke": "empty",
+    "symbol_type": "circle",
+    "symbol_stroke": "empty",
+    "symbol_fill": {
+      "color": {
+        "rgba": {}
+      }
+    },
+    "symbol_size": 1.5,
+    "fill_reuse_rules": [
+      "series_fill_use_series_stroke"
+    ],
+    "fill_use_series_stroke_alpha_multiplier": 1.5,
+    "connection_line_type": "curved",
+    "value_labels_selection": "none",
+    "show_negative_data": true,
+    "mixed_series_type": "area",
+    "y_axis_selection": 2
+  },
+  "ChartValueAxis": {
+    "title": "title sample",
+    "title_text_style": {},
+    "label_text_style": {},
+    "show_labels": true,
+    "show_title": true,
+    "show_major_tickmarks": true,
+    "show_minor_tickmarks": true,
+    "labels_orientation": "horizontal",
+    "label_format_type": "automatic",
+    "label_date_format": {
+      "format_string": "format string sample"
+    },
+    "label_duration_format": {},
+    "label_number_format": {},
+    "label_currency_format": {},
+    "scale": "linear",
+    "max": "empty",
+    "min": "empty",
+    "show_axis": true,
+    "show_major_gridlines": true,
+    "show_minimum_label": true,
+    "number_of_major_gridlines": 2,
+    "number_of_decades": 2,
+    "number_of_minor_gridlines": 2,
+    "show_minor_gridlines": true
+  },
+  "Column3DChart": {
+    "title": {},
+    "caption": {},
+    "data": {
+      "chart_data_source": "chart_data_grid"
+    },
+    "show_legend": true,
+    "legend": {},
+    "series": [
+      {}
+    ],
+    "chart_colors": [
+      {}
+    ],
+    "category_axis": {},
+    "value_axis": {},
+    "value_axis_secondary": {},
+    "geometry": {
+      "position": {
+        "x": 1.5,
+        "y": 1.5
+      },
+      "size": {
+        "width": 1.5,
+        "height": 1.5
+      }
+    },
+    "aspect_ratio_locked": true,
+    "description": "description sample"
+  },
+  "ColumnChart": {
+    "title": {},
+    "caption": {},
+    "data": {
+      "chart_data_source": "chart_data_grid"
+    },
+    "show_legend": true,
+    "legend": {},
+    "series": [
+      {}
+    ],
+    "chart_colors": [
+      {}
+    ],
+    "category_axis": {},
+    "value_axis": {},
+    "value_axis_secondary": {},
+    "geometry": {
+      "position": {
+        "x": 1.5,
+        "y": 1.5
+      },
+      "size": {
+        "width": 1.5,
+        "height": 1.5
+      }
+    },
+    "aspect_ratio_locked": true,
+    "description": "description sample"
+  },
+  "ColumnInteractiveChart": {
+    "title": {},
+    "caption": {},
+    "data": {
+      "chart_data_source": "chart_data_grid"
+    },
+    "show_legend": true,
+    "legend": {},
+    "series": [
+      {}
+    ],
+    "chart_colors": [
+      {}
+    ],
+    "category_axis": {},
+    "value_axis": {},
+    "value_axis_secondary": {},
+    "geometry": {
+      "position": {
+        "x": 1.5,
+        "y": 1.5
+      },
+      "size": {
+        "width": 1.5,
+        "height": 1.5
+      }
+    },
+    "aspect_ratio_locked": true,
+    "description": "description sample"
+  },
+  "DonutChart": {
+    "title": {},
+    "caption": {},
+    "data": {
+      "chart_data_source": "chart_data_grid"
+    },
+    "show_legend": true,
+    "legend": {},
+    "series": [
+      {}
+    ],
+    "chart_colors": [
+      {}
+    ],
+    "geometry": {
+      "position": {
+        "x": 1.5,
+        "y": 1.5
+      },
+      "size": {
+        "width": 1.5,
+        "height": 1.5
+      }
+    },
+    "aspect_ratio_locked": true,
+    "description": "description sample"
+  },
+  "GenericCategoryComparisonChart": {
+    "category_axis": {},
+    "value_axis": {},
+    "value_axis_secondary": {}
+  },
+  "GenericChartAxisCommon": {
+    "title": "title sample",
+    "title_text_style": {},
+    "label_text_style": {},
+    "show_labels": true,
+    "show_title": true,
+    "show_major_tickmarks": true,
+    "show_minor_tickmarks": true,
+    "labels_orientation": "horizontal"
+  },
+  "GenericChartCommon": {
+    "title": {},
+    "caption": {},
+    "data": {
+      "chart_data_source": "chart_data_grid"
+    },
+    "show_legend": true,
+    "legend": {},
+    "series": [
+      {}
+    ],
+    "chart_colors": [
+      {}
+    ]
+  },
+  "GenericChartLabelFormatting": {
+    "label_format_type": "automatic",
+    "label_date_format": {
+      "format_string": "format string sample"
+    },
+    "label_duration_format": {},
+    "label_number_format": {},
+    "label_currency_format": {}
+  },
+  "GenericCorrelationChart": {
+    "value_axis_x": {},
+    "value_axis_y": {}
+  },
+  "Line3DChart": {
+    "title": {},
+    "caption": {},
+    "data": {
+      "chart_data_source": "chart_data_grid"
+    },
+    "show_legend": true,
+    "legend": {},
+    "series": [
+      {}
+    ],
+    "chart_colors": [
+      {}
+    ],
+    "category_axis": {},
+    "value_axis": {},
+    "value_axis_secondary": {},
+    "geometry": {
+      "position": {
+        "x": 1.5,
+        "y": 1.5
+      },
+      "size": {
+        "width": 1.5,
+        "height": 1.5
+      }
+    },
+    "aspect_ratio_locked": true,
+    "description": "description sample"
+  },
+  "LineChart": {
+    "title": {},
+    "caption": {},
+    "data": {
+      "chart_data_source": "chart_data_grid"
+    },
+    "show_legend": true,
+    "legend": {},
+    "series": [
+      {}
+    ],
+    "chart_colors": [
+      {}
+    ],
+    "category_axis": {},
+    "value_axis": {},
+    "value_axis_secondary": {},
+    "geometry": {
+      "position": {
+        "x": 1.5,
+        "y": 1.5
+      },
+      "size": {
+        "width": 1.5,
+        "height": 1.5
+      }
+    },
+    "aspect_ratio_locked": true,
+    "description": "description sample"
+  },
+  "MixedChart": {
+    "title": {},
+    "caption": {},
+    "data": {
+      "chart_data_source": "chart_data_grid"
+    },
+    "show_legend": true,
+    "legend": {},
+    "series": [
+      {}
+    ],
+    "chart_colors": [
+      {}
+    ],
+    "category_axis": {},
+    "value_axis": {},
+    "value_axis_secondary": {},
+    "geometry": {
+      "position": {
+        "x": 1.5,
+        "y": 1.5
+      },
+      "size": {
+        "width": 1.5,
+        "height": 1.5
+      }
+    },
+    "aspect_ratio_locked": true,
+    "description": "description sample"
+  },
+  "Pie3DChart": {
+    "title": {},
+    "caption": {},
+    "data": {
+      "chart_data_source": "chart_data_grid"
+    },
+    "show_legend": true,
+    "legend": {},
+    "series": [
+      {}
+    ],
+    "chart_colors": [
+      {}
+    ],
+    "geometry": {
+      "position": {
+        "x": 1.5,
+        "y": 1.5
+      },
+      "size": {
+        "width": 1.5,
+        "height": 1.5
+      }
+    },
+    "aspect_ratio_locked": true,
+    "description": "description sample"
+  },
+  "PieChart": {
+    "title": {},
+    "caption": {},
+    "data": {
+      "chart_data_source": "chart_data_grid"
+    },
+    "show_legend": true,
+    "legend": {},
+    "series": [
+      {}
+    ],
+    "chart_colors": [
+      {}
+    ],
+    "geometry": {
+      "position": {
+        "x": 1.5,
+        "y": 1.5
+      },
+      "size": {
+        "width": 1.5,
+        "height": 1.5
+      }
+    },
+    "aspect_ratio_locked": true,
+    "description": "description sample"
+  },
+  "RadarChart": {
+    "title": {},
+    "caption": {},
+    "data": {
+      "chart_data_source": "chart_data_grid"
+    },
+    "show_legend": true,
+    "legend": {},
+    "series": [
+      {}
+    ],
+    "chart_colors": [
+      {}
+    ],
+    "category_axis": {},
+    "value_axis": {},
+    "value_axis_secondary": {},
+    "geometry": {
+      "position": {
+        "x": 1.5,
+        "y": 1.5
+      },
+      "size": {
+        "width": 1.5,
+        "height": 1.5
+      }
+    },
+    "aspect_ratio_locked": true,
+    "description": "description sample"
+  },
+  "ScatterChart": {
+    "title": {},
+    "caption": {},
+    "data": {
+      "chart_data_source": "chart_data_grid"
+    },
+    "show_legend": true,
+    "legend": {},
+    "series": [
+      {}
+    ],
+    "chart_colors": [
+      {}
+    ],
+    "value_axis_x": {},
+    "value_axis_y": {},
+    "geometry": {
+      "position": {
+        "x": 1.5,
+        "y": 1.5
+      },
+      "size": {
+        "width": 1.5,
+        "height": 1.5
+      }
+    },
+    "aspect_ratio_locked": true,
+    "description": "description sample"
+  },
+  "ScatterInteractiveChart": {
+    "title": {},
+    "caption": {},
+    "data": {
+      "chart_data_source": "chart_data_grid"
+    },
+    "show_legend": true,
+    "legend": {},
+    "series": [
+      {}
+    ],
+    "chart_colors": [
+      {}
+    ],
+    "value_axis_x": {},
+    "value_axis_y": {},
+    "geometry": {
+      "position": {
+        "x": 1.5,
+        "y": 1.5
+      },
+      "size": {
+        "width": 1.5,
+        "height": 1.5
+      }
+    },
+    "aspect_ratio_locked": true,
+    "description": "description sample"
+  },
+  "StackedArea3DChart": {
+    "title": {},
+    "caption": {},
+    "data": {
+      "chart_data_source": "chart_data_grid"
+    },
+    "show_legend": true,
+    "legend": {},
+    "series": [
+      {}
+    ],
+    "chart_colors": [
+      {}
+    ],
+    "category_axis": {},
+    "value_axis": {},
+    "value_axis_secondary": {},
+    "geometry": {
+      "position": {
+        "x": 1.5,
+        "y": 1.5
+      },
+      "size": {
+        "width": 1.5,
+        "height": 1.5
+      }
+    },
+    "aspect_ratio_locked": true,
+    "description": "description sample"
+  },
+  "StackedAreaChart": {
+    "title": {},
+    "caption": {},
+    "data": {
+      "chart_data_source": "chart_data_grid"
+    },
+    "show_legend": true,
+    "legend": {},
+    "series": [
+      {}
+    ],
+    "chart_colors": [
+      {}
+    ],
+    "category_axis": {},
+    "value_axis": {},
+    "value_axis_secondary": {},
+    "geometry": {
+      "position": {
+        "x": 1.5,
+        "y": 1.5
+      },
+      "size": {
+        "width": 1.5,
+        "height": 1.5
+      }
+    },
+    "aspect_ratio_locked": true,
+    "description": "description sample"
+  },
+  "StackedBar3DChart": {
+    "title": {},
+    "caption": {},
+    "data": {
+      "chart_data_source": "chart_data_grid"
+    },
+    "show_legend": true,
+    "legend": {},
+    "series": [
+      {}
+    ],
+    "chart_colors": [
+      {}
+    ],
+    "category_axis": {},
+    "value_axis": {},
+    "value_axis_secondary": {},
+    "geometry": {
+      "position": {
+        "x": 1.5,
+        "y": 1.5
+      },
+      "size": {
+        "width": 1.5,
+        "height": 1.5
+      }
+    },
+    "aspect_ratio_locked": true,
+    "description": "description sample"
+  },
+  "StackedBarChart": {
+    "title": {},
+    "caption": {},
+    "data": {
+      "chart_data_source": "chart_data_grid"
+    },
+    "show_legend": true,
+    "legend": {},
+    "series": [
+      {}
+    ],
+    "chart_colors": [
+      {}
+    ],
+    "category_axis": {},
+    "value_axis": {},
+    "value_axis_secondary": {},
+    "geometry": {
+      "position": {
+        "x": 1.5,
+        "y": 1.5
+      },
+      "size": {
+        "width": 1.5,
+        "height": 1.5
+      }
+    },
+    "aspect_ratio_locked": true,
+    "description": "description sample"
+  },
+  "StackedColumn3DChart": {
+    "title": {},
+    "caption": {},
+    "data": {
+      "chart_data_source": "chart_data_grid"
+    },
+    "show_legend": true,
+    "legend": {},
+    "series": [
+      {}
+    ],
+    "chart_colors": [
+      {}
+    ],
+    "category_axis": {},
+    "value_axis": {},
+    "value_axis_secondary": {},
+    "geometry": {
+      "position": {
+        "x": 1.5,
+        "y": 1.5
+      },
+      "size": {
+        "width": 1.5,
+        "height": 1.5
+      }
+    },
+    "aspect_ratio_locked": true,
+    "description": "description sample"
+  },
+  "StackedColumnChart": {
+    "title": {},
+    "caption": {},
+    "data": {
+      "chart_data_source": "chart_data_grid"
+    },
+    "show_legend": true,
+    "legend": {},
+    "series": [
+      {}
+    ],
+    "chart_colors": [
+      {}
+    ],
+    "category_axis": {},
+    "value_axis": {},
+    "value_axis_secondary": {},
+    "geometry": {
+      "position": {
+        "x": 1.5,
+        "y": 1.5
+      },
+      "size": {
+        "width": 1.5,
+        "height": 1.5
+      }
+    },
+    "aspect_ratio_locked": true,
+    "description": "description sample"
+  },
+  "TwoAxisChart": {
+    "title": {},
+    "caption": {},
+    "data": {
+      "chart_data_source": "chart_data_grid"
+    },
+    "show_legend": true,
+    "legend": {},
+    "series": [
+      {}
+    ],
+    "chart_colors": [
+      {}
+    ],
+    "category_axis": {},
+    "value_axis": {},
+    "value_axis_secondary": {},
+    "geometry": {
+      "position": {
+        "x": 1.5,
+        "y": 1.5
+      },
+      "size": {
+        "width": 1.5,
+        "height": 1.5
+      }
+    },
+    "aspect_ratio_locked": true,
+    "description": "description sample"
+  },
+  "AxisLabelOrientation": [
+    {
+      "custom": 1.5
+    },
+    "horizontal",
+    "left_diagonal",
+    "left_vertical",
+    "parallel",
+    "perpendicular",
+    "right_diagonal",
+    "right_vertical"
+  ],
+  "CategoryComparisonChart": [
+    {
+      "area3Dchart": {}
+    },
+    {
+      "areaChart": {}
+    },
+    {
+      "bar3Dchart": {}
+    },
+    {
+      "barChart": {}
+    },
+    {
+      "barInteractiveChart": {}
+    },
+    {
+      "column3Dchart": {}
+    },
+    {
+      "columnChart": {}
+    },
+    {
+      "columnInteractiveChart": {}
+    },
+    {
+      "genericCategoryComparisonChart": {}
+    },
+    {
+      "line3Dchart": {}
+    },
+    {
+      "lineChart": {}
+    },
+    {
+      "mixedChart": {}
+    },
+    {
+      "radarChart": {}
+    },
+    {
+      "stackedArea3Dchart": {}
+    },
+    {
+      "stackedAreaChart": {}
+    },
+    {
+      "stackedBar3Dchart": {}
+    },
+    {
+      "stackedBarChart": {}
+    },
+    {
+      "stackedColumn3Dchart": {}
+    },
+    {
+      "stackedColumnChart": {}
+    },
+    {
+      "twoAxisChart": {}
+    }
+  ],
+  "Chart": [
+    {
+      "area": {}
+    },
+    {
+      "area_3d": {}
+    },
+    {
+      "bar": {}
+    },
+    {
+      "bar_3d": {}
+    },
+    {
+      "bar_interactive": {}
+    },
+    {
+      "bubble": {}
+    },
+    {
+      "bubble_interactive": {}
+    },
+    {
+      "column": {}
+    },
+    {
+      "column_3d": {}
+    },
+    {
+      "column_interactive": {}
+    },
+    {
+      "donut": {}
+    },
+    {
+      "line": {}
+    },
+    {
+      "line_3d": {}
+    },
+    {
+      "mixed": {}
+    },
+    {
+      "pie": {}
+    },
+    {
+      "pie_3d": {}
+    },
+    {
+      "radar": {}
+    },
+    {
+      "scatter": {}
+    },
+    {
+      "scatter_interactive": {}
+    },
+    {
+      "stacked_area": {}
+    },
+    {
+      "stacked_area_3d": {}
+    },
+    {
+      "stacked_bar": {}
+    },
+    {
+      "stacked_bar_3d": {}
+    },
+    {
+      "stacked_column": {}
+    },
+    {
+      "stacked_column_3d": {}
+    },
+    {
+      "two_axis": {}
+    }
+  ],
+  "ChartAxisCommon": [
+    {
+      "chartCategoryAxis": {}
+    },
+    {
+      "chartValueAxis": {}
+    },
+    {
+      "genericChartAxisCommon": {}
+    }
+  ],
+  "ChartCommon": [
+    {
+      "area3Dchart": {}
+    },
+    {
+      "areaChart": {}
+    },
+    {
+      "bar3Dchart": {}
+    },
+    {
+      "barChart": {}
+    },
+    {
+      "barInteractiveChart": {}
+    },
+    {
+      "bubbleChart": {}
+    },
+    {
+      "bubbleInteractiveChart": {}
+    },
+    {
+      "column3Dchart": {}
+    },
+    {
+      "columnChart": {}
+    },
+    {
+      "columnInteractiveChart": {}
+    },
+    {
+      "donutChart": {}
+    },
+    {
+      "genericChartCommon": {}
+    },
+    {
+      "line3Dchart": {}
+    },
+    {
+      "lineChart": {}
+    },
+    {
+      "mixedChart": {}
+    },
+    {
+      "pie3Dchart": {}
+    },
+    {
+      "pieChart": {}
+    },
+    {
+      "radarChart": {}
+    },
+    {
+      "scatterChart": {}
+    },
+    {
+      "scatterInteractiveChart": {}
+    },
+    {
+      "stackedArea3Dchart": {}
+    },
+    {
+      "stackedAreaChart": {}
+    },
+    {
+      "stackedBar3Dchart": {}
+    },
+    {
+      "stackedBarChart": {}
+    },
+    {
+      "stackedColumn3Dchart": {}
+    },
+    {
+      "stackedColumnChart": {}
+    },
+    {
+      "twoAxisChart": {}
+    }
+  ],
+  "ChartDataValue": [
+    {
+      "date": {
+        "time_interval_since1970": 1.5
+      }
+    },
+    {
+      "duration": {
+        "seconds": 1.5
+      }
+    },
+    "empty",
+    {
+      "number": 1.5
+    }
+  ],
+  "ChartLabelFormatting": [
+    {
+      "chartCategoryAxis": {}
+    },
+    {
+      "chartSeries": {}
+    },
+    {
+      "chartValueAxis": {}
+    },
+    {
+      "genericChartLabelFormatting": {}
+    }
+  ],
+  "CorrelationChart": [
+    {
+      "bubbleChart": {}
+    },
+    {
+      "bubbleInteractiveChart": {}
+    },
+    {
+      "genericCorrelationChart": {}
+    },
+    {
+      "scatterChart": {}
+    },
+    {
+      "scatterInteractiveChart": {}
+    }
+  ],
+  "LabelSpacing": [
+    "auto_fit",
+    {
+      "custom": 2
+    },
+    "none",
+    "show_all"
+  ]
+}

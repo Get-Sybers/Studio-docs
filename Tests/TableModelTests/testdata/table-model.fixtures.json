@@ -1,0 +1,523 @@
+{
+  "BaseFormat": {
+    "base": 2,
+    "base_places": 2,
+    "base_use_minus_sign": true
+  },
+  "BodyStrokeProperties": {
+    "horizontal_border_stroke": "empty",
+    "vertical_border_stroke": "empty",
+    "horizontal_stroke": "empty",
+    "vertical_stroke": "empty",
+    "border_strokes_visible": true,
+    "horizontal_strokes_visible": true,
+    "vertical_strokes_visible": true
+  },
+  "BoolFormat": {
+    "true_string": "true string sample",
+    "false_string": "false string sample"
+  },
+  "CategoryRules": {},
+  "CellFormat": {
+    "format_type": "automatic",
+    "number_format": {},
+    "currency_format": {},
+    "fraction_format": {},
+    "base_format": {},
+    "bool_format": {
+      "true_string": "true string sample",
+      "false_string": "false string sample"
+    },
+    "duration_format": {},
+    "date_time_format": {
+      "format_string": "format string sample"
+    },
+    "custom_format_identifier": "custom format identifier sample"
+  },
+  "CellProperties": {
+    "text_wrap": true,
+    "vertical_alignment": "bottom",
+    "padding": {},
+    "fill": {
+      "color": {
+        "rgba": {}
+      }
+    }
+  },
+  "CellReference": {
+    "placeholder": "placeholder sample",
+    "display_notation": "display notation sample",
+    "start_row_identifier": "start row identifier sample",
+    "start_column_identifier": "start column identifier sample",
+    "end_row_identifier": "end row identifier sample",
+    "end_column_identifier": "end column identifier sample",
+    "is_row_absolute": true,
+    "is_column_absolute": true,
+    "is_end_row_absolute": true,
+    "is_end_column_absolute": true,
+    "table_identifier": "table identifier sample"
+  },
+  "CellStrokes": {
+    "top": "empty",
+    "bottom": "empty",
+    "left": "empty",
+    "right": "empty"
+  },
+  "ColumnGroupLabel": {
+    "grouping_row_identifier": "grouping row identifier sample",
+    "group_value": "group value sample",
+    "is_collapsed": true,
+    "nesting_level": 2
+  },
+  "ColumnHeader": {
+    "column_identifier": "column identifier sample",
+    "title": "title sample",
+    "cell_format": {},
+    "column_width": 1.5,
+    "cell_properties": {},
+    "text_properties": {},
+    "visibility_state": "user_hidden",
+    "kind": "body"
+  },
+  "ConditionalStyleRule": {
+    "predicate": {
+      "predicate_type": "date_after_relative"
+    },
+    "cell_style": {},
+    "text_style": {},
+    "preset_kind": "blue_fill"
+  },
+  "ConditionalStyleSet": {
+    "rules": [
+      {
+        "predicate": {
+          "predicate_type": "date_after_relative"
+        }
+      }
+    ]
+  },
+  "CurrencyFormat": {
+    "decimal_places": 2,
+    "negative_number_style": "minus",
+    "use_thousands_separator": true,
+    "accounting_style": true,
+    "currency_code": "currency code sample"
+  },
+  "CustomFormat": {
+    "format_name": "format name sample",
+    "format_string": "format string sample",
+    "format_type": "date_time",
+    "number_format_data": {},
+    "conditions": [
+      {
+        "condition_type": "equal",
+        "condition_value": 1.5,
+        "format_string": "format string sample"
+      }
+    ]
+  },
+  "CustomFormatCondition": {
+    "condition_type": "equal",
+    "condition_value": 1.5,
+    "format_string": "format string sample",
+    "number_format_data": {}
+  },
+  "DateTimeFormat": {
+    "format_string": "format string sample"
+  },
+  "DurationFormat": {
+    "use_automatic_units": true,
+    "smallest_unit": "day",
+    "largest_unit": "day",
+    "style": "compact"
+  },
+  "FilterRule": {
+    "predicate": {
+      "predicate_type": "date_after_relative"
+    }
+  },
+  "FilterSet": {
+    "is_enabled": true,
+    "combine_mode": "and",
+    "filters": [
+      {
+        "column_identifier": "column identifier sample",
+        "rules": [
+          {
+            "predicate": {
+              "predicate_type": "date_after_relative"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "FractionFormat": {
+    "accuracy": "conflicting"
+  },
+  "HeaderFooterStrokeProperties": {
+    "border_stroke": "empty",
+    "separator_stroke": "empty",
+    "horizontal_stroke": "empty",
+    "vertical_stroke": "empty",
+    "separator_visible": true,
+    "across_strokes_visible": true
+  },
+  "IdBasedFormula": {
+    "expression": "expression sample",
+    "references": [
+      {
+        "placeholder": "placeholder sample",
+        "start_row_identifier": "start row identifier sample",
+        "start_column_identifier": "start column identifier sample"
+      }
+    ]
+  },
+  "NumberFormat": {
+    "decimal_places": 2,
+    "negative_number_style": "minus",
+    "use_thousands_separator": true
+  },
+  "NumberFormatData": {
+    "scale_factor": 1.5,
+    "fraction_accuracy": "conflicting",
+    "interstitial_strings": [
+      "interstitial strings sample"
+    ],
+    "interstitial_string_insertion_indexes": [
+      2
+    ],
+    "minimum_integer_width": 2,
+    "decimal_width": 2,
+    "number_of_non_space_integer_placeholder_digits": 2,
+    "number_of_non_space_decimal_placeholder_digits": 2,
+    "index_from_right_of_last_digit_placeholder": 2,
+    "number_of_hash_decimal_placeholders": 2,
+    "total_number_of_decimal_placeholders_in_format": 2,
+    "currency_code": "currency code sample",
+    "show_thousands_separator": true,
+    "use_accounting_style": true,
+    "requires_fraction_replacement": true,
+    "format_contains_integer_token": true,
+    "is_complex_format": true
+  },
+  "OverallProperties": {
+    "behaves_like_spreadsheet": true,
+    "auto_resize": true,
+    "writing_direction": "left_to_right",
+    "has_alternating_rows": true,
+    "alternating_rows_fill": {
+      "color": {
+        "rgba": {}
+      }
+    },
+    "rounded_corners": true,
+    "stroke_presets": [
+      {}
+    ]
+  },
+  "PivotRules": {},
+  "PredicateReference": {
+    "row_identifier": "row identifier sample",
+    "column_identifier": "column identifier sample",
+    "is_row_absolute": true,
+    "is_column_absolute": true,
+    "table_identifier": "table identifier sample"
+  },
+  "RowColumnIdRange": {
+    "top_left_row_identifier": "top left row identifier sample",
+    "top_left_column_identifier": "top left column identifier sample",
+    "bottom_right_row_identifier": "bottom right row identifier sample",
+    "bottom_right_column_identifier": "bottom right column identifier sample"
+  },
+  "RowGroupLabel": {
+    "grouping_column_identifier": "grouping column identifier sample",
+    "group_value": "group value sample",
+    "is_collapsed": true,
+    "nesting_level": 2
+  },
+  "SortRule": {
+    "column_identifier": "column identifier sample",
+    "direction": "ascending"
+  },
+  "StrokePreset": {
+    "horizontal_stroke": "empty",
+    "vertical_stroke": "empty",
+    "exterior_stroke": "empty",
+    "visible_edges": [
+      "bottom"
+    ]
+  },
+  "Table": {
+    "geometry": {
+      "position": {
+        "x": 1.5,
+        "y": 1.5
+      },
+      "size": {
+        "width": 1.5,
+        "height": 1.5
+      }
+    },
+    "aspect_ratio_locked": true,
+    "description": "description sample",
+    "title": {},
+    "caption": {},
+    "table_name_border_enabled": true,
+    "number_of_columns": 2,
+    "number_of_rows": 2,
+    "number_of_header_rows": 2,
+    "number_of_header_columns": 2,
+    "number_of_footer_rows": 2,
+    "default_column_width": 1.5,
+    "default_row_height": 1.5,
+    "visual_properties": {},
+    "column_headers": [
+      {}
+    ],
+    "content": [
+      {}
+    ],
+    "merges": [
+      {
+        "row_column_id_range": {
+          "top_left_row_identifier": "top left row identifier sample",
+          "top_left_column_identifier": "top left column identifier sample",
+          "bottom_right_row_identifier": "bottom right row identifier sample",
+          "bottom_right_column_identifier": "bottom right column identifier sample"
+        }
+      }
+    ],
+    "conditional_style_sets": [
+      {
+        "rules": [
+          {
+            "predicate": {
+              "predicate_type": "date_after_relative"
+            }
+          }
+        ]
+      }
+    ],
+    "custom_formats": [
+      {
+        "format_string": "format string sample"
+      }
+    ],
+    "transformation": {}
+  },
+  "TableCell": {
+    "value": "value sample",
+    "unformatted_value": {
+      "boolean": true
+    },
+    "cell_format": {},
+    "cell_properties": {},
+    "text_properties": {},
+    "strokes": {},
+    "anchored_objects": [
+      "anchored objects sample"
+    ],
+    "column_index": 2,
+    "formula": {
+      "display_string": "display string sample"
+    },
+    "spill_range": {
+      "top_left_row_identifier": "top left row identifier sample",
+      "top_left_column_identifier": "top left column identifier sample",
+      "bottom_right_row_identifier": "bottom right row identifier sample",
+      "bottom_right_column_identifier": "bottom right column identifier sample"
+    },
+    "conditional_style_set_identifier": "conditional style set identifier sample"
+  },
+  "TableDate": {
+    "time_interval_since1970": 1.5
+  },
+  "TableFilter": {
+    "column_identifier": "column identifier sample",
+    "rules": [
+      {
+        "predicate": {
+          "predicate_type": "date_after_relative"
+        }
+      }
+    ]
+  },
+  "TablePredicate": {
+    "predicate_type": "date_after_relative",
+    "value1": {
+      "duration": 1.5
+    },
+    "value2": {
+      "duration": 1.5
+    },
+    "qualifier": "case_insensitive",
+    "date_qualifier1": "ago",
+    "date_qualifier2": "ago",
+    "duration_unit1": "day",
+    "duration_unit2": "day",
+    "value_list": [
+      {
+        "duration": 1.5
+      }
+    ]
+  },
+  "TableRow": {
+    "row_index": 2,
+    "row_identifier": "row identifier sample",
+    "row_height": 1.5,
+    "cell_properties": {},
+    "text_properties": {},
+    "cells": [
+      {}
+    ],
+    "visibility_state": "filtered",
+    "kind": "body"
+  },
+  "TableSort": {
+    "scope": "entire_table",
+    "rules": [
+      {
+        "column_identifier": "column identifier sample"
+      }
+    ]
+  },
+  "TableVisualProperties": {
+    "overall_properties": {},
+    "body_cell_properties": {},
+    "body_text_properties": {},
+    "body_stroke_properties": {},
+    "header_row_cell_properties": {},
+    "header_row_text_properties": {},
+    "header_row_stroke_properties": {},
+    "header_column_cell_properties": {},
+    "header_column_text_properties": {},
+    "header_column_stroke_properties": {},
+    "footer_row_cell_properties": {},
+    "footer_row_text_properties": {},
+    "footer_row_stroke_properties": {}
+  },
+  "TransformationInfo": {
+    "base_table": {
+      "number_of_columns": 2,
+      "number_of_rows": 2
+    },
+    "structure": {
+      "categorized": {}
+    },
+    "filter_set": {
+      "filters": [
+        {
+          "column_identifier": "column identifier sample",
+          "rules": [
+            {
+              "predicate": {
+                "predicate_type": "date_after_relative"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "sort": {
+      "rules": [
+        {
+          "column_identifier": "column identifier sample"
+        }
+      ]
+    }
+  },
+  "CellFormula": [
+    {
+      "display_string": "display string sample"
+    },
+    {
+      "id_based": {
+        "expression": "expression sample"
+      }
+    }
+  ],
+  "CellRange": [
+    {
+      "row_column_id_range": {
+        "top_left_row_identifier": "top left row identifier sample",
+        "top_left_column_identifier": "top left column identifier sample",
+        "bottom_right_row_identifier": "bottom right row identifier sample",
+        "bottom_right_column_identifier": "bottom right column identifier sample"
+      }
+    }
+  ],
+  "ColumnHeaderKind": [
+    "body",
+    "grand_total",
+    {
+      "group_label": {
+        "grouping_row_identifier": "grouping row identifier sample",
+        "group_value": "group value sample"
+      }
+    },
+    "group_subtotal"
+  ],
+  "PredicateValue": [
+    {
+      "date": {
+        "time_interval_since1970": 1.5
+      }
+    },
+    {
+      "duration": 1.5
+    },
+    {
+      "number": 1.5
+    },
+    {
+      "reference": {
+        "row_identifier": "row identifier sample",
+        "column_identifier": "column identifier sample"
+      }
+    },
+    {
+      "text": "text sample"
+    }
+  ],
+  "RowKind": [
+    "body",
+    "grand_total",
+    {
+      "group_label": {
+        "grouping_column_identifier": "grouping column identifier sample",
+        "group_value": "group value sample"
+      }
+    },
+    "group_subtotal"
+  ],
+  "TransformationStructure": [
+    {
+      "categorized": {}
+    },
+    {
+      "pivot": {}
+    }
+  ],
+  "UnformattedValue": [
+    {
+      "boolean": true
+    },
+    {
+      "date": {
+        "time_interval_since1970": 1.5
+      }
+    },
+    {
+      "number": 1.5
+    },
+    {
+      "rich_text": {
+        "string": "string sample"
+      }
+    },
+    {
+      "text": "text sample"
+    }
+  ]
+}

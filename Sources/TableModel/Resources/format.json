@@ -1,0 +1,1526 @@
+{
+  "enumerations": [
+    {
+      "name": "CellFormatType",
+      "values": [
+        "automatic",
+        "base",
+        "boolean",
+        "currency",
+        "custom",
+        "date_time",
+        "duration",
+        "fraction",
+        "number",
+        "percentage",
+        "scientific",
+        "text"
+      ]
+    },
+    {
+      "name": "ColumnVisibility",
+      "values": [
+        "user_hidden",
+        "visible"
+      ]
+    },
+    {
+      "name": "ConditionalStylePreset",
+      "values": [
+        "blue_fill",
+        "blue_text",
+        "bold",
+        "custom",
+        "gray_text",
+        "green_fill",
+        "green_text",
+        "italics",
+        "orange_fill",
+        "red_fill",
+        "red_text",
+        "teal_fill",
+        "yellow_fill"
+      ]
+    },
+    {
+      "name": "CustomFormatType",
+      "values": [
+        "date_time",
+        "number",
+        "text"
+      ]
+    },
+    {
+      "name": "DateQualifier",
+      "values": [
+        "ago",
+        "days",
+        "from_now",
+        "months",
+        "quarters",
+        "weeks",
+        "years"
+      ]
+    },
+    {
+      "name": "DurationFormatUnit",
+      "values": [
+        "day",
+        "hour",
+        "millisecond",
+        "minute",
+        "none",
+        "second",
+        "week"
+      ]
+    },
+    {
+      "name": "DurationStyle",
+      "values": [
+        "compact",
+        "long",
+        "short"
+      ]
+    },
+    {
+      "name": "FilterCombination",
+      "values": [
+        "and",
+        "or"
+      ]
+    },
+    {
+      "name": "FormatConditionType",
+      "values": [
+        "equal",
+        "greater_than",
+        "greater_than_or_equal_to",
+        "less_than",
+        "less_than_or_equal_to"
+      ]
+    },
+    {
+      "name": "FractionAccuracy",
+      "values": [
+        "conflicting",
+        "eighths",
+        "halves",
+        "hundredths",
+        "quarters",
+        "sixteenths",
+        "tenths",
+        "up_to_one_digit",
+        "up_to_three_digits",
+        "up_to_two_digits"
+      ]
+    },
+    {
+      "name": "NegativeNumberStyle",
+      "values": [
+        "minus",
+        "none",
+        "parentheses",
+        "red",
+        "red_and_parentheses"
+      ]
+    },
+    {
+      "name": "PredicateDurationUnit",
+      "values": [
+        "day",
+        "hour",
+        "millisecond",
+        "minute",
+        "second",
+        "week"
+      ]
+    },
+    {
+      "name": "PredicateType",
+      "values": [
+        "date_after_relative",
+        "date_before_relative",
+        "date_between_relative",
+        "date_in_this",
+        "date_is_after",
+        "date_is_before",
+        "date_is_between",
+        "date_is_exactly",
+        "date_is_in_the_last",
+        "date_is_in_the_next",
+        "date_is_the_date",
+        "date_is_today",
+        "date_is_tomorrow",
+        "date_is_yesterday",
+        "distincts",
+        "duplicates",
+        "duration_above_average",
+        "duration_below_average",
+        "duration_bottom",
+        "duration_is_between",
+        "duration_is_equal",
+        "duration_is_greater_than",
+        "duration_is_greater_than_or_equal",
+        "duration_is_less_than",
+        "duration_is_less_than_or_equal",
+        "duration_is_not_between",
+        "duration_is_not_equal",
+        "duration_top",
+        "formula",
+        "in_list",
+        "is_blank",
+        "is_checked",
+        "is_false",
+        "is_negative",
+        "is_not_blank",
+        "is_not_checked",
+        "is_positive",
+        "is_true",
+        "not_in_list",
+        "pivot_source_filtered_for_column",
+        "pivot_source_filtered_for_row",
+        "text_begins_with",
+        "text_contains",
+        "text_does_not_contain",
+        "text_ends_with",
+        "text_is",
+        "text_is_not",
+        "text_not_ends_with",
+        "text_not_starts_with",
+        "uniques",
+        "value_above_average",
+        "value_below_average",
+        "value_between",
+        "value_bottom",
+        "value_equal",
+        "value_greater_than",
+        "value_greater_than_or_equal",
+        "value_less_than",
+        "value_less_than_or_equal",
+        "value_not_between",
+        "value_not_equal",
+        "value_top"
+      ]
+    },
+    {
+      "name": "RowVisibility",
+      "values": [
+        "filtered",
+        "user_hidden",
+        "visible"
+      ]
+    },
+    {
+      "name": "SortDirection",
+      "values": [
+        "ascending",
+        "descending"
+      ]
+    },
+    {
+      "name": "SortScope",
+      "values": [
+        "entire_table",
+        "selected_rows"
+      ]
+    },
+    {
+      "name": "StrokeEdge",
+      "values": [
+        "bottom",
+        "horizontal",
+        "left",
+        "right",
+        "top",
+        "vertical"
+      ]
+    },
+    {
+      "name": "TextQualifier",
+      "values": [
+        "case_insensitive",
+        "case_sensitive"
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "type": "com.apple.apps.content-language.table.cell-format.base-format",
+      "name": "BaseFormat",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "base",
+          "kind": "optional",
+          "default": 10
+        },
+        {
+          "name": "base_places",
+          "kind": "optional",
+          "default": 0
+        },
+        {
+          "name": "base_use_minus_sign",
+          "kind": "optional",
+          "default": true
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.table.visual-properties.body-stroke-properties",
+      "name": "BodyStrokeProperties",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "horizontal_border_stroke",
+          "kind": "optional"
+        },
+        {
+          "name": "vertical_border_stroke",
+          "kind": "optional"
+        },
+        {
+          "name": "horizontal_stroke",
+          "kind": "optional"
+        },
+        {
+          "name": "vertical_stroke",
+          "kind": "optional"
+        },
+        {
+          "name": "border_strokes_visible",
+          "kind": "optional"
+        },
+        {
+          "name": "horizontal_strokes_visible",
+          "kind": "optional"
+        },
+        {
+          "name": "vertical_strokes_visible",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.table.cell-format.bool-format",
+      "name": "BoolFormat",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "true_string",
+          "kind": "required"
+        },
+        {
+          "name": "false_string",
+          "kind": "required"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.table.category-rules",
+      "name": "CategoryRules",
+      "version": "1.0",
+      "members": []
+    },
+    {
+      "type": "com.apple.apps.content-language.table.cell-format",
+      "name": "CellFormat",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "format_type",
+          "kind": "optional"
+        },
+        {
+          "name": "number_format",
+          "kind": "optional"
+        },
+        {
+          "name": "currency_format",
+          "kind": "optional"
+        },
+        {
+          "name": "fraction_format",
+          "kind": "optional"
+        },
+        {
+          "name": "base_format",
+          "kind": "optional"
+        },
+        {
+          "name": "bool_format",
+          "kind": "optional"
+        },
+        {
+          "name": "duration_format",
+          "kind": "optional"
+        },
+        {
+          "name": "date_time_format",
+          "kind": "optional"
+        },
+        {
+          "name": "custom_format_identifier",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.table.cell-properties",
+      "name": "CellProperties",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "text_wrap",
+          "kind": "optional"
+        },
+        {
+          "name": "vertical_alignment",
+          "kind": "optional"
+        },
+        {
+          "name": "padding",
+          "kind": "optional"
+        },
+        {
+          "name": "fill",
+          "kind": "inheritable"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.table.cell.formula.cell-reference",
+      "name": "CellReference",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "placeholder",
+          "kind": "required"
+        },
+        {
+          "name": "display_notation",
+          "kind": "optional"
+        },
+        {
+          "name": "start_row_identifier",
+          "kind": "required"
+        },
+        {
+          "name": "start_column_identifier",
+          "kind": "required"
+        },
+        {
+          "name": "end_row_identifier",
+          "kind": "optional"
+        },
+        {
+          "name": "end_column_identifier",
+          "kind": "optional"
+        },
+        {
+          "name": "is_row_absolute",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "is_column_absolute",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "is_end_row_absolute",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "is_end_column_absolute",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "table_identifier",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.table.cell.strokes",
+      "name": "CellStrokes",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "top",
+          "kind": "optional"
+        },
+        {
+          "name": "bottom",
+          "kind": "optional"
+        },
+        {
+          "name": "left",
+          "kind": "optional"
+        },
+        {
+          "name": "right",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.table.column-header.group-label",
+      "name": "ColumnGroupLabel",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "grouping_row_identifier",
+          "kind": "required"
+        },
+        {
+          "name": "group_value",
+          "kind": "required"
+        },
+        {
+          "name": "is_collapsed",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "nesting_level",
+          "kind": "optional",
+          "default": 0
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.table.column-header",
+      "name": "ColumnHeader",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "column_identifier",
+          "kind": "optional"
+        },
+        {
+          "name": "title",
+          "kind": "optional"
+        },
+        {
+          "name": "cell_format",
+          "kind": "optional"
+        },
+        {
+          "name": "column_width",
+          "kind": "optional"
+        },
+        {
+          "name": "cell_properties",
+          "kind": "optional"
+        },
+        {
+          "name": "text_properties",
+          "kind": "optional"
+        },
+        {
+          "name": "visibility_state",
+          "kind": "optional",
+          "default": "visible"
+        },
+        {
+          "name": "kind",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.table.conditional-style-set.rule",
+      "name": "ConditionalStyleRule",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "predicate",
+          "kind": "required"
+        },
+        {
+          "name": "cell_style",
+          "kind": "optional"
+        },
+        {
+          "name": "text_style",
+          "kind": "optional"
+        },
+        {
+          "name": "preset_kind",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.table.conditional-style-set",
+      "name": "ConditionalStyleSet",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "rules",
+          "kind": "required"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.table.cell-format.currency-format",
+      "name": "CurrencyFormat",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "decimal_places",
+          "kind": "optional",
+          "default": 2
+        },
+        {
+          "name": "negative_number_style",
+          "kind": "optional",
+          "default": "minus"
+        },
+        {
+          "name": "use_thousands_separator",
+          "kind": "optional",
+          "default": true
+        },
+        {
+          "name": "accounting_style",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "currency_code",
+          "kind": "optional",
+          "default": "USD"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.table.custom-format",
+      "name": "CustomFormat",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "format_name",
+          "kind": "optional"
+        },
+        {
+          "name": "format_string",
+          "kind": "required"
+        },
+        {
+          "name": "format_type",
+          "kind": "optional",
+          "default": "number"
+        },
+        {
+          "name": "number_format_data",
+          "kind": "optional"
+        },
+        {
+          "name": "conditions",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.table.custom-format.custom-format-condition",
+      "name": "CustomFormatCondition",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "condition_type",
+          "kind": "required"
+        },
+        {
+          "name": "condition_value",
+          "kind": "required"
+        },
+        {
+          "name": "format_string",
+          "kind": "required"
+        },
+        {
+          "name": "number_format_data",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.table.cell-format.date-time-format",
+      "name": "DateTimeFormat",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "format_string",
+          "kind": "required"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.table.cell-format.duration-format",
+      "name": "DurationFormat",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "use_automatic_units",
+          "kind": "optional",
+          "default": true
+        },
+        {
+          "name": "smallest_unit",
+          "kind": "optional",
+          "default": "second"
+        },
+        {
+          "name": "largest_unit",
+          "kind": "optional",
+          "default": "hour"
+        },
+        {
+          "name": "style",
+          "kind": "optional",
+          "default": "short"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.table.filter-set.filter.rule",
+      "name": "FilterRule",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "predicate",
+          "kind": "required"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.table.filter-set",
+      "name": "FilterSet",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "is_enabled",
+          "kind": "optional",
+          "default": true
+        },
+        {
+          "name": "combine_mode",
+          "kind": "optional",
+          "default": "and"
+        },
+        {
+          "name": "filters",
+          "kind": "required"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.table.cell-format.fraction-format",
+      "name": "FractionFormat",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "accuracy",
+          "kind": "optional",
+          "default": "up_to_three_digits"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.table.visual-properties.header-footer-stroke-properties",
+      "name": "HeaderFooterStrokeProperties",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "border_stroke",
+          "kind": "optional"
+        },
+        {
+          "name": "separator_stroke",
+          "kind": "optional"
+        },
+        {
+          "name": "horizontal_stroke",
+          "kind": "optional"
+        },
+        {
+          "name": "vertical_stroke",
+          "kind": "optional"
+        },
+        {
+          "name": "separator_visible",
+          "kind": "optional"
+        },
+        {
+          "name": "across_strokes_visible",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.table.cell.formula.id-based-formula",
+      "name": "IdBasedFormula",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "expression",
+          "kind": "required"
+        },
+        {
+          "name": "references",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.table.cell-format.number-format",
+      "name": "NumberFormat",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "decimal_places",
+          "kind": "optional",
+          "default": 2
+        },
+        {
+          "name": "negative_number_style",
+          "kind": "optional",
+          "default": "minus"
+        },
+        {
+          "name": "use_thousands_separator",
+          "kind": "optional",
+          "default": true
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.table.custom-format.number-format-data",
+      "name": "NumberFormatData",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "scale_factor",
+          "kind": "optional",
+          "default": 1
+        },
+        {
+          "name": "fraction_accuracy",
+          "kind": "optional"
+        },
+        {
+          "name": "interstitial_strings",
+          "kind": "optional"
+        },
+        {
+          "name": "interstitial_string_insertion_indexes",
+          "kind": "optional"
+        },
+        {
+          "name": "minimum_integer_width",
+          "kind": "optional",
+          "default": 0
+        },
+        {
+          "name": "decimal_width",
+          "kind": "optional",
+          "default": 0
+        },
+        {
+          "name": "number_of_non_space_integer_placeholder_digits",
+          "kind": "optional",
+          "default": 0
+        },
+        {
+          "name": "number_of_non_space_decimal_placeholder_digits",
+          "kind": "optional",
+          "default": 0
+        },
+        {
+          "name": "index_from_right_of_last_digit_placeholder",
+          "kind": "optional",
+          "default": 0
+        },
+        {
+          "name": "number_of_hash_decimal_placeholders",
+          "kind": "optional",
+          "default": 0
+        },
+        {
+          "name": "total_number_of_decimal_placeholders_in_format",
+          "kind": "optional",
+          "default": 0
+        },
+        {
+          "name": "currency_code",
+          "kind": "optional"
+        },
+        {
+          "name": "show_thousands_separator",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "use_accounting_style",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "requires_fraction_replacement",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "format_contains_integer_token",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "is_complex_format",
+          "kind": "optional",
+          "default": false
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.table.visual-properties.overall-properties",
+      "name": "OverallProperties",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "behaves_like_spreadsheet",
+          "kind": "optional"
+        },
+        {
+          "name": "auto_resize",
+          "kind": "optional"
+        },
+        {
+          "name": "writing_direction",
+          "kind": "optional"
+        },
+        {
+          "name": "has_alternating_rows",
+          "kind": "optional"
+        },
+        {
+          "name": "alternating_rows_fill",
+          "kind": "inheritable"
+        },
+        {
+          "name": "rounded_corners",
+          "kind": "optional"
+        },
+        {
+          "name": "stroke_presets",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.table.pivot-rules",
+      "name": "PivotRules",
+      "version": "1.0",
+      "members": []
+    },
+    {
+      "type": "com.apple.apps.content-language.table.predicate.reference",
+      "name": "PredicateReference",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "row_identifier",
+          "kind": "required"
+        },
+        {
+          "name": "column_identifier",
+          "kind": "required"
+        },
+        {
+          "name": "is_row_absolute",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "is_column_absolute",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "table_identifier",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.table.cell-range.row-column-id-range",
+      "name": "RowColumnIdRange",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "top_left_row_identifier",
+          "kind": "required"
+        },
+        {
+          "name": "top_left_column_identifier",
+          "kind": "required"
+        },
+        {
+          "name": "bottom_right_row_identifier",
+          "kind": "required"
+        },
+        {
+          "name": "bottom_right_column_identifier",
+          "kind": "required"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.table.row.group-label",
+      "name": "RowGroupLabel",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "grouping_column_identifier",
+          "kind": "required"
+        },
+        {
+          "name": "group_value",
+          "kind": "required"
+        },
+        {
+          "name": "is_collapsed",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "nesting_level",
+          "kind": "optional",
+          "default": 0
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.table.sort.rule",
+      "name": "SortRule",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "column_identifier",
+          "kind": "required"
+        },
+        {
+          "name": "direction",
+          "kind": "optional",
+          "default": "ascending"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.table.visual-properties.stroke-preset",
+      "name": "StrokePreset",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "horizontal_stroke",
+          "kind": "optional"
+        },
+        {
+          "name": "vertical_stroke",
+          "kind": "optional"
+        },
+        {
+          "name": "exterior_stroke",
+          "kind": "optional"
+        },
+        {
+          "name": "visible_edges",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.table",
+      "name": "Table",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "geometry",
+          "kind": "optional"
+        },
+        {
+          "name": "aspect_ratio_locked",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "description",
+          "kind": "optional"
+        },
+        {
+          "name": "title",
+          "kind": "optional"
+        },
+        {
+          "name": "caption",
+          "kind": "optional"
+        },
+        {
+          "name": "table_name_border_enabled",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "number_of_columns",
+          "kind": "required"
+        },
+        {
+          "name": "number_of_rows",
+          "kind": "required"
+        },
+        {
+          "name": "number_of_header_rows",
+          "kind": "optional",
+          "default": 0
+        },
+        {
+          "name": "number_of_header_columns",
+          "kind": "optional",
+          "default": 0
+        },
+        {
+          "name": "number_of_footer_rows",
+          "kind": "optional",
+          "default": 0
+        },
+        {
+          "name": "default_column_width",
+          "kind": "optional",
+          "default": 98
+        },
+        {
+          "name": "default_row_height",
+          "kind": "optional",
+          "default": 20
+        },
+        {
+          "name": "visual_properties",
+          "kind": "optional"
+        },
+        {
+          "name": "column_headers",
+          "kind": "optional"
+        },
+        {
+          "name": "content",
+          "kind": "optional"
+        },
+        {
+          "name": "merges",
+          "kind": "optional"
+        },
+        {
+          "name": "conditional_style_sets",
+          "kind": "optional"
+        },
+        {
+          "name": "custom_formats",
+          "kind": "optional"
+        },
+        {
+          "name": "transformation",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.table.cell",
+      "name": "TableCell",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "value",
+          "kind": "optional",
+          "default": ""
+        },
+        {
+          "name": "unformatted_value",
+          "kind": "optional"
+        },
+        {
+          "name": "cell_format",
+          "kind": "optional"
+        },
+        {
+          "name": "cell_properties",
+          "kind": "optional"
+        },
+        {
+          "name": "text_properties",
+          "kind": "optional"
+        },
+        {
+          "name": "strokes",
+          "kind": "optional"
+        },
+        {
+          "name": "anchored_objects",
+          "kind": "optional"
+        },
+        {
+          "name": "column_index",
+          "kind": "optional"
+        },
+        {
+          "name": "formula",
+          "kind": "optional"
+        },
+        {
+          "name": "spill_range",
+          "kind": "optional"
+        },
+        {
+          "name": "conditional_style_set_identifier",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.table.date",
+      "name": "TableDate",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "time_interval_since1970",
+          "kind": "required"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.table.filter-set.filter",
+      "name": "TableFilter",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "column_identifier",
+          "kind": "required"
+        },
+        {
+          "name": "rules",
+          "kind": "required"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.table.predicate",
+      "name": "TablePredicate",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "predicate_type",
+          "kind": "required"
+        },
+        {
+          "name": "value1",
+          "kind": "optional"
+        },
+        {
+          "name": "value2",
+          "kind": "optional"
+        },
+        {
+          "name": "qualifier",
+          "kind": "optional"
+        },
+        {
+          "name": "date_qualifier1",
+          "kind": "optional"
+        },
+        {
+          "name": "date_qualifier2",
+          "kind": "optional"
+        },
+        {
+          "name": "duration_unit1",
+          "kind": "optional"
+        },
+        {
+          "name": "duration_unit2",
+          "kind": "optional"
+        },
+        {
+          "name": "value_list",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.table.row",
+      "name": "TableRow",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "row_index",
+          "kind": "optional"
+        },
+        {
+          "name": "row_identifier",
+          "kind": "optional"
+        },
+        {
+          "name": "row_height",
+          "kind": "optional"
+        },
+        {
+          "name": "cell_properties",
+          "kind": "optional"
+        },
+        {
+          "name": "text_properties",
+          "kind": "optional"
+        },
+        {
+          "name": "cells",
+          "kind": "optional"
+        },
+        {
+          "name": "visibility_state",
+          "kind": "optional",
+          "default": "visible"
+        },
+        {
+          "name": "kind",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.table.sort",
+      "name": "TableSort",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "scope",
+          "kind": "optional",
+          "default": "entire_table"
+        },
+        {
+          "name": "rules",
+          "kind": "required"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.table.visual-properties",
+      "name": "TableVisualProperties",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "overall_properties",
+          "kind": "optional"
+        },
+        {
+          "name": "body_cell_properties",
+          "kind": "optional"
+        },
+        {
+          "name": "body_text_properties",
+          "kind": "optional"
+        },
+        {
+          "name": "body_stroke_properties",
+          "kind": "optional"
+        },
+        {
+          "name": "header_row_cell_properties",
+          "kind": "optional"
+        },
+        {
+          "name": "header_row_text_properties",
+          "kind": "optional"
+        },
+        {
+          "name": "header_row_stroke_properties",
+          "kind": "optional"
+        },
+        {
+          "name": "header_column_cell_properties",
+          "kind": "optional"
+        },
+        {
+          "name": "header_column_text_properties",
+          "kind": "optional"
+        },
+        {
+          "name": "header_column_stroke_properties",
+          "kind": "optional"
+        },
+        {
+          "name": "footer_row_cell_properties",
+          "kind": "optional"
+        },
+        {
+          "name": "footer_row_text_properties",
+          "kind": "optional"
+        },
+        {
+          "name": "footer_row_stroke_properties",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.table.transformation-info",
+      "name": "TransformationInfo",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "base_table",
+          "kind": "optional"
+        },
+        {
+          "name": "structure",
+          "kind": "optional"
+        },
+        {
+          "name": "filter_set",
+          "kind": "optional"
+        },
+        {
+          "name": "sort",
+          "kind": "optional"
+        }
+      ]
+    }
+  ],
+  "unions": [
+    {
+      "type": "com.apple.apps.content-language.table.cell.formula",
+      "name": "CellFormula",
+      "version": "1.0",
+      "cases": [
+        {
+          "name": "display_string"
+        },
+        {
+          "name": "id_based"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.table.cell-range",
+      "name": "CellRange",
+      "version": "1.0",
+      "cases": [
+        {
+          "name": "row_column_id_range"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.table.column-header.kind",
+      "name": "ColumnHeaderKind",
+      "version": "1.0",
+      "cases": [
+        {
+          "name": "body",
+          "valueless": true
+        },
+        {
+          "name": "grand_total",
+          "valueless": true
+        },
+        {
+          "name": "group_label"
+        },
+        {
+          "name": "group_subtotal",
+          "valueless": true
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.table.predicate.value",
+      "name": "PredicateValue",
+      "version": "1.0",
+      "cases": [
+        {
+          "name": "date"
+        },
+        {
+          "name": "duration"
+        },
+        {
+          "name": "number"
+        },
+        {
+          "name": "reference"
+        },
+        {
+          "name": "text"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.table.row.kind",
+      "name": "RowKind",
+      "version": "1.0",
+      "cases": [
+        {
+          "name": "body",
+          "valueless": true
+        },
+        {
+          "name": "grand_total",
+          "valueless": true
+        },
+        {
+          "name": "group_label"
+        },
+        {
+          "name": "group_subtotal",
+          "valueless": true
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.table.transformation-info.structure",
+      "name": "TransformationStructure",
+      "version": "1.0",
+      "cases": [
+        {
+          "name": "categorized"
+        },
+        {
+          "name": "pivot"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.table.cell.unformatted-value",
+      "name": "UnformattedValue",
+      "version": "1.0",
+      "cases": [
+        {
+          "name": "boolean"
+        },
+        {
+          "name": "date"
+        },
+        {
+          "name": "number"
+        },
+        {
+          "name": "rich_text"
+        },
+        {
+          "name": "text"
+        }
+      ]
+    }
+  ]
+}

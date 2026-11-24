@@ -22,13 +22,15 @@ public enum DocumentValidator {
       }
     }
 
-    guard input.isSelfContained else { return ValidationReport(collector.findings) }
-    for adoption in collector.adoptions
-    where input.presets[adoption.name] == nil && !collector.styleNames.contains(adoption.name) {
-      collector.part = adoption.part
-      collector.report(.unknownPreset(adoption.name), at: adoption.path.member("preset_identifier"))
+    // A body that leans on a theme may name presets and identifiers the document does not hold.
+    if input.isSelfContained {
+      for adoption in collector.adoptions
+      where input.presets[adoption.name] == nil && !collector.styleNames.contains(adoption.name) {
+        collector.part = adoption.part
+        collector.report(.unknownPreset(adoption.name), at: adoption.path.member("preset_identifier"))
+      }
     }
-    IdentifierRules.check(input.main, into: &collector)
+    IdentifierRules.check(input.main, resolvingReferences: input.isSelfContained, into: &collector)
     return ValidationReport(collector.findings)
   }
 

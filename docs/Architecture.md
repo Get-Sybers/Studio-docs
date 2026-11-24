@@ -20,6 +20,11 @@ their identifiers, versions, members, defaults and limits, from `Sources/<Target
 | `DocumentValidation` | typed findings and the checks that make them | `Appearance`, `DocumentIdentifiers`, `JSONTree`, `PresetStyles`, `ResourceReferences`, `TextModel`, `WireFormat` | yes |
 | `DocumentPackage` | `StudioDocument<Body>`, the manifest, the resources, the two layouts of a package, `UntypedBody` | `DocumentValidation`, `JSONTree`, `PresetStyles`, `ResourceReferences`, `TextModel`, `WireFormat`, `ZipArchives`, OrderedCollections | yes |
 | `TextDocument` | the library's own small body, under its own type identifiers; a format table | `DocumentPackage`, `TextModel`, `WireFormat` | yes |
+| `CanvasCommon` | what canvas objects share: geometry, labels, reflections, durations, the owning of titles and captions; a format table | `Appearance`, `JSONTree`, `TextModel`, `WireFormat` | yes |
+| `TableModel` | tables: cells, rows, columns, formats, formulas, conditional styles, filters, sorts, visual properties; a format table | `Appearance`, `CanvasCommon`, `JSONTree`, `TextModel`, `WireFormat` | yes |
+| `ChartModel` | every kind of chart, with axes, series, data, legends and label formatting; a format table | `Appearance`, `CanvasCommon`, `JSONTree`, `TableModel`, `TextModel`, `WireFormat` | yes |
+| `CanvasModel` | the objects of a canvas and their union `CanvasObject`; a format table | `Appearance`, `CanvasCommon`, `ChartModel`, `JSONTree`, `ResourceReferences`, `TableModel`, `TextModel`, `WireFormat` | yes |
+| `PresentationModel` | the presentation, its slides, layouts and theme, the stylesheet's shape, media and table styles, and `Presentation` as a document body; a format table | `Appearance`, `CanvasCommon`, `CanvasModel`, `DocumentPackage`, `JSONTree`, `TableModel`, `TextModel`, `WireFormat` | yes |
 | `AttributedText` | paragraphs to Foundation's `AttributedString` and back | `TextModel`, `WireFormat` | yes |
 | `GoldenFiles` | the expected outputs of a test target, one file for each | none | no |
 | `ModelFixtures` | the fixtures of a test target, and the checks that a type and its table agree | `JSONTree`, `WireFormat` | no |
@@ -37,14 +42,17 @@ From the bytes up:
 2. **Wire.** `WireFormat` reads an object of the format from a tree and writes it back: it checks the type
    identifier and the version, hands each modelled member to the type, and keeps every other member in
    the envelope.
-3. **Types of the format.** `ResourceReferences`, `Appearance` and `TextModel` are the modelled types,
-   each a `WireObject`, a `WireUnion` or a `WireEnumeration`. `PresetStyles` resolves what an object
-   inherits; `DocumentIdentifiers` indexes and mints identifiers.
+3. **Types of the format.** `ResourceReferences`, `Appearance` and `TextModel` are the modelled types of
+   resources, appearance and text, each a `WireObject`, a `WireUnion` or a `WireEnumeration`. `PresetStyles`
+   resolves what an object inherits; `DocumentIdentifiers` indexes and mints identifiers.
 4. **The document.** `DocumentValidation` checks a tree against the format and its own rules;
    `DocumentPackage` opens and saves a `StudioDocument` whose body is a type the client chooses.
-5. **For clients.** `TextDocument` is a body for documents of text; `AttributedText` bridges paragraphs to
+5. **The canvas and the presentation.** `CanvasCommon`, `TableModel`, `ChartModel` and `CanvasModel` model
+   what stands on a slide, bottom up; `PresentationModel` models the presentation itself and makes
+   `Presentation` a document body.
+6. **For clients.** `TextDocument` is a body for documents of text; `AttributedText` bridges paragraphs to
    Foundation's attributed strings.
-6. **For the tests.** `GoldenFiles` and `ModelFixtures`, which no consumer imports.
+7. **For the tests.** `GoldenFiles` and `ModelFixtures`, which no consumer imports.
 
 ## How a document is read and written
 
@@ -59,7 +67,8 @@ where only a file whose bytes differ is written and a file that is gone is remov
 
 ## Format tables
 
-Four targets embed a table: `ResourceReferences`, `Appearance`, `TextModel` and `TextDocument`. A table
+Nine targets embed a table: `ResourceReferences`, `Appearance`, `TextModel`, `TextDocument`, `CanvasCommon`,
+`TableModel`, `ChartModel`, `CanvasModel` and `PresentationModel`. A table
 lists each object and union with its type identifier, its version, and its members or cases with the
 version that introduced each; and each enumeration with its values. The types read their schemas from the
 table at start, `scripts/generate-modelled-types.swift` writes `docs/Modelled-types.md` from the tables,

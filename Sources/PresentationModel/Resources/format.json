@@ -1,0 +1,503 @@
+{
+  "enumerations": [
+    {
+      "name": "PlaceholderKind",
+      "values": [
+        "body",
+        "object",
+        "slide_number",
+        "title"
+      ]
+    },
+    {
+      "name": "SourceKind",
+      "values": [
+        "layout",
+        "placeholder",
+        "user"
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "type": "com.apple.apps.content-language.stylesheet.table-style-collection.body-stroke-style",
+      "name": "BodyStrokeStyle",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "name",
+          "kind": "optional"
+        },
+        {
+          "name": "properties",
+          "kind": "required"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.stylesheet.table-style-collection.cell-style",
+      "name": "CellStyle",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "name",
+          "kind": "optional"
+        },
+        {
+          "name": "properties",
+          "kind": "required"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.stylesheet.table-style-collection.header-footer-stroke-style",
+      "name": "HeaderFooterStrokeStyle",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "name",
+          "kind": "optional"
+        },
+        {
+          "name": "properties",
+          "kind": "required"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.keynote-theme",
+      "name": "KeynoteTheme",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "name",
+          "kind": "optional"
+        },
+        {
+          "name": "locale",
+          "kind": "optional"
+        },
+        {
+          "name": "slide_layouts",
+          "kind": "optional",
+          "minimumCount": 1
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.stylesheet.media-style.media-properties",
+      "name": "MediaProperties",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "stroke",
+          "kind": "inheritable"
+        },
+        {
+          "name": "opacity",
+          "kind": "inheritable"
+        },
+        {
+          "name": "reflection",
+          "kind": "inheritable"
+        },
+        {
+          "name": "shadow",
+          "kind": "inheritable"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.stylesheet.media-style",
+      "name": "MediaStyle",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "name",
+          "kind": "optional"
+        },
+        {
+          "name": "properties",
+          "kind": "required"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.stylesheet.table-style-collection.overall-style",
+      "name": "OverallStyle",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "name",
+          "kind": "optional"
+        },
+        {
+          "name": "properties",
+          "kind": "required"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.slide-object.placeholder-info.placeholder-definition",
+      "name": "PlaceholderDefinition",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "kind",
+          "kind": "required"
+        },
+        {
+          "name": "is_visible",
+          "kind": "optional",
+          "default": true
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.presentation",
+      "name": "Presentation",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "theme",
+          "kind": "optional"
+        },
+        {
+          "name": "slide_size",
+          "kind": "optional"
+        },
+        {
+          "name": "slides",
+          "kind": "required",
+          "minimumCount": 1
+        },
+        {
+          "name": "stylesheet",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.stylesheet.shape-style.shape-properties",
+      "name": "ShapeProperties",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "stroke",
+          "kind": "inheritable"
+        },
+        {
+          "name": "opacity",
+          "kind": "inheritable"
+        },
+        {
+          "name": "reflection",
+          "kind": "inheritable"
+        },
+        {
+          "name": "shadow",
+          "kind": "inheritable"
+        },
+        {
+          "name": "fill",
+          "kind": "inheritable"
+        },
+        {
+          "name": "head",
+          "kind": "inheritable"
+        },
+        {
+          "name": "tail",
+          "kind": "inheritable"
+        },
+        {
+          "name": "layout_properties",
+          "kind": "optional"
+        },
+        {
+          "name": "paragraph_properties",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.stylesheet.shape-style",
+      "name": "ShapeStyle",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "name",
+          "kind": "optional"
+        },
+        {
+          "name": "properties",
+          "kind": "required"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.slide",
+      "name": "Slide",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "layout",
+          "kind": "optional"
+        },
+        {
+          "name": "contents",
+          "kind": "optional"
+        },
+        {
+          "name": "background",
+          "kind": "inheritable"
+        },
+        {
+          "name": "depth",
+          "kind": "optional"
+        },
+        {
+          "name": "note",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.slide-layout",
+      "name": "SlideLayout",
+      "version": "1.1",
+      "members": [
+        {
+          "name": "name",
+          "kind": "required"
+        },
+        {
+          "name": "contents",
+          "kind": "optional"
+        },
+        {
+          "name": "background",
+          "kind": "optional"
+        },
+        {
+          "name": "slide_objects_layer_with_layout",
+          "kind": "optional",
+          "since": "1.1",
+          "default": false
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.slide-object",
+      "name": "SlideObject",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "instructional_text",
+          "kind": "optional"
+        },
+        {
+          "name": "is_locked",
+          "kind": "optional",
+          "default": false
+        },
+        {
+          "name": "object",
+          "kind": "required"
+        },
+        {
+          "name": "placeholder_info",
+          "kind": "optional"
+        },
+        {
+          "name": "source_kind",
+          "kind": "optional"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.stylesheet.table-style-collection",
+      "name": "TableStyleCollection",
+      "version": "1.0",
+      "members": [
+        {
+          "name": "table_name_shape_style",
+          "kind": "optional"
+        },
+        {
+          "name": "table_name_style",
+          "kind": "optional"
+        },
+        {
+          "name": "overall_style",
+          "kind": "required"
+        },
+        {
+          "name": "body_cell_style",
+          "kind": "required"
+        },
+        {
+          "name": "body_text_style",
+          "kind": "required"
+        },
+        {
+          "name": "body_stroke_style",
+          "kind": "required"
+        },
+        {
+          "name": "header_row_cell_style",
+          "kind": "required"
+        },
+        {
+          "name": "header_row_text_style",
+          "kind": "required"
+        },
+        {
+          "name": "header_row_stroke_style",
+          "kind": "required"
+        },
+        {
+          "name": "header_column_cell_style",
+          "kind": "required"
+        },
+        {
+          "name": "header_column_text_style",
+          "kind": "required"
+        },
+        {
+          "name": "header_column_stroke_style",
+          "kind": "required"
+        },
+        {
+          "name": "footer_row_cell_style",
+          "kind": "required"
+        },
+        {
+          "name": "footer_row_text_style",
+          "kind": "required"
+        },
+        {
+          "name": "footer_row_stroke_style",
+          "kind": "required"
+        },
+        {
+          "name": "category_level1_cell_style",
+          "kind": "optional"
+        },
+        {
+          "name": "category_level1_text_style",
+          "kind": "optional"
+        },
+        {
+          "name": "category_level2_cell_style",
+          "kind": "optional"
+        },
+        {
+          "name": "category_level2_text_style",
+          "kind": "optional"
+        },
+        {
+          "name": "category_level3_cell_style",
+          "kind": "optional"
+        },
+        {
+          "name": "category_level3_text_style",
+          "kind": "optional"
+        },
+        {
+          "name": "category_level4_cell_style",
+          "kind": "optional"
+        },
+        {
+          "name": "category_level4_text_style",
+          "kind": "optional"
+        },
+        {
+          "name": "category_level5_cell_style",
+          "kind": "optional"
+        },
+        {
+          "name": "category_level5_text_style",
+          "kind": "optional"
+        },
+        {
+          "name": "label_level1_cell_style",
+          "kind": "optional"
+        },
+        {
+          "name": "label_level1_text_style",
+          "kind": "optional"
+        },
+        {
+          "name": "label_level2_cell_style",
+          "kind": "optional"
+        },
+        {
+          "name": "label_level2_text_style",
+          "kind": "optional"
+        },
+        {
+          "name": "label_level3_cell_style",
+          "kind": "optional"
+        },
+        {
+          "name": "label_level3_text_style",
+          "kind": "optional"
+        },
+        {
+          "name": "label_level4_cell_style",
+          "kind": "optional"
+        },
+        {
+          "name": "label_level4_text_style",
+          "kind": "optional"
+        },
+        {
+          "name": "label_level5_cell_style",
+          "kind": "optional"
+        },
+        {
+          "name": "label_level5_text_style",
+          "kind": "optional"
+        },
+        {
+          "name": "pivot_body_summary_row_cell_style",
+          "kind": "optional"
+        },
+        {
+          "name": "pivot_body_summary_column_cell_style",
+          "kind": "optional"
+        },
+        {
+          "name": "pivot_header_column_summary_cell_style",
+          "kind": "optional"
+        }
+      ]
+    }
+  ],
+  "unions": [
+    {
+      "type": "com.apple.apps.content-language.slide-object.placeholder-info",
+      "name": "PlaceholderInfo",
+      "version": "1.0",
+      "cases": [
+        {
+          "name": "defined"
+        },
+        {
+          "name": "tagged"
+        }
+      ]
+    },
+    {
+      "type": "com.apple.apps.content-language.slide-background",
+      "name": "SlideBackground",
+      "version": "1.0",
+      "cases": [
+        {
+          "name": "standard"
+        }
+      ]
+    }
+  ]
+}

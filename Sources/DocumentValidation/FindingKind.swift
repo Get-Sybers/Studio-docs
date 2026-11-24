@@ -88,6 +88,25 @@ public enum FindingKind: Sendable, Hashable {
   /// The asset UUID of a premium resource is no UUID; a reader ignores it.
   case invalidAssetUUID
 
+  /// A slide names a layout that the theme does not hold; a reader uses the theme's first layout.
+  case unknownSlideLayout(String)
+  /// Two placeholders of one slide or layout are of one kind.
+  case repeatedPlaceholderKind(String)
+  /// An end of a connection line has no end point.
+  case connectionLineEndWithoutPoint
+  /// An end of a connection line is anchored to an object that does not stand beside the line.
+  case anchorNotASibling(ObjectID)
+  /// Two rows, columns, custom formats or conditional style sets of one table carry one name.
+  case repeatedTableName(member: String, value: String)
+  /// A row or a column index lies outside the table.
+  case tableIndexOutOfRange(member: String, index: Int, count: Int)
+  /// A row or a column index does not rise above the one before it.
+  case tableIndexNotRising(member: String, index: Int)
+  /// A cell or a merge names a row, a column, a custom format or a conditional style set that the table lacks.
+  case unknownTableReference(member: String, value: String)
+  /// A series of a two-axis chart selects a value axis other than the first or the second.
+  case yAxisSelectionOutOfRange(Int)
+
   /// A finding of a client's own rule.
   case custom(name: String, detail: String)
 
@@ -98,13 +117,15 @@ public enum FindingKind: Sendable, Hashable {
       .emptyPresetIdentifier, .duplicatePresetIdentifier, .presetCycle, .duplicateIdentifier, .missingMember,
       .nullNotPermitted, .numberOutOfRange, .countOutOfRange, .nonFiniteNumber, .malformedVersion,
       .unionWithoutForm, .unreadable, .emptyLinkTarget, .fileURLAsLinkURL, .columnGuttersMismatch,
-      .columnWidthsTotal, .custom:
+      .columnWidthsTotal, .repeatedPlaceholderKind, .connectionLineEndWithoutPoint, .anchorNotASibling,
+      .repeatedTableName, .tableIndexOutOfRange, .tableIndexNotRising, .unknownTableReference,
+      .yAxisSelectionOutOfRange, .custom:
       .error
     case .resourceNamesCollide, .unknownParentPreset, .unknownPreset, .emptyIdentifier, .unresolvedReference,
       .newerVersion, .unmodelledPrimaryCase, .paragraphSeparatorInRun, .unterminatedParagraphBeforeLast,
       .listLevelOutOfRange, .listStartOutOfRange, .outlineLevelOutOfRange, .tooManyListLevels,
       .tabStopNotPositive, .tooFewGradientStops, .gradientStopsOutOfOrder, .unsupportedNumberFormat,
-      .incompleteLinearGradient, .invalidAssetUUID:
+      .incompleteLinearGradient, .invalidAssetUUID, .unknownSlideLayout:
       .warning
     }
   }

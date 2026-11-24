@@ -1,0 +1,58 @@
+{
+  "GenericCaptionOwning": {
+    "caption": {}
+  },
+  "GenericPlaceableTitleOwning": {
+    "title": {},
+    "title_is_positioned_on_top": true
+  },
+  "GenericTitleOwning": {
+    "title": {}
+  },
+  "Geometry": {
+    "position": {
+      "x": 1.5,
+      "y": 1.5
+    },
+    "size": {
+      "width": 1.5,
+      "height": 1.5
+    },
+    "angle": 1.5,
+    "flip_horizontally": true,
+    "width_valid": true,
+    "height_valid": true
+  },
+  "Label": {
+    "layout_properties": {},
+    "paragraph_properties": {},
+    "text": {
+      "string": "string sample"
+    },
+    "is_visible": true
+  },
+  "Reflection": {
+    "opacity": 0.5,
+    "fade_acceleration": 1.5
+  },
+  "CaptionOwning": [
+    {
+      "genericCaptionOwning": {}
+    }
+  ],
+  "DurationValue": [
+    {
+      "seconds": 1.5
+    }
+  ],
+  "PlaceableTitleOwning": [
+    {
+      "genericPlaceableTitleOwning": {}
+    }
+  ],
+  "TitleOwning": [
+    {
+      "genericTitleOwning": {}
+    }
+  ]
+}

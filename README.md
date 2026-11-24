@@ -22,6 +22,8 @@ URL, depend on its one product, `StudioDocs`, and import the modules you use by 
 
 ```swift
 import DocumentPackage  // StudioDocument, DocumentBody, UntypedBody, WriteOptions
+import PresentationModel  // Presentation, Slide, SlideObject, KeynoteTheme
+import CanvasModel  // CanvasObject, Shape, Textbox, Image, Movie, Group
 import TextDocument  // TextDocumentBody, TextSection
 import TextModel  // TextBody, Paragraph, TextRun, CharacterProperties, Stylesheet
 import WireFormat  // ObjectEnvelope, Inheritable, ClientProperty, FormatVersion
@@ -53,26 +55,34 @@ Beyond the example:
 - `write(to: url, as: .directory)` saves into a directory with the same entries as the archive, and
   writes only the files whose bytes differ. An editor saves step by step that way.
 - `validate()` returns typed findings, each an error or a warning with the part of the package and the
-  path it concerns. A document with an error is refused on save, unless `WriteOptions` says otherwise.
+  path it concerns: what the schemas require and bound, the presets and identifiers, and for a presentation
+  its layouts, placeholders, connection lines, tables and charts. A document with an error is refused on
+  save, unless `WriteOptions` says otherwise.
 - `try AttributedString(body.sections[0].text)` is the text of a section as Foundation's attributed
   string, and `TextBody(attributed)` reads one back. Italic, bold and strikethrough travel as the inline
   presentation intent; underline, the rest of a run's style, links and inline objects travel as the
   library's own attributes; a paragraph-bound attribute carries each paragraph's properties and
   identifier.
-- `StudioDocument<UntypedBody>(contentsOf: url)` opens any package, a Keynote presentation included, keeps
-  `main.json` as a tree, and writes it back as it was.
+- `StudioDocument<Presentation>(contentsOf: url)` opens a Keynote presentation with its slides and objects
+  typed; `StudioDocument<UntypedBody>(contentsOf: url)` opens any package, keeps `main.json` as a tree, and
+  writes it back as it was.
 - A body of your own conforms to `WireObject` and `DocumentBody`; a member of your own on a type of the
   library is a `ClientProperty`, and every reader and writer of the library keeps it.
 
 ## What the library models
 
 A package is `main.json`, `manifest.json`, `presets.json` and the files of `Data`, stored as one ZIP
-archive or as a directory. The library models the package, the text model and what the text model
-refers to.
+archive or as a directory. The library models the package and every type of the format, from the
+presentation and its slides down to the runs of text.
 
 | Module | Holds |
 | --- | --- |
 | `DocumentPackage` | `StudioDocument<Body>`, which opens and saves a package; the manifest; the resources; `UntypedBody` |
+| `PresentationModel` | `Presentation`, a body that opens a Keynote presentation typed: slides, layouts, slide objects, the theme, and the shape, media and table styles of a stylesheet |
+| `CanvasModel` | the objects of a canvas: shapes, text boxes, images, movies, audio, groups, connection lines, and `CanvasObject`, the union of them |
+| `ChartModel` | every kind of chart, with axes, series, data, legends and label formatting |
+| `TableModel` | tables: cells, rows, columns, cell formats, formulas, conditional styles, filters, sorts, pivots and visual properties |
+| `CanvasCommon` | what canvas objects share: geometry, labels, reflections, durations, and the owning of titles and captions |
 | `TextDocument` | the library's own small body: a title, text styles and sections in order |
 | `TextModel` | text bodies, paragraphs, runs, links, breaks; character, paragraph, list and layout properties; stylesheets |
 | `AttributedText` | paragraphs to Foundation's `AttributedString` and back |
@@ -89,8 +99,9 @@ refers to.
 generated from the format tables in `Sources/<Target>/Resources/format.json`.
 [docs/Architecture.md](docs/Architecture.md) gives the targets and their dependencies.
 
-Slides, canvas objects, tables, charts and themes are not modelled. A document that holds them opens
-through `UntypedBody`, which loses nothing: it keeps the tree of `main.json` and writes it back as it
+Every type that Apple documents is modelled, the presentation included:
+`StudioDocument<Presentation>(contentsOf: url)` opens a Keynote presentation typed. A document whose root
+is another type opens through `UntypedBody`, which keeps the tree of `main.json` and writes it back as it
 was. Inside a modelled type, every member, union case, enumeration value and package entry that the
 library does not model is kept as read and written back.
 

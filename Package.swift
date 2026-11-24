@@ -36,8 +36,10 @@ let package = Package(
     .library(
       name: "StudioDocs",
       targets: [
-        "Appearance", "AttributedText", "DocumentIdentifiers", "DocumentPackage", "DocumentValidation", "JSONTree",
-        "PresetStyles", "ResourceReferences", "TextDocument", "TextModel", "WireFormat", "ZipArchives",
+        "Appearance", "AttributedText", "CanvasCommon", "CanvasModel", "ChartModel", "DocumentIdentifiers",
+        "DocumentPackage",
+        "DocumentValidation", "JSONTree", "PresentationModel", "PresetStyles", "ResourceReferences", "TableModel",
+        "TextDocument", "TextModel", "WireFormat", "ZipArchives",
       ])
   ],
   dependencies: [
@@ -68,6 +70,23 @@ let package = Package(
         "ZipArchives", ordered,
       ]),
     library("TextDocument", needs: ["DocumentPackage", "TextModel", "WireFormat"], table: true),
+    library("CanvasCommon", needs: ["Appearance", "JSONTree", "TextModel", "WireFormat"], table: true),
+    library("TableModel", needs: ["Appearance", "CanvasCommon", "JSONTree", "TextModel", "WireFormat"], table: true),
+    library(
+      "ChartModel", needs: ["Appearance", "CanvasCommon", "JSONTree", "TableModel", "TextModel", "WireFormat"],
+      table: true),
+    library(
+      "CanvasModel",
+      needs: [
+        "Appearance", "CanvasCommon", "ChartModel", "JSONTree", "ResourceReferences", "TableModel", "TextModel",
+        "WireFormat",
+      ], table: true),
+    library(
+      "PresentationModel",
+      needs: [
+        "Appearance", "CanvasCommon", "CanvasModel", "ChartModel", "DocumentPackage", "DocumentValidation", "JSONTree",
+        "TableModel", "TextModel", "WireFormat",
+      ], table: true),
     library("AttributedText", needs: ["TextModel", "WireFormat"]),
     library("GoldenFiles"),
     library("ModelFixtures", needs: ["JSONTree", "WireFormat"]),
@@ -97,6 +116,29 @@ let package = Package(
         "TextModel", "WireFormat",
       ]),
     tests(of: "AttributedText", with: ["DocumentIdentifiers", "GoldenFiles", "JSONTree", "TextModel", "WireFormat"]),
+    tests(
+      of: "CanvasCommon", with: ["Appearance", "GoldenFiles", "JSONTree", "ModelFixtures", "TextModel", "WireFormat"]),
+    tests(
+      of: "TableModel",
+      with: ["Appearance", "CanvasCommon", "GoldenFiles", "JSONTree", "ModelFixtures", "TextModel", "WireFormat"]),
+    tests(
+      of: "ChartModel",
+      with: [
+        "Appearance", "CanvasCommon", "GoldenFiles", "JSONTree", "ModelFixtures", "TableModel", "TextModel",
+        "WireFormat",
+      ]),
+    tests(
+      of: "CanvasModel",
+      with: [
+        "Appearance", "CanvasCommon", "ChartModel", "GoldenFiles", "JSONTree", "ModelFixtures", "ResourceReferences",
+        "TableModel", "TextModel", "WireFormat",
+      ]),
+    tests(
+      of: "PresentationModel",
+      with: [
+        "Appearance", "CanvasCommon", "CanvasModel", "DocumentPackage", "DocumentValidation", "GoldenFiles", "JSONTree",
+        "ModelFixtures", "TableModel", "TextModel", "WireFormat", "ZipArchives",
+      ]),
     tests(of: "GoldenFiles"),
     tests(of: "ModelFixtures", with: ["JSONTree", "WireFormat"]),
   ]
