@@ -12,6 +12,10 @@ All notable changes to this package are recorded in this file. The format follow
   trade quotes it and in points, read from the `page-sizes.json` the target embeds.
 - `TextDocumentBody.pageSize`, the size of a page in points, a member of version 1.1 of the library's own type.
 
+### Changed
+
+- The workflow `Release` names its run artifact `Studio-docs-v<version>` and the GitHub release `Studio-docs v<version>`.
+
 ## [0.1.1] - 2026-11-24
 
 ### Added

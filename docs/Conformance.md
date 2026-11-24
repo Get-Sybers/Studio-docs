@@ -80,8 +80,8 @@ under `## [Unreleased]` to `## [x.y.z] - date` in `CHANGELOG.md`. Then the workf
 
 | Job | Runs on | Does |
 | --- | --- | --- |
-| `gate` | `xcode-27` | reads the newest version `CHANGELOG.md` names, refuses one whose tag exists, runs `make tidy conform RESOLVE=--disable-automatic-resolution`, and keeps the section of that version as the release notes |
-| `publish` | `ubuntu-24.04` | with `publish` set, in the environment `release`: creates the tag and the GitHub release with those notes; it runs no code of the repository |
+| `gate` | `xcode-27` | reads the newest version `CHANGELOG.md` names, refuses one whose tag exists, runs `make tidy conform RESOLVE=--disable-automatic-resolution`, and keeps the section of that version as the release notes, in the run artifact `Studio-docs-v<version>` |
+| `publish` | `ubuntu-24.04` | with `publish` set, in the environment `release`: creates the tag `<version>` and the GitHub release `Studio-docs v<version>` with those notes; it runs no code of the repository |
 
 Without `publish` the workflow runs the gate alone and resolves the version 0.0.0, which is no release. It also
 runs on a pull request that changes the workflow itself.
