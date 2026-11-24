@@ -1,18 +1,81 @@
 {
   "TextDocumentBody": {
-    "title": {"string": "Harbour notes"},
+    "title": {
+      "string": "Harbour notes"
+    },
     "stylesheet": {
       "paragraph_styles": [
-        {"name": "Body", "preset_identifier": "body", "properties": {"alignment": "justified"}}
+        {
+          "name": "Body",
+          "preset_identifier": "body",
+          "properties": {
+            "alignment": "justified"
+          }
+        }
       ]
     },
     "sections": [
-      {"heading": {"string": "Monday"}, "text": {"paragraphs": [{"contents": [{"run": {"string": "Low water at six."}}]}]}},
-      {"text": {"string": "A section with no heading."}}
-    ]
+      {
+        "heading": {
+          "string": "Monday"
+        },
+        "text": {
+          "paragraphs": [
+            {
+              "contents": [
+                {
+                  "run": {
+                    "string": "Low water at six."
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "text": {
+          "string": "A section with no heading."
+        }
+      }
+    ],
+    "page_size": {
+      "width": 432,
+      "height": 648
+    }
   },
   "TextSection": {
-    "heading": {"paragraphs": [{"contents": [{"run": {"string": "Tuesday", "style": {"bold": true}}}]}]},
-    "text": {"paragraphs": [{"style": {"preset_identifier": "body"}, "contents": [{"run": {"string": "The swell rose before dawn."}}]}]}
+    "heading": {
+      "paragraphs": [
+        {
+          "contents": [
+            {
+              "run": {
+                "string": "Tuesday",
+                "style": {
+                  "bold": true
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "text": {
+      "paragraphs": [
+        {
+          "style": {
+            "preset_identifier": "body"
+          },
+          "contents": [
+            {
+              "run": {
+                "string": "The swell rose before dawn."
+              }
+            }
+          ]
+        }
+      ]
+    }
   }
 }

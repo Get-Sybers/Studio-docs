@@ -1,3 +1,4 @@
+public import Appearance
 public import DocumentPackage
 public import TextModel
 public import WireFormat
@@ -18,14 +19,19 @@ public struct TextDocumentBody: WireObject, DocumentBody {
   public var stylesheet: Stylesheet?
   /// The sections, in reading order.
   public var sections: [TextSection]
+  /// The size of a page, in points, for a document that is laid out as a book; a member of version 1.1.
+  public var pageSize: SizeValue?
   /// The identifier, version and preset of the object, and the members the type does not model.
   public var envelope = ObjectEnvelope()
 
   /// Creates a body.
-  public init(title: TextBody? = nil, stylesheet: Stylesheet? = nil, sections: [TextSection] = []) {
+  public init(
+    title: TextBody? = nil, stylesheet: Stylesheet? = nil, sections: [TextSection] = [], pageSize: SizeValue? = nil
+  ) {
     self.title = title
     self.stylesheet = stylesheet
     self.sections = sections
+    self.pageSize = pageSize
   }
 
   /// Reads the members of the type.
@@ -33,6 +39,7 @@ public struct TextDocumentBody: WireObject, DocumentBody {
     title = try reader.optional("title")
     stylesheet = try reader.optional("stylesheet")
     sections = try reader.required("sections")
+    pageSize = try reader.optional("page_size")
   }
 
   /// Writes the members of the type.
@@ -40,6 +47,7 @@ public struct TextDocumentBody: WireObject, DocumentBody {
     writer.optional("title", title)
     writer.optional("stylesheet", stylesheet)
     writer.required("sections", sections)
+    writer.optional("page_size", pageSize)
   }
 
   /// The whole text, a line feed between paragraphs and between a heading and its section.

@@ -6,6 +6,12 @@ All notable changes to this package are recorded in this file. The format follow
 
 ## [Unreleased]
 
+### Added
+
+- The target `PageSizes`: the trim sizes of the book trade today, American, British, ISO and Japanese, each as the
+  trade quotes it and in points, read from the `page-sizes.json` the target embeds.
+- `TextDocumentBody.pageSize`, the size of a page in points, a member of version 1.1 of the library's own type.
+
 ## [0.1.1] - 2026-11-24
 
 ### Added
