@@ -55,7 +55,9 @@ Beyond the example:
 - `write(to: url, as: .directory)` saves into a directory with the same entries as the archive, and
   writes only the files whose bytes differ. An editor saves step by step that way.
 - `validate()` returns typed findings, each an error or a warning with the part of the package and the
-  path it concerns. A document with an error is refused on save, unless `WriteOptions` says otherwise.
+  path it concerns: what the schemas require and bound, the presets and identifiers, and for a presentation
+  its layouts, placeholders, connection lines, tables and charts. A document with an error is refused on
+  save, unless `WriteOptions` says otherwise.
 - `try AttributedString(body.sections[0].text)` is the text of a section as Foundation's attributed
   string, and `TextBody(attributed)` reads one back. Italic, bold and strikethrough travel as the inline
   presentation intent; underline, the rest of a run's style, links and inline objects travel as the

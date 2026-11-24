@@ -84,8 +84,8 @@ let package = Package(
     library(
       "PresentationModel",
       needs: [
-        "Appearance", "CanvasCommon", "CanvasModel", "DocumentPackage", "JSONTree", "TableModel", "TextModel",
-        "WireFormat",
+        "Appearance", "CanvasCommon", "CanvasModel", "ChartModel", "DocumentPackage", "DocumentValidation", "JSONTree",
+        "TableModel", "TextModel", "WireFormat",
       ], table: true),
     library("AttributedText", needs: ["TextModel", "WireFormat"]),
     library("GoldenFiles"),

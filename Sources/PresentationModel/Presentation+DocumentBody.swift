@@ -1,4 +1,5 @@
 public import DocumentPackage
+public import DocumentValidation
 public import WireFormat
 
 extension Presentation: DocumentBody {
@@ -7,4 +8,7 @@ extension Presentation: DocumentBody {
 
   /// The schemas of every type of the format, the presentation's own included.
   public static var schemas: SchemaRegistry { .presentation }
+
+  /// The rules of a presentation beyond its schemas: layouts, placeholders, connection lines, tables and charts.
+  public func findings() -> [ValidationFinding] { PresentationRules.findings(of: self) }
 }

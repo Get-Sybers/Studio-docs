@@ -13,6 +13,11 @@ All notable changes to this package are recorded in this file. The format follow
   chart, each with its format table, fixtures and goldens. `Presentation` is a document body, so a Keynote
   presentation opens typed through `StudioDocument<Presentation>`.
 - `Indirect`, a box that keeps a value out of line where a type of the format holds one of its own type.
+- The rules of a presentation beyond its schemas, as findings of `Presentation`: a slide's layout stands in the
+  theme, placeholders of one slide differ in kind, a connection line has its end points and is anchored beside
+  itself, a table's rows, columns, formats and style sets are named once and its indices rise within it, a cell
+  and a merge name what the table holds, and a two-axis series selects the first or the second axis. Identifiers
+  are checked for repeats in every document; an object a slide takes from its layout may repeat the layout's.
 - The ZIP writer writes Zip64 records where a size, an offset or a count needs them; the reader read them already.
 - `JSONValue(parsing:)` refuses an object that holds one member name twice, naming the member and the place of
   the object, where Foundation's decoder kept the first value in silence.

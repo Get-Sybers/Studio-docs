@@ -185,7 +185,7 @@ struct ValidationCase: Sendable, CustomTestStringConvertible {
     ValidationCase(
       name: "a document that leans on a theme may adopt what it lacks",
       main:
-        #"{"run": {"type_identifier": "@text-run", "string": "x", "identifier": "a", "style": {"type_identifier": "@character-properties", "preset_identifier": "gone"}}, "again": {"identifier": "a"}}"#,
+        #"{"run": {"type_identifier": "@text-run", "string": "x", "identifier": "a", "style": {"type_identifier": "@character-properties", "preset_identifier": "gone"}}, "again": {"identifier": "b"}}"#,
       isSelfContained: false),
     ValidationCase(
       name: "a style of the stylesheet is a name to adopt",
