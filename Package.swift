@@ -13,6 +13,7 @@ let native: [SwiftSetting] = [
 
 let ordered: Target.Dependency = .product(name: "OrderedCollections", package: "swift-collections")
 let bits: Target.Dependency = .product(name: "BitCollections", package: "swift-collections")
+let trees: Target.Dependency = .product(name: "HashTreeCollections", package: "swift-collections")
 
 // A library of one concern; `table` says that it embeds a format table, Resources/format.json.
 func library(_ name: String, needs dependencies: [Target.Dependency] = [], table: Bool = false) -> Target {
@@ -35,7 +36,9 @@ let package = Package(
     .library(
       name: "StudioDocs",
       targets: [
-        "Appearance", "JSONTree", "PresetStyles", "ResourceReferences", "TextModel", "WireFormat", "ZipArchives",
+        "Appearance", "DocumentIdentifiers", "JSONTree", "PresetStyles", "ResourceReferences", "TextModel",
+        "WireFormat",
+        "ZipArchives",
       ])
   ],
   dependencies: [
@@ -47,6 +50,7 @@ let package = Package(
     library("JSONTree", needs: [ordered]),
     library("WireFormat", needs: ["JSONTree", bits]),
     library("PresetStyles", needs: ["JSONTree", "WireFormat", ordered]),
+    library("DocumentIdentifiers", needs: ["JSONTree", "WireFormat", trees]),
     library("ResourceReferences", needs: ["JSONTree", "WireFormat"], table: true),
     library("Appearance", needs: ["JSONTree", "ResourceReferences", "WireFormat"], table: true),
     library(
@@ -59,6 +63,7 @@ let package = Package(
     tests(of: "ZipArchives", with: ["GoldenFiles", "RawDeflate"]),
     tests(of: "JSONTree", with: ["GoldenFiles"]),
     tests(of: "WireFormat", with: ["GoldenFiles", "JSONTree"]),
+    tests(of: "DocumentIdentifiers", with: ["GoldenFiles", "JSONTree", "TextModel", "WireFormat"]),
     tests(of: "PresetStyles", with: ["Appearance", "GoldenFiles", "JSONTree", "TextModel", "WireFormat"]),
     tests(of: "ResourceReferences", with: ["GoldenFiles", "JSONTree", "ModelFixtures", "WireFormat"]),
     tests(of: "Appearance", with: ["GoldenFiles", "JSONTree", "ModelFixtures", "WireFormat"]),

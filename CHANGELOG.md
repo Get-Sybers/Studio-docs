@@ -29,6 +29,9 @@ All notable changes to this package are recorded in this file. The format follow
   returns the effective properties of an object: its own, its preset's, the parents', then the declared
   default. A `null` stops the search. `TextModel` adds the layering of a run over its paragraph and the
   text styles of a stylesheet.
+- The target `DocumentIdentifiers`: an index of every object identifier of a tree with the places that
+  carry it, and a mint that makes identifiers no object carries. Reading and writing keep an identifier
+  as it is; only a call to the mint makes one.
 - The target `GoldenFiles`, which the tests share: one file of expected outputs for each test target.
 - The gate `make tidy conform`, the structural lint `scripts/structure-lint.sh`, and the workflow
   `Swift CI`.

@@ -1,0 +1,5 @@
+{
+  "index: every identifier with its places" : "root: <root>\ns-1: sections[0]\np-1: sections[0].paragraphs[0], sections[1].paragraphs[0]\np-2: sections[0].paragraphs[1]\ns-2: sections[1]",
+  "mint: assigned to a split and to a new paragraph" : "kept: p-1\nnone: 50F5647D-2380-409D-832A-5CD27A6B13A1\nsplit first: p-2\nsplit second: A356BE30-6E9B-426D-812E-6299272E6DF0\nkept too: p-3",
+  "mint: three identifiers from a fixed seed" : "DB9C5598-9194-4D23-B8BC-927DED35455D\nAAD71E75-CDE2-488E-A280-938AD5A104F2\nCAA69C1E-0798-4F49-B9F5-A07176645A03"
+}
