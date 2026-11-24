@@ -12,6 +12,7 @@ let native: [SwiftSetting] = [
 ]
 
 let ordered: Target.Dependency = .product(name: "OrderedCollections", package: "swift-collections")
+let bits: Target.Dependency = .product(name: "BitCollections", package: "swift-collections")
 
 // A library of one concern.
 func library(_ name: String, needs dependencies: [Target.Dependency] = []) -> Target {
@@ -29,7 +30,7 @@ let package = Package(
   name: "Studio-docs",
   platforms: [.macOS(.v27)],
   products: [
-    .library(name: "StudioDocs", targets: ["JSONTree", "ZipArchives"])
+    .library(name: "StudioDocs", targets: ["JSONTree", "WireFormat", "ZipArchives"])
   ],
   dependencies: [
     .package(url: "https://github.com/apple/swift-collections", from: "1.7.0")
@@ -38,11 +39,13 @@ let package = Package(
     library("RawDeflate"),
     library("ZipArchives", needs: ["RawDeflate", ordered]),
     library("JSONTree", needs: [ordered]),
+    library("WireFormat", needs: ["JSONTree", bits]),
     library("GoldenFiles"),
 
     tests(of: "RawDeflate", data: false),
     tests(of: "ZipArchives", with: ["GoldenFiles", "RawDeflate"]),
     tests(of: "JSONTree", with: ["GoldenFiles"]),
+    tests(of: "WireFormat", with: ["GoldenFiles", "JSONTree"]),
     tests(of: "GoldenFiles"),
   ]
 )

@@ -4,7 +4,7 @@ import OrderedCollections
 ///
 /// The order carries no meaning: two objects with the same members are equal in any order.
 public struct JSONObject: Sendable {
-  private var members: OrderedDictionary<String, JSONValue>
+  var members: OrderedDictionary<String, JSONValue>
 
   /// Creates an object with no members.
   public init() {
