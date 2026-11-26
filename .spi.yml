@@ -1,0 +1,24 @@
+version: 1
+builder:
+  configs:
+    - documentation_targets:
+        - DocumentPackage
+        - PresentationModel
+        - CanvasModel
+        - ChartModel
+        - TableModel
+        - CanvasCommon
+        - TextDocument
+        - PageSizes
+        - TextModel
+        - AttributedText
+        - Appearance
+        - ResourceReferences
+        - PresetStyles
+        - DocumentIdentifiers
+        - DocumentValidation
+        - WireFormat
+        - JSONTree
+        - ZipArchives
+      platform: macos-spm
+      swift_version: '6.4'

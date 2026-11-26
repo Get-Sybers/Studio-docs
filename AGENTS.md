@@ -57,3 +57,4 @@ These rules bind every contributor, human or agent. `make tidy conform` checks m
 | `README.md` | what the package is, how to use it, what it models and where it departs from Apple's reader |
 | `NOTICE` | the credits: Apple's documentation and library as the reference, and Swift Collections |
 | `.xcode-version`, `.swift-format` | the pin of the toolchain and the configuration of the formatter |
+| `.spi.yml` | the manifest of the Swift Package Index: the targets whose documentation the index builds, on macOS with Swift 6.4 |
