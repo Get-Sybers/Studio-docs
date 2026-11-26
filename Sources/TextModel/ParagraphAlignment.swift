@@ -16,7 +16,7 @@ public struct ParagraphAlignment: WireEnumeration {
   public static let justified = ParagraphAlignment(rawValue: "justified")
   /// Flush left.
   public static let left = ParagraphAlignment(rawValue: "left")
-  /// In a table cell: text to the leading edge and numbers to the trailing edge.
+  /// Decided by the content: in a table cell, words sit at the leading side and numbers at the trailing side.
   public static let natural = ParagraphAlignment(rawValue: "natural")
   /// Flush right.
   public static let right = ParagraphAlignment(rawValue: "right")

@@ -1,6 +1,6 @@
 public import WireFormat
 
-/// The space kept free along each edge of an area, in points.
+/// How far content stands back from each side of its area, in points.
 public struct Insets: WireObject {
   /// The facts of the type, from the format table.
   public static let schema = AppearanceFormat.table.object(named: "Insets")

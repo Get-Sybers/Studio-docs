@@ -6,6 +6,16 @@ All notable changes to this package are recorded in this file. The format follow
 
 ## [Unreleased]
 
+### Added
+
+- `.spi.yml`, the manifest of the Swift Package Index: the targets whose documentation the index builds, on macOS
+  with Swift 6.4.
+
+### Changed
+
+- The documentation comments of `Insets` and of `ParagraphAlignment.natural` are reworded in the library's own
+  words.
+
 ## [0.1.2] - 2026-11-24
 
 ### Added
