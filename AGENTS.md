@@ -1,10 +1,14 @@
 # Contributor guide
 
-These rules bind every contributor, human or agent. `make tidy conform` checks most of them.
+These rules bind every contributor, human or agent. `make check` checks most of them before a pull request
+leaves draft, and `make tidy conform` is the full gate.
 
 ## Rules
 
-1. **The gate decides.** A change is ready when `make tidy conform` is green. CI runs the same command.
+1. **The gate decides.** `make check` is green before a pull request leaves draft: the format and
+   structural lints, the generated list and the critical tests. The full gate `make tidy conform` compiles
+   and tests on every platform, and the release workflow runs it, by hand and at a release. Pull-request CI runs the
+   structural lint alone, and nothing compiles on a pull request.
 2. **Every change adds a line to `CHANGELOG.md`** under `## [Unreleased]`. No tracking marker stands in
    code, and no progress note stands in a document.
 3. **Documents state present fact.** `README.md`, this file and `docs/` describe what the repository
@@ -49,10 +53,10 @@ These rules bind every contributor, human or agent. `make tidy conform` checks m
 | `docs/Architecture.md` | the targets, their concerns, their dependencies and the layers |
 | `docs/Conformance.md` | the gate, the structural lint, the version pins and CI |
 | `docs/Modelled-types.md` | the generated list of modelled types |
-| `.github/workflows/` | `swift-ci.yml`, the CI that runs the gate, and `release.yml`, the release run by hand |
+| `.github/workflows/` | `swift-ci.yml`, the structural lint on each pull request, and `release.yml`, the full gate run by hand and at a release |
 | `.github/dependabot.yml` | the weekly raising of the Actions pins and the Swift packages |
 | `.github/pull_request_template.md` | the checklist of a pull request |
-| `Makefile` | the gate `conform`, `tidy` and `upgrade` |
+| `Makefile` | the gates `check` and `conform`, `lint`, `tidy` and `upgrade` |
 | `CHANGELOG.md` | every change, under `## [Unreleased]` until a release |
 | `README.md` | what the package is, how to use it, what it models and where it departs from Apple's reader |
 | `NOTICE` | the credits: Apple's documentation and library as the reference, and Swift Collections |

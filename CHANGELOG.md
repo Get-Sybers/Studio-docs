@@ -6,6 +6,21 @@ All notable changes to this package are recorded in this file. The format follow
 
 ## [Unreleased]
 
+### Added
+
+- `docs/Modules.md`, an index of the package's modules, with a spec for each module under `docs/modules/`.
+- `docs/Ways-to-use.md`, four patterns that draw on the client-property, attributed-text, text and
+  presentation parts of the library.
+- `make check`, the local gate before a pull request leaves draft: the lints, the generated list and the
+  critical tests (`CRITICAL`). `make lint` runs the checks that do not compile, and `make test-critical`
+  the critical test targets.
+
+### Changed
+
+- Pull-request CI runs the structural lint alone, on Ubuntu, with no toolchain. The build, the tests and
+  the platform builds move to the release workflow, which runs by hand and at a release, so nothing
+  compiles on a pull request.
+
 ## [0.1.3] - 2026-11-27
 
 ### Added
