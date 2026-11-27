@@ -16,6 +16,8 @@ All notable changes to this package are recorded in this file. The format follow
 
 - The documentation comments of `Insets` and of `ParagraphAlignment.natural` are reworded in the library's own
   words.
+- `make conform` builds the package for iOS, tvOS, visionOS and watchOS and runs the tests on an iOS simulator,
+  through the targets `platforms` and `test-ios`; CI and the workflow `Release` run them with the rest of the gate.
 
 ## [0.1.2] - 2026-11-24
 
