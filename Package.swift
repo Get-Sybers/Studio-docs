@@ -35,7 +35,7 @@ func tests(of name: String, with dependencies: [Target.Dependency] = [], data: B
 
 let package = Package(
   name: "Studio-docs",
-  platforms: [.macOS(.v27)],
+  platforms: [.macOS(.v27), .iOS(.v27), .tvOS(.v27), .visionOS(.v27), .watchOS(.v27)],
   products: [
     .library(
       name: "StudioDocs",
