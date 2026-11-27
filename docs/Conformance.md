@@ -5,7 +5,8 @@ A change is ready when `make tidy conform` is green. CI runs the same command.
 ## The gate
 
 `make conform` runs these targets in order and stops at the first failure. It needs macOS with the Xcode
-that `.xcode-version` names.
+that `.xcode-version` names, the iOS, tvOS, visionOS and watchOS platforms of that Xcode, and the iOS
+simulator that `SIMULATOR` names, `iPhone 17` unless it is set.
 
 | Target | Runs | Catches |
 | --- | --- | --- |
@@ -13,7 +14,9 @@ that `.xcode-version` names.
 | `vet` | `swift build --build-tests` | a broken build; every target treats a warning as an error |
 | `test` | `swift test --parallel` | failing tests |
 | `generate` | `scripts/generate-modelled-types.swift`, then `git diff --exit-code` on its output | a list of modelled types that differs from the format tables |
-| `conform` | the four above, then `scripts/structure-lint.sh` | the structural rules below |
+| `platforms` | `xcodebuild build` for a generic iOS, tvOS, visionOS and watchOS device | a build that breaks or warns on one of those platforms |
+| `test-ios` | `xcodebuild build-for-testing`, then `test-without-building`, on that simulator at the newest iOS of the Xcode | failing tests on iOS |
+| `conform` | the six above, then `scripts/structure-lint.sh` | the structural rules below |
 
 | Target | Does |
 | --- | --- |
@@ -23,7 +26,8 @@ that `.xcode-version` names.
 | `upgrade` | runs `swift package update`, then `conform`; when `conform` fails it restores `Package.resolved` |
 
 `RESOLVE=--disable-automatic-resolution` makes the build use the committed versions and nothing else. CI
-passes it.
+passes it. `platforms` and `test-ios` hand it to `xcodebuild` as `-disableAutomaticPackageResolution`, and
+`xcodebuild` keeps its build in `.build/xcode`.
 
 A test compares what it produced with the goldens of its target, the file `testdata/<name>.goldens.json`.
 `UPDATE_GOLDENS=1 make test` writes what the tests produce into those files in the source tree.
@@ -69,8 +73,10 @@ and every night, with read-only permissions.
 | `build-test` | `xcode-27` | when the build is needed: `make tidy conform RESOLVE=--disable-automatic-resolution` |
 | `CI OK` | `ubuntu-24.04` | fails when a job above ended as anything but success or skipped; the one check to require |
 
-A change to the documents alone starts no macOS job. Dependabot raises the GitHub Actions pins and the Swift
-packages weekly, seven days after a release, each group in one pull request.
+`build-test` relies on the image of `xcode-27` to hold the Xcode that `.xcode-version` names with the SDKs of
+iOS, tvOS, visionOS and watchOS and the simulator that `SIMULATOR` names. A change to the documents alone
+starts no macOS job. Dependabot raises the GitHub Actions pins and the Swift packages weekly, seven days after
+a release, each group in one pull request.
 
 ## Release
 
