@@ -9,8 +9,9 @@ Keynote and Creator Studio are trademarks of Apple Inc.
 
 ## Using the package
 
-The manifest needs the Swift 6.4 tools and sets a deployment target of macOS 27. Add the package by its
-URL, depend on its one product, `StudioDocs`, and import the modules you use by name.
+The manifest needs the Swift 6.4 tools and sets a deployment target of version 27 on macOS, iOS, tvOS,
+visionOS and watchOS. Add the package by its URL, depend on its one product, `StudioDocs`, and import the
+modules you use by name.
 
 ```swift
 .package(url: "https://github.com/Get-Sybers/Studio-docs", from: "0.1.0")

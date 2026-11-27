@@ -10,6 +10,7 @@ All notable changes to this package are recorded in this file. The format follow
 
 - `.spi.yml`, the manifest of the Swift Package Index: the targets whose documentation the index builds, on macOS
   with Swift 6.4.
+- The platforms iOS, tvOS, visionOS and watchOS, each from version 27 as macOS is.
 
 ### Changed
 
