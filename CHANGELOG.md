@@ -6,6 +6,8 @@ All notable changes to this package are recorded in this file. The format follow
 
 ## [Unreleased]
 
+## [0.1.3] - 2026-11-27
+
 ### Added
 
 - `.spi.yml`, the manifest of the Swift Package Index: the targets whose documentation the index builds, on macOS
@@ -117,7 +119,8 @@ All notable changes to this package are recorded in this file. The format follow
 - The example of the README and the test `createSaveReopen` are one: a section of two paragraphs, one of
   them styled, saved as an archive and opened again.
 
-[Unreleased]: https://github.com/Get-Sybers/Studio-docs/compare/0.1.2...HEAD
+[Unreleased]: https://github.com/Get-Sybers/Studio-docs/compare/0.1.3...HEAD
+[0.1.3]: https://github.com/Get-Sybers/Studio-docs/compare/0.1.2...0.1.3
 [0.1.2]: https://github.com/Get-Sybers/Studio-docs/compare/0.1.1...0.1.2
 [0.1.1]: https://github.com/Get-Sybers/Studio-docs/compare/0.1.0...0.1.1
 [0.1.0]: https://github.com/Get-Sybers/Studio-docs/releases/tag/0.1.0
