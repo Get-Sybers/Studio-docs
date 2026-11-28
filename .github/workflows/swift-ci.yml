@@ -1,13 +1,14 @@
 name: Swift CI
 
+# Nothing here compiles. The build, the tests and the platform builds are the full gate,
+# which runs in release.yml, by hand and at a release. docs/Conformance.md describes the split.
+
 on:
   pull_request:
   merge_group:
   push:
     branches: [main]
   workflow_dispatch:
-  schedule:
-    - cron: "0 0 * * *"
 
 permissions:
   contents: read
@@ -17,66 +18,18 @@ concurrency:
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
-  changes:
-    name: Detect Swift changes
+  lint:
+    name: Structural lint
     runs-on: ubuntu-24.04
     timeout-minutes: 5
-    outputs:
-      swift: ${{ steps.filter.outputs.swift }}
     steps:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          fetch-depth: 0
           persist-credentials: false
 
-      - name: Diff against base
-        id: filter
-        env:
-          EVENT: ${{ github.event_name }}
-          PR_BASE: ${{ github.event.pull_request.base.sha }}
-          MQ_BASE: ${{ github.event.merge_group.base_sha }}
-          PUSH_BEFORE: ${{ github.event.before }}
-        run: |
-          case "$EVENT" in
-            pull_request) base="$PR_BASE" ;;
-            merge_group)  base="$MQ_BASE" ;;
-            push)         base="$PUSH_BEFORE" ;;
-            *)            base="" ;;
-          esac
-
-          # Without a base commit to compare with, build.
-          if [ -z "$base" ] || ! git cat-file -e "${base}^{commit}" 2>/dev/null; then
-            echo "No usable base commit; building."
-            echo "swift=true" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-
-          # One extended regular expression a line; a match on any line starts the build.
-          cat > "$RUNNER_TEMP/swift-paths" <<'PATHS'
-          \.(swift|h|hpp|m|mm|c|cc|cpp|metal)$
-          (^|/)Package\.resolved$
-          \.(xcodeproj|xcworkspace|swiftpm|xcassets|xcdatamodeld|docc)/
-          \.(xcconfig|xctestplan|entitlements|plist|xcstrings|strings|stringsdict|storyboard|xib|intentdefinition|modulemap|xcprivacy)$
-          (^|/)\.(swift-version|xcode-version|swiftlint\.yml|swift-format|swiftformat)$
-          ^Sources/[^/]+/Resources/
-          ^Tests/[^/]+/testdata/
-          ^docs/Modelled-types\.md$
-          ^Makefile$
-          ^scripts/
-          ^\.github/workflows/swift-ci\.yml$
-          PATHS
-
-          # --no-renames lists both paths of a file that moved.
-          changed="$(git diff --name-only --no-renames "$base" HEAD)"
-          echo "Changed files:"
-          echo "$changed"
-
-          if grep -Eq -f "$RUNNER_TEMP/swift-paths" <<<"$changed"; then
-            echo "swift=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "swift=false" >> "$GITHUB_OUTPUT"
-          fi
+      - name: Structural lint
+        run: sh scripts/structure-lint.sh
 
   changelog:
     name: Changelog updated
@@ -102,49 +55,10 @@ jobs:
             exit 1
           fi
 
-  build-test:
-    name: Build and test
-    needs: changes
-    if: needs.changes.outputs.swift == 'true'
-    runs-on: xcode-27
-    timeout-minutes: 45
-    steps:
-      - name: Checkout
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-        with:
-          persist-credentials: false
-
-      - name: Select Xcode
-        run: |
-          echo "DEVELOPER_DIR=/Applications/Xcode_$(cat .xcode-version).app/Contents/Developer" >> "$GITHUB_ENV"
-
-      - name: Show toolchain
-        run: |
-          xcodebuild -version
-          swift --version
-
-      - name: Cache Swift packages
-        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
-        with:
-          path: ~/Library/Caches/org.swift.swiftpm
-          key: spm-${{ runner.os }}-${{ hashFiles('**/Package.resolved') }}
-
-      # The job's token lifts the fetch of the package dependency above the limits of an anonymous clone.
-      - name: Conform
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          auth="$(printf 'x-access-token:%s' "${GH_TOKEN}" | base64)"
-          echo "::add-mask::${auth}"
-          export GIT_CONFIG_COUNT=1
-          export GIT_CONFIG_KEY_0="http.https://github.com/.extraheader"
-          export GIT_CONFIG_VALUE_0="AUTHORIZATION: basic ${auth}"
-          make tidy conform RESOLVE=--disable-automatic-resolution
-
   ci-ok:
     name: CI OK
     if: always()
-    needs: [changes, changelog, build-test]
+    needs: [lint, changelog]
     runs-on: ubuntu-24.04
     timeout-minutes: 2
     steps:

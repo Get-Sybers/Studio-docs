@@ -4,7 +4,7 @@
 
 ## Checklist
 
-- [ ] `make tidy conform` is green locally
+- [ ] `make check` is green locally before this leaves draft (`make tidy conform` for a release)
 - [ ] `CHANGELOG.md` records the change under `## [Unreleased]`
 - [ ] Documents state what the repository does now: no plan, status or history
 - [ ] Comments are few and give a reason; every `public` declaration has a documentation comment

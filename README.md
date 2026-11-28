@@ -103,6 +103,8 @@ presentation and its slides down to the runs of text.
 [docs/Modelled-types.md](docs/Modelled-types.md) lists every type of the format that the library models,
 generated from the format tables in `Sources/<Target>/Resources/format.json`.
 [docs/Architecture.md](docs/Architecture.md) gives the targets and their dependencies.
+[docs/Modules.md](docs/Modules.md) indexes the modules with a spec for each, and
+[docs/Ways-to-use.md](docs/Ways-to-use.md) shows patterns that draw on the library beyond plain text.
 
 Every type that Apple documents is modelled, the presentation included:
 `StudioDocument<Presentation>(contentsOf: url)` opens a Keynote presentation typed. A document whose root
