@@ -8,6 +8,7 @@ All notable changes to this package are recorded in this file. The format follow
 
 ### Added
 
+- `sample-macos-app/`, an Xcode project for a macOS SwiftUI sample app, kept beside the package.
 - `docs/Modules.md`, an index of the package's modules, with a spec for each module under `docs/modules/`.
 - `docs/Ways-to-use.md`, four patterns that draw on the client-property, attributed-text, text and
   presentation parts of the library.
